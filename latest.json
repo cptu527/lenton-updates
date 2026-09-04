@@ -1,7 +1,7 @@
 {
-  "versionCode": 128,
-  "versionName": "0.22.07",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.07.apk",
-  "sha256": "2f94df1c47aec03d462bff614d4c660721f7e627ee89bd5bb5bb8bbe42bc0e24",
-  "notes": "다크/라이트 테마 변경 후 홈·타임라인·프로필 등 메인 화면 전체가 새 테마로 다시 표시되도록 수정 · 이전 테마로 만들어진 화면 스냅샷 재사용 방지 · 기존 계정 설정 스위치/업데이트 파란 점/프로필 페이지네이션/답글 확대/키보드/업데이트 기능 유지"
+  "versionCode": 129,
+  "versionName": "0.22.08",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.08.apk",
+  "sha256": "a2fc1113fe5a615158f96f11f19ed5b1c3bbc1cf9a2515cec3a09ab0d901847d",
+  "notes": "7가지 강조 색상 추가: 블루·핑크·오렌지·퍼플·레드·민트 그린·모노 · 탭/링크/버튼/+ 버튼/업데이트 점/스위치에 선택 색상 적용 · 다크/라이트 모드와 기존 계정 설정·프로필 페이지네이션·답글 확대·키보드·업데이트 기능 유지"
 }
