@@ -1,7 +1,7 @@
 {
-  "versionCode": 130,
-  "versionName": "0.22.09",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.09.apk",
-  "sha256": "a035e1cdfbef75d0dc772715f046ad98b6fc7216e4d7551b441849e65e486b1e",
-  "notes": "새 버전을 앱 시작/사이드 메뉴에서 빠르게 조용히 확인해 업데이트 강조색 점 즉시 표시 · 다른 계정에 새 알림이 오면 사이드 메뉴 계정 프로필 사진에 강조색 알림 점 표시하고 해당 계정 알림 확인 시 제거 · 기존 7가지 강조 색상과 모든 기존 기능 유지"
+  "versionCode": 131,
+  "versionName": "0.22.10",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.10.apk",
+  "sha256": "55bacb508444be72eb808a9467357168c8e033eb8b31f2ab570ef3e8d79ce094",
+  "notes": "내 답글에 다시 답할 때 타래의 실제 상대를 계속 답글 대상으로 유지 · 답글 대상 안내를 입력창 안으로 이동 · 전체 답글 작성창에서 GIF/투표 버튼 제거 · CW 버튼으로 실제 콘텐츠 경고 입력 및 spoiler_text 전송 · v0.22.09 기존 기능 유지"
 }
