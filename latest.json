@@ -1,7 +1,7 @@
 {
-  "versionCode": 129,
-  "versionName": "0.22.08",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.08.apk",
-  "sha256": "a2fc1113fe5a615158f96f11f19ed5b1c3bbc1cf9a2515cec3a09ab0d901847d",
-  "notes": "7가지 강조 색상 추가: 블루·핑크·오렌지·퍼플·레드·민트 그린·모노 · 탭/링크/버튼/+ 버튼/업데이트 점/스위치에 선택 색상 적용 · 다크/라이트 모드와 기존 계정 설정·프로필 페이지네이션·답글 확대·키보드·업데이트 기능 유지"
+  "versionCode": 130,
+  "versionName": "0.22.09",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.09.apk",
+  "sha256": "a035e1cdfbef75d0dc772715f046ad98b6fc7216e4d7551b441849e65e486b1e",
+  "notes": "새 버전을 앱 시작/사이드 메뉴에서 빠르게 조용히 확인해 업데이트 강조색 점 즉시 표시 · 다른 계정에 새 알림이 오면 사이드 메뉴 계정 프로필 사진에 강조색 알림 점 표시하고 해당 계정 알림 확인 시 제거 · 기존 7가지 강조 색상과 모든 기존 기능 유지"
 }
