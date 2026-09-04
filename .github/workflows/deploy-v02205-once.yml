@@ -1,0 +1,78 @@
+name: Deploy Lenton v0.22.05 updater package
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/deploy-v02205-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download exact signed v0.22.05 artifact
+        shell: bash
+        run: |
+          curl -fL --retry 3 --retry-delay 2 'https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-7a74-8211-9560-86dcba03611b/raw?se=2026-09-04T12%3A51%3A24Z&sp=r&sv=2026-02-06&sr=b&scid=7867e313-1040-5cc8-b3aa-ad4f0dcf3e7d&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-04T02%3A10%3A29Z&ske=2026-09-05T02%3A10%3A29Z&sks=b&skv=2026-02-06&sig=XKbYW563Qeyh4UiT8qG8ygPK6q6RLqNLi7lVsp96IQQ%3D' -o build.zip
+          unzip -o build.zip
+          echo 'fa2dab98aed7c727f1a119375c24c717c1a84d23227b94c68ccc71355a48bc75  Lenton-v0.22.05.apk' | sha256sum -c -
+
+      - name: Verify Lenton signing certificate
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, struct
+          data=Path('Lenton-v0.22.05.apk').read_bytes()
+          assert hashlib.sha256(data).hexdigest() == 'fa2dab98aed7c727f1a119375c24c717c1a84d23227b94c68ccc71355a48bc75'
+          eocd=data.rfind(b'PK\x05\x06'); assert eocd >= 0
+          cd_offset=struct.unpack_from('<4sHHHHIIH',data,eocd)[6]
+          size2=struct.unpack_from('<Q',data,cd_offset-24)[0]
+          assert data[cd_offset-16:cd_offset] == b'APK Sig Block 42'
+          block_start=cd_offset-(size2+8)
+          pairs={}; i=block_start+8; end=cd_offset-24
+          while i < end:
+              length=struct.unpack_from('<Q',data,i)[0]; i += 8
+              pair_id=struct.unpack_from('<I',data,i)[0]
+              pairs[pair_id]=data[i+4:i+length]; i += length
+          assert 0x7109871a in pairs
+          def lp32(buf,off):
+              length=struct.unpack_from('<I',buf,off)[0]; start=off+4; finish=start+length
+              assert finish <= len(buf)
+              return buf[start:finish],finish
+          signers,_=lp32(pairs[0x7109871a],0); signer,_=lp32(signers,0); signed_data,_=lp32(signer,0)
+          _,sd_off=lp32(signed_data,0); certs,_=lp32(signed_data,sd_off); cert,_=lp32(certs,0)
+          cert_sha=hashlib.sha256(cert).hexdigest()
+          assert cert_sha == 'fe6fc92cc637bc3fdbd18e98b7c0846b8e489d4c0d0f4e859fc520333f2d8688', cert_sha
+          print('certificate matches installed Lenton:',cert_sha)
+          PY
+
+      - name: Write updater metadata
+        shell: bash
+        run: |
+          cat > latest.json <<'JSON'
+          {
+            "versionCode": 126,
+            "versionName": "0.22.05",
+            "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.05.apk",
+            "sha256": "fa2dab98aed7c727f1a119375c24c717c1a84d23227b94c68ccc71355a48bc75",
+            "notes": "설정 메뉴 전체 행 터치와 이동 표시 개선 · 공개 범위/답장 공개 범위/게시글 언어 설명 정리 · 서버 미지원 인용 정책은 변경 불가 상태로 명확히 표시 · 알림 필터 보이기 설정 실제 동작 연결 · 기존 프로필 페이지네이션/답글 확대/키보드/업데이트 기능 유지"
+          }
+          JSON
+          python3 -m json.tool latest.json >/dev/null
+
+      - name: Publish and remove this one-time workflow
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/deploy-v02205-once.yml
+          rm -f build.zip
+          git add Lenton-v0.22.05.apk latest.json
+          git commit -m 'Publish Lenton v0.22.05 updater package'
+          git push
