@@ -1,7 +1,7 @@
 {
-  "versionCode": 124,
-  "versionName": "0.22.03",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.03.apk",
-  "sha256": "eae41c8bd9a76126ba5fb26b40a245ab812f301bf51cbab67c7668715f001347",
-  "notes": "v0.22.02 실행 즉시 종료 문제 수정 · 작은 답글창 확대 버튼과 작성 중 내용 전달 기능 유지 · 기존 UI/키보드/업데이트/알림/DM 기능 변경 없음"
+  "versionCode": 125,
+  "versionName": "0.22.04",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.04.apk",
+  "sha256": "b8b35c24d1a8de2ab7dd05dea61e215d015fa85357ce8caaca941ffa0cb4e97b",
+  "notes": "프로필 게시물이 최근 25개에서 끊기던 문제 수정 · 아래로 내려가면 max_id로 과거 게시물을 계속 불러옴 · 기존 4개 프로필 탭/스와이프/고정 탭/답글 확대/업데이트 기능 유지"
 }
