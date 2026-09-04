@@ -1,0 +1,58 @@
+name: Publish Lenton v0.21.08
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-v02108.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download built APK artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fL --retry 3 --retry-delay 2 'https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-8364-8211-bd14-49c202cc1d48/raw?se=2026-09-04T06%3A43%3A29Z&sp=r&sv=2026-02-06&sr=b&scid=c10bf3c6-a67d-5398-bd09-b24c4e6cb6b9&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-04T03%3A15%3A35Z&ske=2026-09-05T03%3A15%3A35Z&sks=b&skv=2026-02-06&sig=Q4Qyg2U2q/PSpBOZqqmwhuW9cwZOOCwDipH4aiAypII%3D' -o artifact.zip
+          unzip -o artifact.zip
+          test -f Lenton-v0.21.08.apk
+          echo 'f0f36cbff3f21a59e85dd0e27e8622455a47c4ee3d2b591200583c82d28c92a0  Lenton-v0.21.08.apk' | sha256sum -c -
+
+      - name: Publish raw APK and updater manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > latest.json <<'JSON'
+          {
+            "versionCode": 119,
+            "versionName": "0.21.08",
+            "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.21.08.apk",
+            "sha256": "f0f36cbff3f21a59e85dd0e27e8622455a47c4ee3d2b591200583c82d28c92a0",
+            "notes": "새로 도착한 알림은 파란색 배경으로 표시 · 알림을 열면 일반 배경으로 전환 · v0.21.07 자체 업데이트 설치 안정화 유지"
+          }
+          JSON
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add Lenton-v0.21.08.apk latest.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish Lenton v0.21.08 update files [skip ci]'
+            git push origin HEAD:main
+          fi
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view v0.21.08 >/dev/null 2>&1; then
+            gh release upload v0.21.08 Lenton-v0.21.08.apk --clobber
+          else
+            gh release create v0.21.08 Lenton-v0.21.08.apk --title 'Lenton v0.21.08' --notes '새로 도착한 알림은 파란색 배경으로 표시하고, 확인하면 일반 배경으로 돌아옵니다. v0.21.07 자체 업데이트 설치 안정화도 유지합니다.' --target main
+          fi
