@@ -31,11 +31,11 @@ jobs:
       - name: Reconstruct signed v0.22.01 APK
         shell: bash
         run: |
-          cat \
-            .github/v02201-signature/part00.b64 \
-            .github/v02201-signature/part01.b64 \
-            .github/v02201-signature/part02.b64 \
-            .github/v02201-signature/part03.b64 > signature-patch.b64
+          head -c 6000 .github/v02201-signature/part00.b64 > signature-patch.b64
+          head -c 6000 .github/v02201-signature/part01.b64 >> signature-patch.b64
+          head -c 6000 .github/v02201-signature/part02.b64 >> signature-patch.b64
+          head -c 5708 .github/v02201-signature/part03.b64 >> signature-patch.b64
+          test "$(wc -c < signature-patch.b64)" -eq 23708
           base64 -d signature-patch.b64 > signature-patch.zst
           echo '64ce2a22883af160984bbb35bec9eda6ccd9f16fc8529d0f2e64616a1ec59ef4  signature-patch.zst' | sha256sum -c -
           command -v zstd >/dev/null || { sudo apt-get update && sudo apt-get install -y zstd; }
