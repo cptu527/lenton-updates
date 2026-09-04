@@ -1,0 +1,58 @@
+name: Publish Lenton v0.21.09
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-v02109.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download built APK artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fL --retry 3 --retry-delay 2 'https://sdmntpritalynorth.oaiusercontent.com/files/00000000-d264-8246-b4a7-6873f6031f18/raw?se=2026-09-04T07%3A32%3A30Z&sp=r&sv=2026-02-06&sr=b&scid=6e500c67-39da-5008-bde6-5a58cc8d2e9e&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-04T03%3A21%3A46Z&ske=2026-09-05T03%3A21%3A46Z&sks=b&skv=2026-02-06&sig=BhdTHcPnVioaw5YnIswt9GLuDOjyzh0ke/BJkK6O1KE%3D' -o artifact.zip
+          unzip -o artifact.zip
+          test -f Lenton-v0.21.09.apk
+          echo 'ec1d63c5f03c5f92f8f55963b35949f43aa6d76f33e1909d4cbb01118d3a0e47  Lenton-v0.21.09.apk' | sha256sum -c -
+
+      - name: Publish raw APK and updater manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > latest.json <<'JSON'
+          {
+            "versionCode": 120,
+            "versionName": "0.21.09",
+            "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.21.09.apk",
+            "sha256": "ec1d63c5f03c5f92f8f55963b35949f43aa6d76f33e1909d4cbb01118d3a0e47",
+            "notes": "게시물 답글창 중복 생성 수정 · 답글 입력창이 키보드와 함께 이동 · 답글 대상 표시를 입력 영역 안으로 이동 · v0.21.08 새 알림 파란색 표시 유지"
+          }
+          JSON
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add Lenton-v0.21.09.apk latest.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish Lenton v0.21.09 update files [skip ci]'
+            git push origin HEAD:main
+          fi
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view v0.21.09 >/dev/null 2>&1; then
+            gh release upload v0.21.09 Lenton-v0.21.09.apk --clobber
+          else
+            gh release create v0.21.09 Lenton-v0.21.09.apk --title 'Lenton v0.21.09' --notes '게시물 답글창 중복 생성을 수정하고, 입력창이 키보드와 함께 올라오도록 개선했습니다. 답글 대상 표시도 입력 영역 안으로 이동했습니다.' --target main
+          fi
