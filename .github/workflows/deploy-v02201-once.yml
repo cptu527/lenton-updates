@@ -1,0 +1,112 @@
+name: Deploy Lenton v0.22.01 updater package
+
+on:
+  push:
+    paths:
+      - '.github/workflows/deploy-v02201-once.yml'
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download exact v0.22.01 unsigned artifact
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -fL --retry 3 --retry-delay 2 \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            'https://api.github.com/repos/cptu527/lenton-updates/actions/artifacts/9930164644/zip' \
+            -o unsigned.zip
+          unzip -o unsigned.zip
+          echo '1d6fd1e11172b0bddcf513474f9e2602f3fd974d6dd32057b831a3758bff5cf8  Lenton-v0.22.01-aligned-unsigned.apk' | sha256sum -c -
+
+      - name: Reconstruct signed v0.22.01 APK
+        shell: bash
+        run: |
+          cat \
+            .github/v02201-signature/part00.b64 \
+            .github/v02201-signature/part01.b64 \
+            .github/v02201-signature/part02.b64 \
+            .github/v02201-signature/part03.b64 > signature-patch.b64
+          base64 -d signature-patch.b64 > signature-patch.zst
+          echo '64ce2a22883af160984bbb35bec9eda6ccd9f16fc8529d0f2e64616a1ec59ef4  signature-patch.zst' | sha256sum -c -
+          command -v zstd >/dev/null || { sudo apt-get update && sudo apt-get install -y zstd; }
+          zstd -d --patch-from=Lenton-v0.22.01-aligned-unsigned.apk signature-patch.zst -o Lenton-v0.22.01.apk
+          echo 'f3a7a20d8ec66c44400f028528f13a0cab36344559420774d594dd7514851f2e  Lenton-v0.22.01.apk' | sha256sum -c -
+
+      - name: Verify Lenton signing certificate
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, struct
+
+          data=Path('Lenton-v0.22.01.apk').read_bytes()
+          assert hashlib.sha256(data).hexdigest() == 'f3a7a20d8ec66c44400f028528f13a0cab36344559420774d594dd7514851f2e'
+          eocd=data.rfind(b'PK\x05\x06')
+          assert eocd >= 0
+          cd_offset=struct.unpack_from('<4sHHHHIIH',data,eocd)[6]
+          size2=struct.unpack_from('<Q',data,cd_offset-24)[0]
+          assert data[cd_offset-16:cd_offset] == b'APK Sig Block 42'
+          block_start=cd_offset-(size2+8)
+          pairs={}
+          i=block_start+8
+          end=cd_offset-24
+          while i < end:
+              length=struct.unpack_from('<Q',data,i)[0]
+              i += 8
+              pair_id=struct.unpack_from('<I',data,i)[0]
+              pairs[pair_id]=data[i+4:i+length]
+              i += length
+          assert 0x7109871a in pairs
+          def lp32(buf,off):
+              length=struct.unpack_from('<I',buf,off)[0]
+              start=off+4
+              finish=start+length
+              assert finish <= len(buf)
+              return buf[start:finish],finish
+          v2=pairs[0x7109871a]
+          signers,_=lp32(v2,0)
+          signer,_=lp32(signers,0)
+          signed_data,_=lp32(signer,0)
+          _,sd_off=lp32(signed_data,0)
+          certs,_=lp32(signed_data,sd_off)
+          cert,_=lp32(certs,0)
+          cert_sha=hashlib.sha256(cert).hexdigest()
+          expected='fe6fc92cc637bc3fdbd18e98b7c0846b8e489d4c0d0f4e859fc520333f2d8688'
+          assert cert_sha == expected, cert_sha
+          print('certificate matches installed Lenton:', cert_sha)
+          PY
+
+      - name: Publish v0.22.01 updater manifest
+        shell: bash
+        run: |
+          cat > latest.json <<'JSON'
+          {
+            "versionCode": 122,
+            "versionName": "0.22.01",
+            "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.01.apk",
+            "sha256": "f3a7a20d8ec66c44400f028528f13a0cab36344559420774d594dd7514851f2e",
+            "notes": "삼성/Android 15에서 답글창이 키보드 뒤에 가려지던 문제 재수정 · 실제 IME 겹침 높이만큼 답글 패널을 키보드 바로 위로 이동 · 키보드가 내려가면 원래 위치로 자동 복귀 · 기존 업데이트 캐시 수정 및 다른 기능 유지"
+          }
+          JSON
+
+      - name: Commit updater package and clean temporary files
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/deploy-v02201-once.yml
+          git rm -r .github/v02201-signature
+          rm -f unsigned.zip unsigned-sha256.txt Lenton-v0.22.01-aligned-unsigned.apk signature-patch.b64 signature-patch.zst
+          git add Lenton-v0.22.01.apk latest.json
+          git commit -m 'Publish Lenton v0.22.01 updater package'
+          git push
