@@ -1,0 +1,63 @@
+name: Run Lenton v0.22.02 updater deployment
+
+on:
+  push:
+    paths:
+      - '.github/workflows/deploy-v02202-run.yml'
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install zstd
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y zstd
+
+      - name: Download exact v0.22.02 unsigned base
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          curl -fL --retry 3 \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            'https://api.github.com/repos/cptu527/lenton-updates/actions/artifacts/9931010487/zip' \
+            -o unsigned.zip
+          unzip -q unsigned.zip -d unsigned
+          test -f unsigned/Lenton-v0.22.02-aligned-unsigned.apk
+
+      - name: Reconstruct already signed v0.22.02 APK
+        run: |
+          cat .deploy/v02202.part0 .deploy/v02202.part1 .deploy/v02202.part2 .deploy/v02202.part3 > v02202-signature.patch.zst
+          echo '91b663738457e9df3ffa1653d959a22bfc45c937790420f389ada032c2b857d7  v02202-signature.patch.zst' | sha256sum -c -
+          zstd -q -d --patch-from=unsigned/Lenton-v0.22.02-aligned-unsigned.apk v02202-signature.patch.zst -o Lenton-v0.22.02.apk
+          echo '3ca5341ccb5b47dadf207d4e2c94811f555df0ced1027d49d97a91fa2678e9c9  Lenton-v0.22.02.apk' | sha256sum -c -
+
+      - name: Write latest updater metadata
+        run: |
+          cat > latest.json <<'JSON'
+          {
+            "versionCode": 123,
+            "versionName": "0.22.02",
+            "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.02.apk",
+            "sha256": "3ca5341ccb5b47dadf207d4e2c94811f555df0ced1027d49d97a91fa2678e9c9",
+            "notes": "작은 답글창에 확대 버튼 추가 · 확대하면 전체 답글 작성 화면으로 전환 · 작은 답글창에서 작성하던 내용 그대로 이어서 작성 · 기존 기능 및 UI 유지"
+          }
+          JSON
+
+      - name: Publish v0.22.02 and remove temporary deployment files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add Lenton-v0.22.02.apk latest.json
+          git rm .deploy/v02202.part0 .deploy/v02202.part1 .deploy/v02202.part2 .deploy/v02202.part3
+          git rm .github/workflows/deploy-v02202-once.yml .github/workflows/deploy-v02202-run.yml
+          git commit -m 'Deploy Lenton v0.22.02 updater package'
+          git push
