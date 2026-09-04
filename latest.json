@@ -1,7 +1,7 @@
 {
-  "versionCode": 125,
-  "versionName": "0.22.04",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.04.apk",
-  "sha256": "b8b35c24d1a8de2ab7dd05dea61e215d015fa85357ce8caaca941ffa0cb4e97b",
-  "notes": "프로필 게시물이 최근 25개에서 끊기던 문제 수정 · 아래로 내려가면 max_id로 과거 게시물을 계속 불러옴 · 기존 4개 프로필 탭/스와이프/고정 탭/답글 확대/업데이트 기능 유지"
+  "versionCode": 126,
+  "versionName": "0.22.05",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.05.apk",
+  "sha256": "fa2dab98aed7c727f1a119375c24c717c1a84d23227b94c68ccc71355a48bc75",
+  "notes": "설정 메뉴 전체 행 터치와 이동 표시 개선 · 공개 범위/답장 공개 범위/게시글 언어 설명 정리 · 서버 미지원 인용 정책은 변경 불가 상태로 명확히 표시 · 알림 필터 보이기 설정 실제 동작 연결 · 기존 프로필 페이지네이션/답글 확대/키보드/업데이트 기능 유지"
 }
