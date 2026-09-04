@@ -1,7 +1,7 @@
 {
-  "versionCode": 126,
-  "versionName": "0.22.05",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.05.apk",
-  "sha256": "fa2dab98aed7c727f1a119375c24c717c1a84d23227b94c68ccc71355a48bc75",
-  "notes": "설정 메뉴 전체 행 터치와 이동 표시 개선 · 공개 범위/답장 공개 범위/게시글 언어 설명 정리 · 서버 미지원 인용 정책은 변경 불가 상태로 명확히 표시 · 알림 필터 보이기 설정 실제 동작 연결 · 기존 프로필 페이지네이션/답글 확대/키보드/업데이트 기능 유지"
+  "versionCode": 127,
+  "versionName": "0.22.06",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.06.apk",
+  "sha256": "3700631f7161b13b7ccb29fadc6a4faa3afff3f6e39ac5834bf502a6e1da532e",
+  "notes": "계정 설정의 ‘미디어를 항상 민감함으로 표시’와 ‘계정 잠금’을 휴대폰 알림과 같은 스위치로 변경 · 토글 후 화면이 맨 위로 이동하는 현상 제거 · 새 업데이트가 확인되면 사이드 메뉴 ‘앱 업데이트’ 오른쪽에 파란 점 표시 · 기존 설정/프로필 페이지네이션/답글 확대/키보드/업데이트 기능 유지"
 }
