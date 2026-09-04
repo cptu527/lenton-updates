@@ -32,14 +32,15 @@ jobs:
         run: |
           curl -fL --retry 3 'https://github.com/iBotPeaches/Apktool/releases/download/v2.10.0/apktool_2.10.0.jar' -o apktool.jar
 
-      - name: Decode v0.22.00 and apply only v0.22.01 IME correction
+      - name: Decode v0.22.00 and apply v0.22.01 IME correction
         shell: bash
+        env:
+          LISTENER_B64: LmNsYXNzIGZpbmFsIExjb20vbWFzdG9mbG93L2FwcC9MZW50b25SZXBseUltZUluc2V0c0xpc3RlbmVyOwouc3VwZXIgTGphdmEvbGFuZy9PYmplY3Q7Ci5zb3VyY2UgIkxlbnRvblJlcGx5SW1lSW5zZXRzTGlzdGVuZXIuamF2YSIKCiMgaW50ZXJmYWNlcwouaW1wbGVtZW50cyBMYW5kcm9pZC92aWV3L1ZpZXckT25BcHBseVdpbmRvd0luc2V0c0xpc3RlbmVyOwoKCiMgaW5zdGFuY2UgZmllbGRzCi5maWVsZCBwcml2YXRlIGZpbmFsIGFjdGl2aXR5Okxjb20vbWFzdG9mbG93L2FwcC9NYWluQWN0aXZpdHk7CgouZmllbGQgcHJpdmF0ZSBmaW5hbCBiYXNlQm90dG9tOkkKCgojIGRpcmVjdCBtZXRob2RzCi5tZXRob2QgY29uc3RydWN0b3IgPGluaXQ+KExjb20vbWFzdG9mbG93L2FwcC9NYWluQWN0aXZpdHk7SSlWCiAgICAubG9jYWxzIDAKCiAgICBpbnZva2UtZGlyZWN0IHtwMH0sIExqYXZhL2xhbmcvT2JqZWN0Oy0+PGluaXQ+KClWCgogICAgaXB1dC1vYmplY3QgcDEsIHAwLCBMY29tL21hc3RvZmxvdy9hcHAvTGVudG9uUmVwbHlJbWVJbnNldHNMaXN0ZW5lcjstPmFjdGl2aXR5Okxjb20vbWFzdG9mbG93L2FwcC9NYWluQWN0aXZpdHk7CgogICAgaXB1dCBwMiwgcDAsIExjb20vbWFzdG9mbG93L2FwcC9MZW50b25SZXBseUltZUluc2V0c0xpc3RlbmVyOy0+YmFzZUJvdHRvbTpJCgogICAgcmV0dXJuLXZvaWQKLmVuZCBtZXRob2QKCgojIHZpcnR1YWwgbWV0aG9kcwoubWV0aG9kIHB1YmxpYyBvbkFwcGx5V2luZG93SW5zZXRzKExhbmRyb2lkL3ZpZXcvVmlldztMYW5kcm9pZC92aWV3L1dpbmRvd0luc2V0czspTGFuZHJvaWQvdmlldy9XaW5kb3dJbnNldHM7CiAgICAubG9jYWxzIDEyCgogICAgaW52b2tlLXZpcnR1YWwge3AxfSwgTGFuZHJvaWQvdmlldy9WaWV3Oy0+Z2V0TGF5b3V0UGFyYW1zKClMYW5kcm9pZC92aWV3L1ZpZXdHcm91cCRMYXlvdXRQYXJhbXM7CgogICAgbW92ZS1yZXN1bHQtb2JqZWN0IHYwCgogICAgaW5zdGFuY2Utb2YgdjEsIHYwLCBMYW5kcm9pZC93aWRnZXQvTGluZWFyTGF5b3V0JExheW91dFBhcmFtczsKCiAgICBpZi1lcXogdjEsIDpjb25kXzIKCiAgICBjaGVjay1jYXN0IHYwLCBMYW5kcm9pZC93aWRnZXQvTGluZWFyTGF5b3V0JExheW91dFBhcmFtczsKCiAgICBpZ2V0IHYxLCB2MCwgTGFuZHJvaWQvd2lkZ2V0L0xpbmVhckxheW91dCRMYXlvdXRQYXJhbXM7LT5ib3R0b21NYXJnaW46SQoKICAgIGlnZXQgdjIsIHAwLCBMY29tL21hc3RvZmxvdy9hcHAvTGVudG9uUmVwbHlJbWVJbnNldHNMaXN0ZW5lcjstPmJhc2VCb3R0b206SQoKICAgIHN1Yi1pbnQgdjMsIHYxLCB2MgoKICAgIGNvbnN0LzQgdjQsIDB4MAoKICAgIGludm9rZS1zdGF0aWMge3YzLCB2NH0sIExqYXZhL2xhbmcvTWF0aDstPm1heChJSSlJCgogICAgbW92ZS1yZXN1bHQgdjMKCiAgICBtb3ZlIHY1LCB2NAoKICAgIGludm9rZS1zdGF0aWMge30sIExhbmRyb2lkL3ZpZXcvV2luZG93SW5zZXRzJFR5cGU7LT5pbWUoKUkKCiAgICBtb3ZlLXJlc3VsdCB2NgoKICAgIGludm9rZS12aXJ0dWFsIHtwMiwgdjZ9LCBMYW5kcm9pZC92aWV3L1dpbmRvd0luc2V0czstPmlzVmlzaWJsZShJKVoKCiAgICBtb3ZlLXJlc3VsdCB2NgoKICAgIGlmLWVxeiB2NiwgOmNvbmRfMAoKICAgIGludm9rZS1zdGF0aWMge30sIExhbmRyb2lkL3ZpZXcvV2luZG93SW5zZXRzJFR5cGU7LT5pbWUoKUkKCiAgICBtb3ZlLXJlc3VsdCB2NgoKICAgIGludm9rZS12aXJ0dWFsIHtwMiwgdjZ9LCBMYW5kcm9pZC92aWV3L1dpbmRvd0luc2V0czstPmdldEluc2V0cyhJKUxhbmRyb2lkL2dyYXBoaWNzL0luc2V0czsKCiAgICBtb3ZlLXJlc3VsdC1vYmplY3QgdjcKCiAgICBpZ2V0LW9iamVjdCB2OSwgcDAsIExjb20vbWFzdG9mbG93L2FwcC9MZW50b25SZXBseUltZUluc2V0c0xpc3RlbmVyOy0+YWN0aXZpdHk6TGNvbS9tYXN0b2Zsb3cvYXBwL01haW5BY3Rpdml0eTsKCiAgICBpbnZva2UtdmlydHVhbCB7djl9LCBMY29tL21hc3RvZmxvdy9hcHAvTWFpbkFjdGl2aXR5Oy0+Z2V0V2luZG93TWFuYWdlcigpTGFuZHJvaWQvdmlldy9XaW5kb3dNYW5hZ2VyOwoKICAgIG1vdmUtcmVzdWx0LW9iamVjdCB2OQoKICAgIGludm9rZS1pbnRlcmZhY2Uge3Y5fSwgTGFuZHJvaWQvdmlldy9XaW5kb3dNYW5hZ2VyOy0+Z2V0Q3VycmVudFdpbmRvd01ldHJpY3MoKUxhbmRyb2lkL3ZpZXcvV2luZG93TWV0cmljczsKCiAgICBtb3ZlLXJlc3VsdC1vYmplY3QgdjkKCiAgICBpbnZva2UtdmlydHVhbCB7djl9LCBMYW5kcm9pZC92aWV3L1dpbmRvd01ldHJpY3M7LT5nZXRCb3VuZHMoKUxhbmRyb2lkL2dyYXBoaWNzL1JlY3Q7CgogICAgbW92ZS1yZXN1bHQtb2JqZWN0IHY5CgogICAgaW52b2tlLXZpcnR1YWwge3Y5fSwgTGFuZHJvaWQvZ3JhcGhpY3MvUmVjdDstPmhlaWdodCgpSQoKICAgIG1vdmUtcmVzdWx0IHY4CgogICAgY29uc3QvNCB2MTEsIDB4MgoKICAgIG5ldy1hcnJheSB2MTAsIHYxMSwgW0kKCiAgICBpbnZva2UtdmlydHVhbCB7cDEsIHYxMH0sIExhbmRyb2lkL3ZpZXcvVmlldzstPmdldExvY2F0aW9uSW5XaW5kb3coW0kpVgoKICAgIGNvbnN0LzQgdjExLCAweDEKCiAgICBhZ2V0IHYxMCwgdjEwLCB2MTEKCiAgICBpbnZva2UtdmlydHVhbCB7cDF9LCBMYW5kcm9pZC92aWV3L1ZpZXc7LT5nZXRIZWlnaHQoKUkKCiAgICBtb3ZlLXJlc3VsdCB2MTEKCiAgICBhZGQtaW50LzJhZGRyIHYxMCwgdjExCgogICAgYWRkLWludC8yYWRkciB2MTAsIHYzCgogICAgaWdldCB2MTEsIHY3LCBMYW5kcm9pZC9ncmFwaGljcy9JbnNldHM7LT5ib3R0b206SQoKICAgIHN1Yi1pbnQvMmFkZHIgdjgsIHYxMQoKICAgIHN1Yi1pbnQvMmFkZHIgdjEwLCB2OAoKICAgIGludm9rZS1zdGF0aWMge3Y0LCB2MTB9LCBMamF2YS9sYW5nL01hdGg7LT5tYXgoSUkpSQoKICAgIG1vdmUtcmVzdWx0IHY1CgogICAgOmNvbmRfMAogICAgaWdldCB2MiwgcDAsIExjb20vbWFzdG9mbG93L2FwcC9MZW50b25SZXBseUltZUluc2V0c0xpc3RlbmVyOy0+YmFzZUJvdHRvbTpJCgogICAgYWRkLWludC8yYWRkciB2MiwgdjUKCiAgICBpZ2V0IHYxLCB2MCwgTGFuZHJvaWQvd2lkZ2V0L0xpbmVhckxheW91dCRMYXlvdXRQYXJhbXM7LT5ib3R0b21NYXJnaW46SQoKICAgIGlmLWVxIHYxLCB2MiwgOmNvbmRfMQoKICAgIGlwdXQgdjIsIHYwLCBMYW5kcm9pZC93aWRnZXQvTGluZWFyTGF5b3V0JExheW91dFBhcmFtczstPmJvdHRvbU1hcmdpbjpJCgogICAgaW52b2tlLXZpcnR1YWwge3AxLCB2MH0sIExhbmRyb2lkL3ZpZXcvVmlldzstPnNldExheW91dFBhcmFtcyhMYW5kcm9pZC92aWV3L1ZpZXdHcm91cCRMYXlvdXRQYXJhbXM7KVYKCiAgICA6Y29uZF8xCiAgICBpZi1sZXogdjUsIDpjb25kXzIKCiAgICBpbnZva2UtdmlydHVhbCB7cDF9LCBMYW5kcm9pZC92aWV3L1ZpZXc7LT5icmluZ1RvRnJvbnQoKVYKCiAgICA6Y29uZF8yCiAgICByZXR1cm4tb2JqZWN0IHAyCi5lbmQgbWV0aG9kCg==
         run: |
           java -jar apktool.jar d -f Lenton-v0.22.00.apk -o work
           python3 - <<'PY'
           from pathlib import Path
-          import re
-
+          import os,base64
           root=Path('work')
           y=root/'apktool.yml'
           s=y.read_text()
@@ -47,7 +48,6 @@ jobs:
           s=s.replace('apkFileName: Lenton-v0.22.00.apk','apkFileName: Lenton-v0.22.01.apk',1)
           s=s.replace('versionCode: 121','versionCode: 122',1).replace('versionName: 0.22.00','versionName: 0.22.01',1)
           y.write_text(s)
-
           main=root/'smali/com/mastoflow/app/MainActivity.smali'
           s=main.read_text()
           anchor='''    invoke-virtual {v2, v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V\n\n    invoke-direct {p0, v0, p1}, Lcom/mastoflow/app/MainActivity;->renderInlineReplyCompact(Landroid/widget/LinearLayout;Lorg/json/JSONObject;)V'''
@@ -55,99 +55,9 @@ jobs:
           assert anchor in s
           s=s.replace(anchor,replacement,1)
           s=s.replace('Lenton-Updater/0.22.00','Lenton-Updater/0.22.01')
-
-          start=s.find('.method private currentReleaseNotes()Ljava/lang/String;')
-          assert start>=0
-          end=s.find('.end method',start)
-          assert end>start
-          chunk=s[start:end]
-          chunk2=re.sub(r'const-string v0, ".*?"', 'const-string v0, "\\u2022 \\uc0bc\\uc131/Android 15\\uc5d0\\uc11c \\ub2f5\\uae00\\ucc3d\\uc774 \\ud0a4\\ubcf4\\ub4dc \\ub4a4\\uc5d0 \\uac00\\ub824\\uc9c0\\ub358 \\ubb38\\uc81c \\uc7ac\\uc218\\uc815\\n\\u2022 \\uc2e4\\uc81c IME \\uacb9\\uce68 \\ub192\\uc774\\ub9cc\\ud07c \\ub2f5\\uae00 \\ud328\\ub110\\uc744 \\ud0a4\\ubcf4\\ub4dc \\ubc14\\ub85c \\uc704\\ub85c \\uc774\\ub3d9\\n\\u2022 \\ud0a4\\ubcf4\\ub4dc\\uac00 \\ub0b4\\ub824\\uac00\\uba74 \\ub2f5\\uae00 \\ud328\\ub110\\ub3c4 \\uc6d0\\ub798 \\uc704\\uce58\\ub85c \\uc790\\ub3d9 \\ubcf5\\uadc0\\n\\u2022 v0.22.00 \\uc5c5\\ub370\\uc774\\ud2b8 \\uce90\\uc2dc \\uc218\\uc815 \\ubc0f \\uae30\\uc874 \\uae30\\ub2a5 \\uc720\\uc9c0"', chunk, count=1)
-          assert chunk2!=chunk
-          s=s[:start]+chunk2+s[end:]
           main.write_text(s)
-
           listener=root/'smali/com/mastoflow/app/LentonReplyImeInsetsListener.smali'
-          listener.write_text(r'''.class final Lcom/mastoflow/app/LentonReplyImeInsetsListener;
-.super Ljava/lang/Object;
-.source "LentonReplyImeInsetsListener.java"
-
-# interfaces
-.implements Landroid/view/View$OnApplyWindowInsetsListener;
-
-# instance fields
-.field private final activity:Lcom/mastoflow/app/MainActivity;
-.field private final baseBottom:I
-
-# direct methods
-.method constructor <init>(Lcom/mastoflow/app/MainActivity;I)V
-    .locals 0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-    iput-object p1, p0, Lcom/mastoflow/app/LentonReplyImeInsetsListener;->activity:Lcom/mastoflow/app/MainActivity;
-    iput p2, p0, Lcom/mastoflow/app/LentonReplyImeInsetsListener;->baseBottom:I
-    return-void
-.end method
-
-# virtual methods
-.method public onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
-    .locals 12
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-    move-result-object v0
-    instance-of v1, v0, Landroid/widget/LinearLayout$LayoutParams;
-    if-eqz v1, :cond_2
-    check-cast v0, Landroid/widget/LinearLayout$LayoutParams;
-    iget v1, v0, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
-    iget v2, p0, Lcom/mastoflow/app/LentonReplyImeInsetsListener;->baseBottom:I
-    sub-int v3, v1, v2
-    const/4 v4, 0x0
-    invoke-static {v3, v4}, Ljava/lang/Math;->max(II)I
-    move-result v3
-    move v5, v4
-    invoke-static {}, Landroid/view/WindowInsets$Type;->ime()I
-    move-result v6
-    invoke-virtual {p2, v6}, Landroid/view/WindowInsets;->isVisible(I)Z
-    move-result v6
-    if-eqz v6, :cond_0
-    invoke-static {}, Landroid/view/WindowInsets$Type;->ime()I
-    move-result v6
-    invoke-virtual {p2, v6}, Landroid/view/WindowInsets;->getInsets(I)Landroid/graphics/Insets;
-    move-result-object v7
-    iget-object v9, p0, Lcom/mastoflow/app/LentonReplyImeInsetsListener;->activity:Lcom/mastoflow/app/MainActivity;
-    invoke-virtual {v9}, Lcom/mastoflow/app/MainActivity;->getWindowManager()Landroid/view/WindowManager;
-    move-result-object v9
-    invoke-interface {v9}, Landroid/view/WindowManager;->getCurrentWindowMetrics()Landroid/view/WindowMetrics;
-    move-result-object v9
-    invoke-virtual {v9}, Landroid/view/WindowMetrics;->getBounds()Landroid/graphics/Rect;
-    move-result-object v9
-    invoke-virtual {v9}, Landroid/graphics/Rect;->height()I
-    move-result v8
-    const/4 v11, 0x2
-    new-array v10, v11, [I
-    invoke-virtual {p1, v10}, Landroid/view/View;->getLocationInWindow([I)V
-    const/4 v11, 0x1
-    aget v10, v10, v11
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-    move-result v11
-    add-int/2addr v10, v11
-    add-int/2addr v10, v3
-    iget v11, v7, Landroid/graphics/Insets;->bottom:I
-    sub-int/2addr v8, v11
-    sub-int/2addr v10, v8
-    invoke-static {v4, v10}, Ljava/lang/Math;->max(II)I
-    move-result v5
-    :cond_0
-    iget v2, p0, Lcom/mastoflow/app/LentonReplyImeInsetsListener;->baseBottom:I
-    add-int/2addr v2, v5
-    iget v1, v0, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
-    if-eq v1, v2, :cond_1
-    iput v2, v0, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
-    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-    :cond_1
-    if-lez v5, :cond_2
-    invoke-virtual {p1}, Landroid/view/View;->bringToFront()V
-    :cond_2
-    return-object p2
-.end method
-''')
+          listener.write_bytes(base64.b64decode(os.environ['LISTENER_B64']))
           PY
 
       - name: Build and align unsigned APK
