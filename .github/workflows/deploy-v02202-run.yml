@@ -35,7 +35,9 @@ jobs:
 
       - name: Reconstruct already signed v0.22.02 APK
         run: |
-          cat .deploy/v02202.part0 .deploy/v02202.part1 .deploy/v02202.part2 .deploy/v02202.part3 > v02202-signature.patch.zst
+          zstd -q -d .deploy/v02202.part0.z2 -o v02202.part0
+          echo '58d0f2df5ed008ca7b75b02474a774a4317402e5a37138482fcf4d70357818a8  v02202.part0' | sha256sum -c -
+          cat v02202.part0 .deploy/v02202.part1 .deploy/v02202.part2 .deploy/v02202.part3 > v02202-signature.patch.zst
           echo '91b663738457e9df3ffa1653d959a22bfc45c937790420f389ada032c2b857d7  v02202-signature.patch.zst' | sha256sum -c -
           zstd -q -d --patch-from=unsigned/Lenton-v0.22.02-aligned-unsigned.apk v02202-signature.patch.zst -o Lenton-v0.22.02.apk
           echo '3ca5341ccb5b47dadf207d4e2c94811f555df0ced1027d49d97a91fa2678e9c9  Lenton-v0.22.02.apk' | sha256sum -c -
@@ -57,7 +59,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add Lenton-v0.22.02.apk latest.json
-          git rm .deploy/v02202.part0 .deploy/v02202.part1 .deploy/v02202.part2 .deploy/v02202.part3
+          git rm .deploy/v02202.part0 .deploy/v02202.part0.z2 .deploy/v02202.part1 .deploy/v02202.part2 .deploy/v02202.part3
           git rm .github/workflows/deploy-v02202-once.yml .github/workflows/deploy-v02202-run.yml
           git commit -m 'Deploy Lenton v0.22.02 updater package'
           git push
