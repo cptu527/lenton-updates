@@ -1,7 +1,7 @@
 {
   "versionCode": 117,
   "versionName": "0.21.06",
-  "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.21.06/Lenton-v0.21.06.apk",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.21.06.apk",
   "sha256": "89c1e5f498062ab58c8456f7c81d2c02d311a2b14d0e7c70c7d3f58c5118b669",
   "notes": "실시간 연결 상태 표시 설정 아이콘을 설정과 같은 톱니바퀴로 통일 · 이 앱에 관하여 메뉴 제거 · 앱 업데이트 화면에서 현재 버전과 업데이트 내용을 확인 가능 · 새 버전이 있을 때 현재 버전과 새 버전, 변경사항을 함께 표시"
 }
