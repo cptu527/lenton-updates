@@ -1,7 +1,7 @@
 {
-  "versionCode": 119,
-  "versionName": "0.21.08",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.21.08.apk",
-  "sha256": "f0f36cbff3f21a59e85dd0e27e8622455a47c4ee3d2b591200583c82d28c92a0",
-  "notes": "새로 도착한 알림은 파란색 배경으로 표시 · 알림을 열면 일반 배경으로 전환 · v0.21.07 자체 업데이트 설치 안정화 유지"
+  "versionCode": 120,
+  "versionName": "0.21.09",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.21.09.apk",
+  "sha256": "ec1d63c5f03c5f92f8f55963b35949f43aa6d76f33e1909d4cbb01118d3a0e47",
+  "notes": "게시물 답글창 중복 생성 수정 · 답글 입력창이 키보드와 함께 이동 · 답글 대상 표시를 입력 영역 안으로 이동 · v0.21.08 새 알림 파란색 표시 유지"
 }
