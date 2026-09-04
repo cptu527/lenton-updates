@@ -1,0 +1,51 @@
+name: Deploy Lenton v0.22.04 once
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/deploy-v02204-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download exact verified v0.22.04 artifact
+        shell: bash
+        run: |
+          curl -fL --retry 3 'https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-ef9c-8211-b64c-5faa79928b56/raw?se=2026-09-04T11%3A32%3A51Z&sp=r&sv=2026-02-06&sr=b&scid=accb99ab-f97b-500f-b6c5-1284c268530c&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-04T03%3A27%3A10Z&ske=2026-09-05T03%3A27%3A10Z&sks=b&skv=2026-02-06&sig=5gcPMitmcQAgtU7MeqX7BRKqTyGxk9vxfnMG11oitVM%3D' -o v02204.zip
+          echo '4d968d8a2ba23113fe7f476e6afec7f9f62fb38b687eba40d6e978ae247e93fd  v02204.zip' | sha256sum -c -
+          unzip -o v02204.zip Lenton-v0.22.04.apk
+          echo 'b8b35c24d1a8de2ab7dd05dea61e215d015fa85357ce8caaca941ffa0cb4e97b  Lenton-v0.22.04.apk' | sha256sum -c -
+
+      - name: Write updater metadata
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          meta={
+            'versionCode':125,
+            'versionName':'0.22.04',
+            'apkUrl':'https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.04.apk',
+            'sha256':'b8b35c24d1a8de2ab7dd05dea61e215d015fa85357ce8caaca941ffa0cb4e97b',
+            'notes':'프로필 게시물이 최근 25개에서 끊기던 문제 수정 · 아래로 내려가면 max_id로 과거 게시물을 계속 불러옴 · 기존 4개 프로필 탭/스와이프/고정 탭/답글 확대/업데이트 기능 유지'
+          }
+          Path('latest.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+          cat latest.json
+
+      - name: Publish v0.22.04 and remove temporary workflow
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add Lenton-v0.22.04.apk latest.json
+          git rm .github/workflows/deploy-v02204-once.yml
+          git commit -m 'Deploy Lenton v0.22.04 profile pagination'
+          git push
