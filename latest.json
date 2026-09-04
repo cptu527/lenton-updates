@@ -1,7 +1,7 @@
 {
-  "versionCode": 120,
-  "versionName": "0.21.09",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.21.09.apk",
-  "sha256": "ec1d63c5f03c5f92f8f55963b35949f43aa6d76f33e1909d4cbb01118d3a0e47",
-  "notes": "게시물 답글창 중복 생성 수정 · 답글 입력창이 키보드와 함께 이동 · 답글 대상 표시를 입력 영역 안으로 이동 · v0.21.08 새 알림 파란색 표시 유지"
+  "versionCode": 121,
+  "versionName": "0.22.00",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.00.apk",
+  "sha256": "c581991faa5780cb20ea9cb415e7db769e104e95ac68921bd9e12c47ebcf8593",
+  "notes": "답글 입력창이 키보드에 가려지는 문제 수정 · 키보드가 올라오면 답글 패널도 바로 위로 함께 이동 · 업데이트 정보 캐시 문제 수정 · 새 알림 파란색 표시 유지"
 }
