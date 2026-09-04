@@ -1,0 +1,64 @@
+name: Publish exact signed Lenton v0.22.03 hotfix
+
+on:
+  push:
+    branches: [ deploy-v02203-final ]
+    paths:
+      - '.github/workflows/publish-v02203-exact.yml'
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install zstd
+        run: sudo apt-get update -qq && sudo apt-get install -y zstd
+
+      - name: Download exact verified unsigned artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          curl -fL --retry 3 \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            'https://api.github.com/repos/cptu527/lenton-updates/actions/artifacts/9932965898/zip' \
+            -o exact.zip
+          unzip -q exact.zip -d exact
+          test -f exact/Lenton-v0.22.03-aligned.apk
+          echo '36b0031792d144520925894c92c0030c99b6ca57942bd5a56b87bb496c4d617b  exact/Lenton-v0.22.03-aligned.apk' | sha256sum -c -
+
+      - name: Restore exact locally signed APK
+        run: |
+          cat .deploy/v02203.exact0.b64 .deploy/v02203.exact1.b64 .deploy/v02203.exact2.b64 | base64 -d > v02203-exact-signature.patch.zst
+          echo '51fe99d609f4a4d6b35a431dea30df02bbe7d326365b8ddac9f7a2a670979b39  v02203-exact-signature.patch.zst' | sha256sum -c -
+          zstd -q -d --patch-from=exact/Lenton-v0.22.03-aligned.apk v02203-exact-signature.patch.zst -o Lenton-v0.22.03.apk
+          echo 'eae41c8bd9a76126ba5fb26b40a245ab812f301bf51cbab67c7668715f001347  Lenton-v0.22.03.apk' | sha256sum -c -
+
+      - name: Write updater metadata
+        run: |
+          cat > latest.json <<'JSON'
+          {
+            "versionCode": 124,
+            "versionName": "0.22.03",
+            "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.03.apk",
+            "sha256": "eae41c8bd9a76126ba5fb26b40a245ab812f301bf51cbab67c7668715f001347",
+            "notes": "v0.22.02 실행 즉시 종료 문제 수정 · 작은 답글창 확대 버튼과 작성 중 내용 전달 기능 유지 · 기존 UI/키보드/업데이트/알림/DM 기능 변경 없음"
+          }
+          JSON
+
+      - name: Publish hotfix and remove temporary deployment files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add Lenton-v0.22.03.apk latest.json
+          git rm -f .deploy/v02203.exact0.b64 .deploy/v02203.exact1.b64 .deploy/v02203.exact2.b64 || true
+          git rm -f .deploy/v02203.part0 .deploy/v02203.part1 .deploy/v02203.part2 || true
+          git rm -f .github/workflows/deploy-v02203-final.yml .github/workflows/prepare-v02203-exact.yml .github/workflows/publish-v02203-exact.yml || true
+          git commit -m 'Deploy Lenton v0.22.03 startup hotfix'
+          git push
