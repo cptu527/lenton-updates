@@ -1,0 +1,31 @@
+name: Mirror v0.21.06 APK to raw
+
+on:
+  push:
+    paths:
+      - '.github/workflows/mirror-v02106-apk.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download release APK
+        run: |
+          curl -fL --retry 3 --retry-delay 2 \
+            'https://github.com/cptu527/lenton-updates/releases/download/v0.21.06/Lenton-v0.21.06.apk' \
+            -o Lenton-v0.21.06.apk
+      - name: Verify APK SHA-256
+        run: |
+          echo '89c1e5f498062ab58c8456f7c81d2c02d311a2b14d0e7c70c7d3f58c5118b669  Lenton-v0.21.06.apk' | sha256sum -c -
+      - name: Commit mirrored APK
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add Lenton-v0.21.06.apk
+          git diff --cached --quiet && exit 0
+          git commit -m 'Mirror Lenton v0.21.06 APK for updater'
+          git push
