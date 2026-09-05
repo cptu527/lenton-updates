@@ -1,7 +1,7 @@
 {
-  "versionCode": 138,
-  "versionName": "0.22.17",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.17.apk",
-  "sha256": "2db4c604672b7154b3a9e6df70023896cde676af17ff522de45a995a8807b6de",
-  "notes": "퍼블릭 타임라인 요청 실패를 빈 타임라인으로 저장하지 않도록 수정 · 팔로잉 목록 요청 실패도 빈 캐시로 확정하지 않음 · 기존 정상 퍼블릭 캐시와 v0.22.16 기능 유지"
+  "versionCode": 139,
+  "versionName": "0.22.18",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.18.apk",
+  "sha256": "d234b64edbd454d6b994a75f9bbbaddda33bf1c3dcdd8d7c15bbdfa7954459a5",
+  "notes": "퍼블릭 요청이 정상 응답이어도 빈 결과면 기존 정상 퍼블릭 캐시를 지우지 않도록 수정 · 이미 빈 캐시로 덮인 경우 시간순 캐시에서 퍼블릭 게시물을 복구 · 새로고침도 동일 보호 적용 · v0.22.17 및 기존 기능 유지"
 }
