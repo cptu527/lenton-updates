@@ -1,7 +1,7 @@
 {
-  "versionCode": 151,
-  "versionName": "0.22.30",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.30.apk",
-  "sha256": "50f4123cfbaa5b1ef88c867fe4a3b2316b9d38cfe51be7fc08863077edf312b9",
-  "notes": "한 장 사진은 서버의 잘린 미리보기 대신 원본 이미지를 사용 · 원본 이미지 자체 비율로 높이를 자동 조절해 좌우/상하 크롭 제거 · 여러 장 사진 그리드와 v0.22.29 이미지 메모리 최적화 유지 · v0.22.29 이하 기존 기능 유지"
+  "versionCode": 152,
+  "versionName": "0.22.31",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.31.apk",
+  "sha256": "1314a85decf8ac88098da9daf267df0c42f88a6f528385e5ad5f2b97b81710cf",
+  "notes": "모노 강조색을 검정 대신 블루그레이 #58656D로 변경 · 본문과 멘션/탭/버튼 강조를 더 쉽게 구분 · 다른 강조 색상과 v0.22.30 이하 기존 기능 유지"
 }
