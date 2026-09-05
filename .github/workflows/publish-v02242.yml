@@ -1,0 +1,64 @@
+name: Publish Lenton v0.22.42
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/publish-v02242.yml'
+
+permissions:
+  contents: write
+
+env:
+  ARTIFACT_URL_B64: aHR0cHM6Ly9zZG1udHByaW5kaWFzb2NlbnRyYWwub2FpdXNlcmNvbnRlbnQuY29tL2ZpbGVzLzAwMDAwMDAwLTU0NjQtODIxMS04OWVlLWRiNzVjYTU2ZDJlZC9yYXc/c2U9MjAyNi0wOS0wNVQyMCUzQTA4JTNBMTdaJnNwPXImc3Y9MjAyNi0wMi0wNiZzcj1iJnNjaWQ9MzVkNGFkNTQtZTE0OS01ZTNiLWI3MDYtN2YxN2I2ZTkyNTc3JnNrb2lkPTY5ODBhYjFlLWI5OTQtNDY2OC04NGRlLWFkMDQ0NGM5ZDA4YiZza3RpZD1hNDhjY2E1Ni1lNmRhLTQ4NGUtYTgxNC05Yzg0OTY1MmJjYjMmc2t0PTIwMjYtMDktMDRUMjMlM0ExNyUzQTExWiZza2U9MjAyNi0wOS0wNVQyMyUzQTE3JTNBMTFaJnNrcz1iJnNrdj0yMDI2LTAyLTA2JnNpZz1pRWcxUVNONE1IQjcyUUpNRWp5V3Q0eWxIUERoNlBYMDBURUdYdWVsQk9BJTNE
+  EXPECTED_APK_SHA: 8ecff505463c21d04d4befebd3f01493d427173d29decb032ae8d16b76ddaec2
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download verified build artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          ARTIFACT_URL="$(printf '%s' "$ARTIFACT_URL_B64" | base64 -d)"
+          curl -fL --retry 3 --retry-delay 2 "$ARTIFACT_URL" -o /tmp/lenton-v02242.zip
+          rm -rf /tmp/lenton-v02242
+          mkdir -p /tmp/lenton-v02242
+          unzip -q /tmp/lenton-v02242.zip -d /tmp/lenton-v02242
+          test -f /tmp/lenton-v02242/Lenton-v0.22.42.apk
+          cp /tmp/lenton-v02242/Lenton-v0.22.42.apk ./Lenton-v0.22.42.apk
+
+      - name: Verify APK and write UTF-8 update metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          ACTUAL_SHA="$(sha256sum Lenton-v0.22.42.apk | awk '{print $1}')"
+          test "$ACTUAL_SHA" = "$EXPECTED_APK_SHA"
+          python3 - <<'PY'
+          import json
+          data = {
+              "versionCode": 163,
+              "versionName": "0.22.42",
+              "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.42.apk",
+              "sha256": "8ecff505463c21d04d4befebd3f01493d427173d29decb032ae8d16b76ddaec2",
+              "notes": "DM에서 같은 상대의 여러 대화를 답글 관계 기준 타래별로 분리 · 타래 선택 메뉴에서 원하는 대화 흐름만 표시 · 답장 대상은 선택한 타래의 최신 메시지로 유지 · 다른 타래의 실시간 DM이 현재 타래에 섞이지 않도록 처리 · v0.22.41 이하 기존 기능 유지"
+          }
+          with open("latest.json", "w", encoding="utf-8", newline="\n") as f:
+              json.dump(data, f, ensure_ascii=False, indent=2)
+              f.write("\n")
+          PY
+          cat latest.json
+
+      - name: Publish update and remove one-shot workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'lenton-update-bot'
+          git config user.email 'cptu527@gmail.com'
+          git add Lenton-v0.22.42.apk latest.json
+          git rm .github/workflows/publish-v02242.yml
+          git commit -m 'Publish Lenton v0.22.42 DM thread separation update'
+          git push
