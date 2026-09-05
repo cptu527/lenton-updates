@@ -1,7 +1,7 @@
 {
-  "versionCode": 131,
-  "versionName": "0.22.10",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.10.apk",
-  "sha256": "55bacb508444be72eb808a9467357168c8e033eb8b31f2ab570ef3e8d79ce094",
-  "notes": "내 답글에 다시 답할 때 타래의 실제 상대를 계속 답글 대상으로 유지 · 답글 대상 안내를 입력창 안으로 이동 · 전체 답글 작성창에서 GIF/투표 버튼 제거 · CW 버튼으로 실제 콘텐츠 경고 입력 및 spoiler_text 전송 · v0.22.09 기존 기능 유지"
+  "versionCode": 132,
+  "versionName": "0.22.11",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.11.apk",
+  "sha256": "fbcfca304ad109292f12e6c8f0bad577ed055d004a1e1f1a7d7779bc703256ff",
+  "notes": "CW 게시물은 경고 문구만 먼저 표시하고 본문을 숨김 · 영상처럼 테두리 있는 더보기 버튼으로 펼치기 · 펼친 뒤 숨기기로 다시 접기 · v0.22.10 기존 기능 유지"
 }
