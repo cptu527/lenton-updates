@@ -1,0 +1,56 @@
+name: Publish Lenton v0.22.33
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/publish-v02233.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download verified v0.22.33 build artifact
+        env:
+          ARTIFACT_URL_B64: aHR0cHM6Ly9zZG1udHByaW5kaWFzb2NlbnRyYWwub2FpdXNlcmNvbnRlbnQuY29tL2ZpbGVzLzAwMDAwMDAwLTBkODgtODIxMS1hODlkLTNmMDU2NTYyMjJiNy9yYXc/c2U9MjAyNi0wOS0wNVQxMCUzQTI4JTNBNDBaJnNwPXImc3Y9MjAyNi0wMi0wNiZzcj1iJnNjaWQ9MThlZTQzYmMtYTg1NS01YmI1LTkzOWUtNzlhMDRlMjkwNjFkJnNrb2lkPTY5ODBhYjFlLWI5OTQtNDY2OC04NGRlLWFkMDQ0NGM5ZDA4YiZza3RpZD1hNDhjY2E1Ni1lNmRhLTQ4NGUtYTgxNC05Yzg0OTY1MmJjYjMmc2t0PTIwMjYtMDktMDRUMjMlM0EyNiUzQTU5WiZza2U9MjAyNi0wOS0wNVQyMyUzQTI2JTNBNTlaJnNrcz1iJnNrdj0yMDI2LTAyLTA2JnNpZz1KREFuVXVHVzBVYllpRDNoemZKQmZVRnlqN2ZDdllwL21RZzRKJTJCb3oxckUlM0Q=
+        run: |
+          ARTIFACT_URL="$(printf '%s' "$ARTIFACT_URL_B64" | base64 -d)"
+          curl --fail --location --retry 3 "$ARTIFACT_URL" --output /tmp/lenton-v02233.zip
+          rm -rf /tmp/lenton-v02233
+          mkdir -p /tmp/lenton-v02233
+          unzip -o /tmp/lenton-v02233.zip -d /tmp/lenton-v02233
+          test -f /tmp/lenton-v02233/Lenton-v0.22.33.apk
+          cp /tmp/lenton-v02233/Lenton-v0.22.33.apk ./Lenton-v0.22.33.apk
+
+      - name: Verify APK and write updater metadata
+        shell: python
+        run: |
+          from pathlib import Path
+          import hashlib, json
+          apk = Path('Lenton-v0.22.33.apk')
+          digest = hashlib.sha256(apk.read_bytes()).hexdigest()
+          expected = 'd2e11ce593e3ab29251b7e9c79363864bb1293ecdc9adc67d59a165ba13a4504'
+          assert digest == expected, (digest, expected)
+          meta = {
+              'versionCode': 154,
+              'versionName': '0.22.33',
+              'apkUrl': 'https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.33.apk',
+              'sha256': digest,
+              'notes': '작성자 이름은 조금 더 선명하게, 아이디·시간은 한 단계 작게 표시 · 멘션·해시태그·링크를 실제 Bold로 표시 · 답글 대상 문구를 더 작고 옅게 조정 · 게시물 구분선을 살짝 선명하게 정돈 · v0.22.32 이하 기존 기능 유지'
+          }
+          Path('latest.json').write_text(json.dumps(meta, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print('verified apk sha256:', digest)
+
+      - name: Publish update and remove temporary workflow
+        run: |
+          git config user.name 'lenton-update-bot'
+          git config user.email 'lenton-update-bot@users.noreply.github.com'
+          git add Lenton-v0.22.33.apk latest.json
+          git rm .github/workflows/publish-v02233.yml
+          git commit -m 'Publish Lenton v0.22.33 update'
+          git push
