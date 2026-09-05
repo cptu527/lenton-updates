@@ -1,7 +1,7 @@
 {
-  "versionCode": 140,
-  "versionName": "0.22.19",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.19.apk",
-  "sha256": "6c1028d55d1cfef84273c052cef5b3b69c8fed224e4846e4b33343505ffce208",
-  "notes": "퍼블릭을 인증된 홈 타임라인 중심으로 구성해 빈 결과 문제를 줄임 · 시간순 캐시에서 퍼블릭을 즉시 만들어 먼저 표시해 로딩 체감 개선 · 초기 퍼블릭 깊은 탐색에서 글로벌 퍼블릭 반복 요청을 제거해 요청 수와 대기시간 감소 · 기존 기능 유지"
+  "versionCode": 141,
+  "versionName": "0.22.20",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.20.apk",
+  "sha256": "28643d5d4bc29796302aae5482a62990ca34df009bd2f1a05521e82075b166bd",
+  "notes": "이미지 로딩을 Glide 캐시로 통합해 스크롤·화면 렉과 API 스레드 경합 감소 · 홈 RecyclerView의 전체 JSON 직렬화와 불필요한 전체 재바인딩 제거 · 첨부 미디어를 임시파일 복사 없이 스트리밍하고 최대 2개 병렬 업로드 · 업로드 전용 스레드와 재사용 HTTP 연결 적용 · 기존 기능 유지"
 }
