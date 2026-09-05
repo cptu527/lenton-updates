@@ -1,7 +1,7 @@
 {
-  "versionCode": 136,
-  "versionName": "0.22.15",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.15.apk",
-  "sha256": "2184c256fcb0456d3a7065a53cec2cb65ecc9ca2aacb78e893eb421987e87375",
-  "notes": "게시물이 적어 홈이 화면을 채우지 못할 때 이전 게시물을 자동으로 이어서 불러옴 · 기존 스크롤 페이지네이션/429 대기/API 과호출 방지 유지 · v0.22.14 기존 기능 유지"
+  "versionCode": 137,
+  "versionName": "0.22.16",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.16.apk",
+  "sha256": "ee744f278e820ed20a0331d9d040999417aa49f3d999e08d5529ba01097eb3fc",
+  "notes": "DM에서 같은 사람이 연속으로 보낸 메시지는 첫 말풍선에만 프로필 인장을 표시하고 이후 말풍선은 같은 위치로 정렬 · 연속 말풍선 간격을 더 촘촘하게 조정"
 }
