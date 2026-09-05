@@ -1,0 +1,59 @@
+name: Publish Lenton v0.22.32
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/publish-v02232.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download verified build artifact
+        env:
+          ARTIFACT_URL_B64: aHR0cHM6Ly9zZG1udHByaW5kaWFzb2NlbnRyYWwub2FpdXNlcmNvbnRlbnQuY29tL2ZpbGVzLzAwMDAwMDAwLWJiYjgtODIxMS04MzAyLTJlZWRkZDlhNjdhYi9yYXc/c2U9MjAyNi0wOS0wNVQwOSUzQTIwJTNBNDJaJnNwPXImc3Y9MjAyNi0wMi0wNiZzcj1iJnNjaWQ9MzdhY2I3MmEtNmE0YS01YmQ4LTllNjItNzgwNGQ5ODAxYjhhJnNrb2lkPTY5ODBhYjFlLWI5OTQtNDY2OC04NGRlLWFkMDQ0NGM5ZDA4YiZza3RpZD1hNDhjY2E1Ni1lNmRhLTQ4NGUtYTgxNC05Yzg0OTY1MmJjYjMmc2t0PTIwMjYtMDktMDVUMDAlM0E0NiUzQTQ1WiZza2U9MjAyNi0wOS0wNlQwMCUzQTQ2JTNBNDVaJnNrcz1iJnNrdj0yMDI2LTAyLTA2JnNpZz1wVHFRc1hYY2RPVXR3VlIxQmMyV2ppSUltdjZzZmRUS0Zhek05aGQ1c1ZnJTNE
+        run: |
+          ARTIFACT_URL="$(printf '%s' "$ARTIFACT_URL_B64" | base64 -d)"
+          curl --fail --location --retry 3 "$ARTIFACT_URL" --output /tmp/lenton-v02232.zip
+          rm -rf /tmp/lenton-v02232
+          mkdir -p /tmp/lenton-v02232
+          unzip -o /tmp/lenton-v02232.zip -d /tmp/lenton-v02232
+          test -f /tmp/lenton-v02232/Lenton-v0.22.32.apk
+          cp /tmp/lenton-v02232/Lenton-v0.22.32.apk ./Lenton-v0.22.32.apk
+
+      - name: Verify APK hash and publish metadata
+        shell: python
+        run: |
+          from pathlib import Path
+          import hashlib, json
+          apk=Path('Lenton-v0.22.32.apk')
+          digest=hashlib.sha256(apk.read_bytes()).hexdigest()
+          expected='a1f1e290519373093427f6c15d415a79cb15a22250336de973f68f24c92a38a4'
+          assert digest==expected,(digest,expected)
+          meta={
+              'versionCode':153,
+              'versionName':'0.22.32',
+              'apkUrl':'https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.32.apk',
+              'sha256':digest,
+              'notes':'멘션·해시태그·링크 강조 글자를 살짝 더 두껍게 표시 · 일반 본문 글자 굵기는 그대로 유지 · 모노 블루그레이와 v0.22.31 이하 기존 기능 유지'
+          }
+          Path('latest.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print('published sha256:',digest)
+
+      - name: Commit app update files
+        run: |
+          git config user.name 'lenton-update-bot'
+          git config user.email 'lenton-update-bot@users.noreply.github.com'
+          git add Lenton-v0.22.32.apk latest.json
+          if git diff --cached --quiet; then
+            echo 'Update files already published.'
+            exit 0
+          fi
+          git commit -m 'Publish Lenton v0.22.32 update'
+          git push
