@@ -1,0 +1,48 @@
+name: Deploy Lenton v0.22.39
+
+on:
+  push:
+    branches: [ deploy/v02239-stabilization ]
+    paths: [ '.github/workflows/deploy-v02239-stabilization.yml' ]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download verified stabilization artifact
+        env:
+          ARTIFACT_URL: 'https://sdmntprkoreacentral.oaiusercontent.com/files/00000000-6e58-8206-9979-8b957bf1019c/raw?se=2026-09-05T18%3A02%3A46Z&sp=r&sv=2026-02-06&sr=b&scid=c9b4e07d-34e6-5359-99a5-59b1236772ec&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-04T23%3A22%3A12Z&ske=2026-09-05T23%3A22%3A12Z&sks=b&skv=2026-02-06&sig=tXlhdVzzEkjA6YH09wbuWVngEL759uV0P8ro0VpanIA%3D'
+        run: |
+          mkdir -p /tmp/lenton-v02239
+          curl --fail --location "$ARTIFACT_URL" -o /tmp/lenton-v02239/artifact.zip
+          unzip -o /tmp/lenton-v02239/artifact.zip -d /tmp/lenton-v02239/out
+          test -f /tmp/lenton-v02239/out/Lenton-v0.22.39.apk
+          echo '394a9c7906691deb693c9bd600199a53076a4cc0903c6bfeab364a18c4965013  /tmp/lenton-v02239/out/Lenton-v0.22.39.apk' | sha256sum -c -
+
+      - name: Publish APK and update metadata atomically
+        run: |
+          git fetch origin main
+          git checkout main
+          cp /tmp/lenton-v02239/out/Lenton-v0.22.39.apk ./Lenton-v0.22.39.apk
+          cat > latest.json <<'EOF'
+          {
+            "versionCode": 160,
+            "versionName": "0.22.39",
+            "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.39.apk",
+            "sha256": "394a9c7906691deb693c9bd600199a53076a4cc0903c6bfeab364a18c4965013",
+            "notes": "배포 전 안정화: 퍼블릭 탭 캐시를 현재 규칙으로 다시 검증해 내 글·답글·부스트가 잘못 섞이는 현상을 방지하고 최신순으로 정리합니다. 오래된 오염 캐시는 자동 정리하며 v0.22.38까지의 기존 기능을 유지합니다."
+          }
+          EOF
+          git config user.name 'lenton-update-bot'
+          git config user.email 'lenton-update-bot@users.noreply.github.com'
+          git add Lenton-v0.22.39.apk latest.json
+          git diff --cached --exit-code && exit 1 || true
+          git commit -m 'Publish Lenton v0.22.39 stabilization update'
+          git push origin main
