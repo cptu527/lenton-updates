@@ -1,7 +1,7 @@
 {
-  "versionCode": 139,
-  "versionName": "0.22.18",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.18.apk",
-  "sha256": "d234b64edbd454d6b994a75f9bbbaddda33bf1c3dcdd8d7c15bbdfa7954459a5",
-  "notes": "퍼블릭 요청이 정상 응답이어도 빈 결과면 기존 정상 퍼블릭 캐시를 지우지 않도록 수정 · 이미 빈 캐시로 덮인 경우 시간순 캐시에서 퍼블릭 게시물을 복구 · 새로고침도 동일 보호 적용 · v0.22.17 및 기존 기능 유지"
+  "versionCode": 140,
+  "versionName": "0.22.19",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.19.apk",
+  "sha256": "6c1028d55d1cfef84273c052cef5b3b69c8fed224e4846e4b33343505ffce208",
+  "notes": "퍼블릭을 인증된 홈 타임라인 중심으로 구성해 빈 결과 문제를 줄임 · 시간순 캐시에서 퍼블릭을 즉시 만들어 먼저 표시해 로딩 체감 개선 · 초기 퍼블릭 깊은 탐색에서 글로벌 퍼블릭 반복 요청을 제거해 요청 수와 대기시간 감소 · 기존 기능 유지"
 }
