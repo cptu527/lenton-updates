@@ -1,7 +1,7 @@
 {
-  "versionCode": 133,
-  "versionName": "0.22.12",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.12.apk",
-  "sha256": "461c72848c7ca1d5438b1129f7f78fc1b82aef05335f19fec8faba6ae6d5f906",
-  "notes": "CW 제목 입력칸을 본문 위로 이동 · 홈 화면에서 CW 더보기를 누르면 상세로 이동하지 않고 본문을 바로 펼침 · 펼친 뒤 숨기기로 다시 접기 유지 · v0.22.11 기존 기능 유지"
+  "versionCode": 134,
+  "versionName": "0.22.13",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.13.apk",
+  "sha256": "8dd7b926f67c905fb327cd160aefb14fcf7768e104bcf25dcffb35e38a8259d4",
+  "notes": "홈 새로고침 시 서버 목록을 다시 받아 삭제된 게시물까지 반영 · 내 게시물 삭제 성공 즉시 홈 목록/캐시에서도 제거 · 상세에서 삭제 후 돌아와도 재등장하지 않음 · v0.22.12 기존 기능 유지"
 }
