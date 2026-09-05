@@ -1,0 +1,57 @@
+name: Deploy Lenton v0.22.15 Home Autofill
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/deploy-v02215-home-autofill.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Download verified v0.22.15 artifact
+        env:
+          ARTIFACT_URL: 'https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-4480-8211-bb5c-2b73088c99f8/raw?se=2026-09-05T03%3A25%3A30Z&sp=r&sv=2026-02-06&sr=b&scid=b4ed22b8-8088-5ea8-a2a5-0f4290852dde&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-04T23%3A55%3A48Z&ske=2026-09-05T23%3A55%3A48Z&sks=b&skv=2026-02-06&sig=Lx6U2kuzlx5AH2fEb8aatRbti1R/bp7IfiJO73rIVGc%3D'
+        run: |
+          set -euo pipefail
+          curl -fL --retry 3 "$ARTIFACT_URL" -o artifact.zip
+          rm -rf artifact-unpack
+          mkdir artifact-unpack
+          unzip -q artifact.zip -d artifact-unpack
+          test -f artifact-unpack/Lenton-v0.22.15.apk
+          echo '2184c256fcb0456d3a7065a53cec2cb65ecc9ca2aacb78e893eb421987e87375  artifact-unpack/Lenton-v0.22.15.apk' | sha256sum -c -
+          cp artifact-unpack/Lenton-v0.22.15.apk ./Lenton-v0.22.15.apk
+      - name: Write updater metadata
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          meta = {
+              "versionCode": 136,
+              "versionName": "0.22.15",
+              "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.15.apk",
+              "sha256": "2184c256fcb0456d3a7065a53cec2cb65ecc9ca2aacb78e893eb421987e87375",
+              "notes": "게시물이 적어 홈이 화면을 채우지 못할 때 이전 게시물을 자동으로 이어서 불러옴 · 기존 스크롤 페이지네이션/429 대기/API 과호출 방지 유지 · v0.22.14 기존 기능 유지"
+          }
+          Path('latest.json').write_text(json.dumps(meta, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+          PY
+          cat latest.json
+      - name: Commit updater release
+        run: |
+          set -euo pipefail
+          git config user.name 'Lenton Build'
+          git config user.email 'actions@users.noreply.github.com'
+          git add Lenton-v0.22.15.apk latest.json
+          if git diff --cached --quiet; then
+            echo 'Updater files already current'
+            exit 0
+          fi
+          git commit -m 'Deploy Lenton v0.22.15'
+          git push origin HEAD:main
