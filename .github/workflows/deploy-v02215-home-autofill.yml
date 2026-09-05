@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 1
       - name: Download verified v0.22.15 artifact
         env:
-          ARTIFACT_URL: 'https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-4480-8211-bb5c-2b73088c99f8/raw?se=2026-09-05T03%3A25%3A30Z&sp=r&sv=2026-02-06&sr=b&scid=b4ed22b8-8088-5ea8-a2a5-0f4290852dde&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-04T23%3A55%3A48Z&ske=2026-09-05T23%3A55%3A48Z&sks=b&skv=2026-02-06&sig=Lx6U2kuzlx5AH2fEb8aatRbti1R/bp7IfiJO73rIVGc%3D'
+          ARTIFACT_URL: 'https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-4960-8211-a20b-3979b7ea10e9/raw?se=2026-09-05T03%3A36%3A44Z&sp=r&sv=2026-02-06&sr=b&scid=b6315a16-0a88-5ff5-b279-22eec6c619f4&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-05T02%3A20%3A36Z&ske=2026-09-06T02%3A20%3A36Z&sks=b&skv=2026-02-06&sig=26T2Klcol1wD204nTJgCav69dWaHqo5tjwls0hlZ9yg%3D'
         run: |
           set -euo pipefail
           curl -fL --retry 3 "$ARTIFACT_URL" -o artifact.zip
