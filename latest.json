@@ -1,7 +1,7 @@
 {
-  "versionCode": 144,
-  "versionName": "0.22.23",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.23.apk",
-  "sha256": "aa3c14a14380348abef520322a96a4e4f1bcdb20c40f4260cd5a20a1002ed2ba",
-  "notes": "프로필의 계정 ID에 서버 도메인을 함께 표시(@아이디@서버) · 사이드 메뉴 현재 계정과 계정 전환 목록에도 서버 표시 · 원격 계정은 기존 도메인을 중복 추가하지 않음 · v0.22.22 인앱 로그인 및 기존 기능 유지"
+  "versionCode": 145,
+  "versionName": "0.22.24",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.24.apk",
+  "sha256": "9a3ce4a06b2b0328828f28ae30d066ca70efd2c747070940652b644ca08191b2",
+  "notes": "검정 테마에서 @멘션 태그를 살짝 두껍게 표시해 가독성 개선 · 라이트 테마와 일반 링크 굵기는 그대로 유지 · v0.22.23 서버 도메인 표시 및 기존 기능 유지"
 }
