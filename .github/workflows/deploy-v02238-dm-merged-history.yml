@@ -1,0 +1,46 @@
+name: Deploy Lenton v0.22.38
+
+on:
+  push:
+    branches: [ deploy/v02238-dm-merged-history ]
+    paths: [ '.github/workflows/deploy-v02238-dm-merged-history.yml' ]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Download verified build artifact
+        env:
+          ARTIFACT_URL: 'https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-9d94-8211-802f-76e030760f71/raw?se=2026-09-05T15%3A49%3A12Z&sp=r&sv=2026-02-06&sr=b&scid=c3f2fe99-fd33-5e70-9fe4-4cbc8d8c5d31&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-05T01%3A32%3A59Z&ske=2026-09-06T01%3A32%3A59Z&sks=b&skv=2026-02-06&sig=E/Z4P7BbcnkC7VoxKG%2BXnLwOO73jnromK09XlEfTdIQ%3D'
+        run: |
+          mkdir -p /tmp/lenton-v02238
+          curl --fail --location "$ARTIFACT_URL" -o /tmp/lenton-v02238/artifact.zip
+          unzip -o /tmp/lenton-v02238/artifact.zip -d /tmp/lenton-v02238/out
+          test -f /tmp/lenton-v02238/out/Lenton-v0.22.38.apk
+          echo 'a8daafdb3ded57efcff88f4c4fdc796c57393f8aa35b09c7a5a5752b5f7922dd  /tmp/lenton-v02238/out/Lenton-v0.22.38.apk' | sha256sum -c -
+      - name: Publish APK and update metadata atomically
+        run: |
+          git fetch origin main
+          git checkout main
+          cp /tmp/lenton-v02238/out/Lenton-v0.22.38.apk ./Lenton-v0.22.38.apk
+          cat > latest.json <<'EOF'
+          {
+            "versionCode": 159,
+            "versionName": "0.22.38",
+            "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.38.apk",
+            "sha256": "a8daafdb3ded57efcff88f4c4fdc796c57393f8aa35b09c7a5a5752b5f7922dd",
+            "notes": "같은 상대와 여러 개로 나뉜 Mastodon DM 대화를 한 채팅방에 합쳐 이전 대화까지 표시합니다. 동일 참여자 대화만 합치고 중복 메시지는 제거해 시간순으로 보여줍니다. 기존 DM 실시간 수신·전송·참여자·미디어 기능과 이전 기능은 유지됩니다."
+          }
+          EOF
+          git config user.name 'lenton-update-bot'
+          git config user.email 'lenton-update-bot@users.noreply.github.com'
+          git add Lenton-v0.22.38.apk latest.json
+          git diff --cached --exit-code && exit 1 || true
+          git commit -m 'Publish Lenton v0.22.38 update'
+          git push origin main
