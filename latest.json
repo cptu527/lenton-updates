@@ -1,7 +1,7 @@
 {
-  "versionCode": 142,
-  "versionName": "0.22.21",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.21.apk",
-  "sha256": "07ae5f3badee9ba54acd0349c47e56d80f27fc16aed9c1e95ce7669a6f11ef83",
-  "notes": "답글 작성에서 +로 여러 게시물을 이어 쓸 때 첫 답글의 상대/멘션 대상을 모든 후속 게시물에 그대로 유지 · 내 계정은 기존 replyPrefix 규칙대로 제외 · 후속 글은 직전 글에 답글로 이어지는 기존 타래 구조 유지 · v0.22.20 성능 최적화와 기존 기능 유지"
+  "versionCode": 143,
+  "versionName": "0.22.22",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.22.apk",
+  "sha256": "3d5e219d844d98529c66aa6f776a16a2ac9909554fb6cec8fb77dfe78e8084d1",
+  "notes": "첫 로그인과 계정 추가의 Mastodon OAuth 화면을 외부 브라우저 대신 렌톤 내부 WebView에서 진행 · 기존 OAuth scope/redirect/token 저장/다중 계정 전환 유지 · 로그인 완료 후 자동으로 렌톤 복귀 · v0.22.21 이하 기존 기능 유지"
 }
