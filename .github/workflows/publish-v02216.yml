@@ -1,0 +1,57 @@
+name: Publish Lenton v0.22.16
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/publish-v02216.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download verified build artifact
+        run: |
+          curl --fail --location --retry 3 \
+            'https://sdmntprcentralindia.oaiusercontent.com/files/00000000-4f58-8208-9270-cba311febb36/raw?se=2026-09-05T03%3A58%3A14Z&sp=r&sv=2026-02-06&sr=b&scid=c2805772-b5a7-515c-9b44-2aa337b0786b&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-05T00%3A46%3A38Z&ske=2026-09-06T00%3A46%3A38Z&sks=b&skv=2026-02-06&sig=kfbzjNK6rB5vPjIYHfraualQJiv8lKSc4GyHVU2crUI%3D' \
+            --output /tmp/lenton-v02216.zip
+          mkdir -p /tmp/lenton-v02216
+          unzip -o /tmp/lenton-v02216.zip -d /tmp/lenton-v02216
+          test -f /tmp/lenton-v02216/Lenton-v0.22.16.apk
+          cp /tmp/lenton-v02216/Lenton-v0.22.16.apk ./Lenton-v0.22.16.apk
+
+      - name: Verify APK hash and publish metadata
+        shell: python
+        run: |
+          from pathlib import Path
+          import hashlib, json
+          apk = Path('Lenton-v0.22.16.apk')
+          digest = hashlib.sha256(apk.read_bytes()).hexdigest()
+          expected = 'ee744f278e820ed20a0331d9d040999417aa49f3d999e08d5529ba01097eb3fc'
+          assert digest == expected, (digest, expected)
+          meta = {
+              'versionCode': 137,
+              'versionName': '0.22.16',
+              'apkUrl': 'https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.16.apk',
+              'sha256': digest,
+              'notes': 'DM에서 같은 사람이 연속으로 보낸 메시지는 첫 말풍선에만 프로필 인장을 표시하고 이후 말풍선은 같은 위치로 정렬 · 연속 말풍선 간격을 더 촘촘하게 조정'
+          }
+          Path('latest.json').write_text(json.dumps(meta, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print('published sha256:', digest)
+
+      - name: Commit app update files
+        run: |
+          git config user.name 'lenton-update-bot'
+          git config user.email 'lenton-update-bot@users.noreply.github.com'
+          git add Lenton-v0.22.16.apk latest.json
+          if git diff --cached --quiet; then
+            echo 'Update files already published.'
+            exit 0
+          fi
+          git commit -m 'Publish Lenton v0.22.16 update'
+          git push
