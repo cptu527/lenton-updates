@@ -1,7 +1,7 @@
 {
-  "versionCode": 150,
-  "versionName": "0.22.29",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.29.apk",
-  "sha256": "9d916e4c8165c8cf6b03de97fc9c658872485371f26c36be09d32ac88554bbfd",
-  "notes": "한 장 첨부 사진을 확대 크롭하지 않고 전체 비율에 맞춰 표시 · 타임라인 미디어를 실제 표시 크기에 맞춰 디코딩해 메모리/GC 부담 감소 · 프로필 헤더와 알림 썸네일의 과도한 원본 디코딩 방지 · v0.22.28 이하 기존 기능 유지"
+  "versionCode": 151,
+  "versionName": "0.22.30",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.30.apk",
+  "sha256": "50f4123cfbaa5b1ef88c867fe4a3b2316b9d38cfe51be7fc08863077edf312b9",
+  "notes": "한 장 사진은 서버의 잘린 미리보기 대신 원본 이미지를 사용 · 원본 이미지 자체 비율로 높이를 자동 조절해 좌우/상하 크롭 제거 · 여러 장 사진 그리드와 v0.22.29 이미지 메모리 최적화 유지 · v0.22.29 이하 기존 기능 유지"
 }
