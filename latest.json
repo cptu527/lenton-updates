@@ -1,7 +1,7 @@
 {
-  "versionCode": 132,
-  "versionName": "0.22.11",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.11.apk",
-  "sha256": "fbcfca304ad109292f12e6c8f0bad577ed055d004a1e1f1a7d7779bc703256ff",
-  "notes": "CW 게시물은 경고 문구만 먼저 표시하고 본문을 숨김 · 영상처럼 테두리 있는 더보기 버튼으로 펼치기 · 펼친 뒤 숨기기로 다시 접기 · v0.22.10 기존 기능 유지"
+  "versionCode": 133,
+  "versionName": "0.22.12",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.12.apk",
+  "sha256": "461c72848c7ca1d5438b1129f7f78fc1b82aef05335f19fec8faba6ae6d5f906",
+  "notes": "CW 제목 입력칸을 본문 위로 이동 · 홈 화면에서 CW 더보기를 누르면 상세로 이동하지 않고 본문을 바로 펼침 · 펼친 뒤 숨기기로 다시 접기 유지 · v0.22.11 기존 기능 유지"
 }
