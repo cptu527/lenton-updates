@@ -1,0 +1,58 @@
+name: Publish Lenton v0.22.26
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/publish-v02226.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download verified build artifact
+        run: |
+          curl --fail --location --retry 3 \
+            'https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-c50c-8211-8e4b-b48e7415c763/raw?se=2026-09-05T07%3A16%3A27Z&sp=r&sv=2026-02-06&sr=b&scid=60fab049-846e-5596-b666-1a3df403e774&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-05T06%3A12%3A18Z&ske=2026-09-06T06%3A12%3A18Z&sks=b&skv=2026-02-06&sig=OJglrbO%2Bav1rL22ovkMLFEm6JbPr0mTmtEDwIGkfWBE%3D' \
+            --output /tmp/lenton-v02226.zip
+          rm -rf /tmp/lenton-v02226
+          mkdir -p /tmp/lenton-v02226
+          unzip -o /tmp/lenton-v02226.zip -d /tmp/lenton-v02226
+          test -f /tmp/lenton-v02226/Lenton-v0.22.26.apk
+          cp /tmp/lenton-v02226/Lenton-v0.22.26.apk ./Lenton-v0.22.26.apk
+
+      - name: Verify APK hash and publish metadata
+        shell: python
+        run: |
+          from pathlib import Path
+          import hashlib, json
+          apk=Path('Lenton-v0.22.26.apk')
+          digest=hashlib.sha256(apk.read_bytes()).hexdigest()
+          expected='42e0c6224f4c2af4325835d3f91ab8923230fc364877552327ce1ba017542e0b'
+          assert digest==expected,(digest,expected)
+          meta={
+              'versionCode':147,
+              'versionName':'0.22.26',
+              'apkUrl':'https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.26.apk',
+              'sha256':digest,
+              'notes':'게시물 더보기(⋮) 터치 영역 확대 및 게시물 본문 클릭과 분리 · 더보기는 메뉴만 열고 게시물 본문으로 진입하지 않도록 수정 · 좋아요 숫자를 눌러 좋아요한 계정 목록 확인 및 프로필 이동 · v0.22.25 포함 기존 기능 유지'
+          }
+          Path('latest.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print('published sha256:',digest)
+
+      - name: Commit app update files
+        run: |
+          git config user.name 'lenton-update-bot'
+          git config user.email 'lenton-update-bot@users.noreply.github.com'
+          git add Lenton-v0.22.26.apk latest.json
+          if git diff --cached --quiet; then
+            echo 'Update files already published.'
+            exit 0
+          fi
+          git commit -m 'Publish Lenton v0.22.26 update'
+          git push
