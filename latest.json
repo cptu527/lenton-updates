@@ -1,7 +1,7 @@
 {
-  "versionCode": 160,
-  "versionName": "0.22.39",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.39.apk",
-  "sha256": "394a9c7906691deb693c9bd600199a53076a4cc0903c6bfeab364a18c4965013",
-  "notes": "배포 전 안정화: 퍼블릭 탭 캐시를 현재 규칙으로 다시 검증해 내 글·답글·부스트가 잘못 섞이는 현상을 방지하고 최신순으로 정리합니다. 오래된 오염 캐시는 자동 정리하며 v0.22.38까지의 기존 기능을 유지합니다."
+  "versionCode": 161,
+  "versionName": "0.22.40",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.40.apk",
+  "sha256": "bc5fba555d4119d3c6f7467144bd602420941ee87e2ff44bffa0738c07201ec8",
+  "notes": "앱 업데이트 화면에 문제 신고하기 메뉴 추가 · 렌톤 내부에서 문의 유형/발생 화면/제목/내용/재현 방법 작성 · 선택한 스크린샷 최대 3장 첨부 · 앱/Android/기기/서버/테마/강조색 진단정보를 민감정보 없이 포함해 cptu527@gmail.com으로 이메일 작성 · v0.22.39 안정화와 기존 기능 유지"
 }
