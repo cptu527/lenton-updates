@@ -1,7 +1,7 @@
 {
-  "versionCode": 134,
-  "versionName": "0.22.13",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.13.apk",
-  "sha256": "8dd7b926f67c905fb327cd160aefb14fcf7768e104bcf25dcffb35e38a8259d4",
-  "notes": "홈 새로고침 시 서버 목록을 다시 받아 삭제된 게시물까지 반영 · 내 게시물 삭제 성공 즉시 홈 목록/캐시에서도 제거 · 상세에서 삭제 후 돌아와도 재등장하지 않음 · v0.22.12 기존 기능 유지"
+  "versionCode": 135,
+  "versionName": "0.22.14",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.14.apk",
+  "sha256": "90d96f2e67d32d9e45a654c66196844c53adc38a2c416cc960d9f2865c65a1c7",
+  "notes": "API 요청 중복 방지 · 429 서버 대기시간 정확히 준수 · 실시간 알림 중복 폴링 제거 · 홈/배지 새로고침 과호출 완화 · v0.22.13 기존 기능 유지"
 }
