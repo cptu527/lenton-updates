@@ -1,7 +1,7 @@
 {
-  "versionCode": 137,
-  "versionName": "0.22.16",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.16.apk",
-  "sha256": "ee744f278e820ed20a0331d9d040999417aa49f3d999e08d5529ba01097eb3fc",
-  "notes": "DM에서 같은 사람이 연속으로 보낸 메시지는 첫 말풍선에만 프로필 인장을 표시하고 이후 말풍선은 같은 위치로 정렬 · 연속 말풍선 간격을 더 촘촘하게 조정"
+  "versionCode": 138,
+  "versionName": "0.22.17",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.17.apk",
+  "sha256": "2db4c604672b7154b3a9e6df70023896cde676af17ff522de45a995a8807b6de",
+  "notes": "퍼블릭 타임라인 요청 실패를 빈 타임라인으로 저장하지 않도록 수정 · 팔로잉 목록 요청 실패도 빈 캐시로 확정하지 않음 · 기존 정상 퍼블릭 캐시와 v0.22.16 기능 유지"
 }
