@@ -1,0 +1,46 @@
+name: Deploy Lenton v0.22.37
+
+on:
+  push:
+    branches: [ deploy/v02237-detail-favourite-participants ]
+    paths: [ '.github/workflows/deploy-v02237-detail-favourite-participants.yml' ]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Download verified build artifact
+        env:
+          ARTIFACT_URL: 'https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-2ce4-8211-87b0-6de5617e6a95/raw?se=2026-09-05T15%3A07%3A38Z&sp=r&sv=2026-02-06&sr=b&scid=28d8aaff-4a26-5bd6-a80b-e82512651fdc&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-04T23%3A19%3A18Z&ske=2026-09-05T23%3A19%3A18Z&sks=b&skv=2026-02-06&sig=fSy69ncIps7ZWhijszPPJv69mZtNDIHNWKlyhXPwmAQ%3D'
+        run: |
+          mkdir -p /tmp/lenton-v02237
+          curl --fail --location "$ARTIFACT_URL" -o /tmp/lenton-v02237/artifact.zip
+          unzip -o /tmp/lenton-v02237/artifact.zip -d /tmp/lenton-v02237/out
+          test -f /tmp/lenton-v02237/out/Lenton-v0.22.37.apk
+          echo 'b088721a106de346e4635bc361cde981b9a23dba5cd2f18dee4d383b23842e47  /tmp/lenton-v02237/out/Lenton-v0.22.37.apk' | sha256sum -c -
+      - name: Publish APK and update metadata atomically
+        run: |
+          git fetch origin main
+          git checkout main
+          cp /tmp/lenton-v02237/out/Lenton-v0.22.37.apk ./Lenton-v0.22.37.apk
+          cat > latest.json <<'EOF'
+          {
+            "versionCode": 158,
+            "versionName": "0.22.37",
+            "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.37.apk",
+            "sha256": "b088721a106de346e4635bc361cde981b9a23dba5cd2f18dee4d383b23842e47",
+            "notes": "게시물 상세 정보 줄의 N 좋아요를 누르면 좋아요한 계정 목록을 표시합니다. 기존 하트 및 좋아요 숫자 동작과 이전 기능은 유지됩니다."
+          }
+          EOF
+          git config user.name 'lenton-update-bot'
+          git config user.email 'lenton-update-bot@users.noreply.github.com'
+          git add Lenton-v0.22.37.apk latest.json
+          git diff --cached --exit-code && exit 1 || true
+          git commit -m 'Publish Lenton v0.22.37 update'
+          git push origin main
