@@ -1,0 +1,64 @@
+name: Publish Lenton v0.22.40
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/publish-v02240.yml'
+
+permissions:
+  contents: write
+
+env:
+  ARTIFACT_URL_B64: aHR0cHM6Ly9zZG1udHByaW5kaWFzb2NlbnRyYWwub2FpdXNlcmNvbnRlbnQuY29tL2ZpbGVzLzAwMDAwMDAwLTRmYzgtODIxMS05NmJlLWIzMDRhOTAwYzRkNi9yYXc/c2U9MjAyNi0wOS0wNVQxOCUzQTU3JTNBNDFaJnNwPXImc3Y9MjAyNi0wMi0wNiZzcj1iJnNjaWQ9YzkwMWM1MTItODU0MC01Y2M4LThjOTEtZWUyOTA4ZTJhZGZhJnNrb2lkPTY5ODBhYjFlLWI5OTQtNDY2OC04NGRlLWFkMDQ0NGM5ZDA4YiZza3RpZD1hNDhjY2E1Ni1lNmRhLTQ4NGUtYTgxNC05Yzg0OTY1MmJjYjMmc2t0PTIwMjYtMDktMDRUMjMlM0ExMyUzQTI1WiZza2U9MjAyNi0wOS0wNVQyMyUzQTEzJTNBMjVaJnNrcz1iJnNrdj0yMDI2LTAyLTA2JnNpZz13Ri9KaG0xM3MxZDcxMGFReEslMkJyNGFwQ3NjdXBUcDA4aUxaZWFlSDdRVEUlM0Q=
+  EXPECTED_APK_SHA: bc5fba555d4119d3c6f7467144bd602420941ee87e2ff44bffa0738c07201ec8
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download verified build artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          ARTIFACT_URL="$(printf '%s' "$ARTIFACT_URL_B64" | base64 -d)"
+          curl -fL --retry 3 --retry-delay 2 "$ARTIFACT_URL" -o /tmp/lenton-v02240.zip
+          rm -rf /tmp/lenton-v02240
+          mkdir -p /tmp/lenton-v02240
+          unzip -q /tmp/lenton-v02240.zip -d /tmp/lenton-v02240
+          test -f /tmp/lenton-v02240/Lenton-v0.22.40.apk
+          cp /tmp/lenton-v02240/Lenton-v0.22.40.apk ./Lenton-v0.22.40.apk
+
+      - name: Verify APK and write UTF-8 update metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          ACTUAL_SHA="$(sha256sum Lenton-v0.22.40.apk | awk '{print $1}')"
+          test "$ACTUAL_SHA" = "$EXPECTED_APK_SHA"
+          python3 - <<'PY'
+          import json
+          data = {
+              "versionCode": 161,
+              "versionName": "0.22.40",
+              "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.40.apk",
+              "sha256": "bc5fba555d4119d3c6f7467144bd602420941ee87e2ff44bffa0738c07201ec8",
+              "notes": "앱 업데이트 화면에 문제 신고하기 메뉴 추가 · 렌톤 내부에서 문의 유형/발생 화면/제목/내용/재현 방법 작성 · 선택한 스크린샷 최대 3장 첨부 · 앱/Android/기기/서버/테마/강조색 진단정보를 민감정보 없이 포함해 cptu527@gmail.com으로 이메일 작성 · v0.22.39 안정화와 기존 기능 유지"
+          }
+          with open("latest.json", "w", encoding="utf-8", newline="\n") as f:
+              json.dump(data, f, ensure_ascii=False, indent=2)
+              f.write("\n")
+          PY
+          cat latest.json
+
+      - name: Publish update and remove one-shot workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'lenton-update-bot'
+          git config user.email 'cptu527@gmail.com'
+          git add Lenton-v0.22.40.apk latest.json
+          git rm .github/workflows/publish-v02240.yml
+          git commit -m 'Publish Lenton v0.22.40 problem report update'
+          git push
