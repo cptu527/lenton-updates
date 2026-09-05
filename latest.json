@@ -1,7 +1,7 @@
 {
-  "versionCode": 135,
-  "versionName": "0.22.14",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.14.apk",
-  "sha256": "90d96f2e67d32d9e45a654c66196844c53adc38a2c416cc960d9f2865c65a1c7",
-  "notes": "API 요청 중복 방지 · 429 서버 대기시간 정확히 준수 · 실시간 알림 중복 폴링 제거 · 홈/배지 새로고침 과호출 완화 · v0.22.13 기존 기능 유지"
+  "versionCode": 136,
+  "versionName": "0.22.15",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.15.apk",
+  "sha256": "2184c256fcb0456d3a7065a53cec2cb65ecc9ca2aacb78e893eb421987e87375",
+  "notes": "게시물이 적어 홈이 화면을 채우지 못할 때 이전 게시물을 자동으로 이어서 불러옴 · 기존 스크롤 페이지네이션/429 대기/API 과호출 방지 유지 · v0.22.14 기존 기능 유지"
 }
