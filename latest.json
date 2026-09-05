@@ -1,7 +1,7 @@
 {
-  "versionCode": 161,
-  "versionName": "0.22.40",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.40.apk",
-  "sha256": "bc5fba555d4119d3c6f7467144bd602420941ee87e2ff44bffa0738c07201ec8",
-  "notes": "앱 업데이트 화면에 문제 신고하기 메뉴 추가 · 렌톤 내부에서 문의 유형/발생 화면/제목/내용/재현 방법 작성 · 선택한 스크린샷 최대 3장 첨부 · 앱/Android/기기/서버/테마/강조색 진단정보를 민감정보 없이 포함해 cptu527@gmail.com으로 이메일 작성 · v0.22.39 안정화와 기존 기능 유지"
+  "versionCode": 162,
+  "versionName": "0.22.41",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.41.apk",
+  "sha256": "8367d3a056384297322881445f4cd87cc895082f80edcacb89f5102e06404cda",
+  "notes": "문제 신고 이메일 줄바꿈 오류 수정 · 메일 제목과 본문을 실제 문의 접수 양식처럼 정리 · 문의 정보/문의 내용/재현 방법/앱 정보를 구역별로 표시 · 기존 스크린샷 첨부·민감정보 제외·v0.22.40 기능 유지"
 }
