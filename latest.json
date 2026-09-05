@@ -1,7 +1,7 @@
 {
-  "versionCode": 147,
-  "versionName": "0.22.26",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.26.apk",
-  "sha256": "42e0c6224f4c2af4325835d3f91ab8923230fc364877552327ce1ba017542e0b",
-  "notes": "게시물 더보기(⋮) 터치 영역 확대 및 게시물 본문 클릭과 분리 · 더보기는 메뉴만 열고 게시물 본문으로 진입하지 않도록 수정 · 좋아요 숫자를 눌러 좋아요한 계정 목록 확인 및 프로필 이동 · v0.22.25 포함 기존 기능 유지"
+  "versionCode": 148,
+  "versionName": "0.22.27",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.27.apk",
+  "sha256": "4857331a55e3f37ef22519cede8cb4ecbf311d2bcc87a9836fea42f229d9f49d",
+  "notes": "+ 타래의 각 게시물마다 CW를 따로 켜고 경고 문구를 지정할 수 있도록 수정 · CW 더보기/숨기기는 그 자리에서 펼치기/접기만 하고 게시물 상세로 이동하지 않도록 수정 · 게시물 메뉴 본문 복사 및 본문 길게 눌러 복사 추가 · v0.22.26 이하 기존 기능 유지"
 }
