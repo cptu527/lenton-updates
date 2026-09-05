@@ -1,7 +1,7 @@
 {
-  "versionCode": 159,
-  "versionName": "0.22.38",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.38.apk",
-  "sha256": "a8daafdb3ded57efcff88f4c4fdc796c57393f8aa35b09c7a5a5752b5f7922dd",
-  "notes": "같은 상대와 여러 개로 나뉜 Mastodon DM 대화를 한 채팅방에 합쳐 이전 대화까지 표시합니다. 동일 참여자 대화만 합치고 중복 메시지는 제거해 시간순으로 보여줍니다. 기존 DM 실시간 수신·전송·참여자·미디어 기능과 이전 기능은 유지됩니다."
+  "versionCode": 160,
+  "versionName": "0.22.39",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.39.apk",
+  "sha256": "394a9c7906691deb693c9bd600199a53076a4cc0903c6bfeab364a18c4965013",
+  "notes": "배포 전 안정화: 퍼블릭 탭 캐시를 현재 규칙으로 다시 검증해 내 글·답글·부스트가 잘못 섞이는 현상을 방지하고 최신순으로 정리합니다. 오래된 오염 캐시는 자동 정리하며 v0.22.38까지의 기존 기능을 유지합니다."
 }
