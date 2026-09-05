@@ -1,7 +1,7 @@
 {
-  "versionCode": 156,
-  "versionName": "0.22.35",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.35.apk",
-  "sha256": "e7f73c3f75dc72e50a55ef02818ea32aba20068a1fd0bacad6d68543e7c26df8",
-  "notes": "첫 로그인 및 계정 추가의 Mastodon m 표시를 현재 렌톤 앱 아이콘으로 교체 · 런처 아이콘 자체와 OAuth/계정 추가 흐름은 그대로 유지 · v0.22.34 이하 기존 기능 유지"
+  "versionCode": 157,
+  "versionName": "0.22.36",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.36.apk",
+  "sha256": "6850add5484def8e2d16e701318110f4e4f2e0d677ed444eac36067ba35033f1",
+  "notes": "게시물 본문의 좋아요 숫자를 누르면 좋아요한 계정 목록 표시 · 좋아요 0→1 변경 뒤에도 새로고침 없이 참여자 목록 터치 유지 · 좋아요 숫자 터치 영역 확대 · 하트 짧게 누르기 좋아요/취소는 기존 유지 · v0.22.35 로그인 앱 아이콘과 이전 기능 모두 유지"
 }
