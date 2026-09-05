@@ -1,7 +1,7 @@
 {
-  "versionCode": 152,
-  "versionName": "0.22.31",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.31.apk",
-  "sha256": "1314a85decf8ac88098da9daf267df0c42f88a6f528385e5ad5f2b97b81710cf",
-  "notes": "모노 강조색을 검정 대신 블루그레이 #58656D로 변경 · 본문과 멘션/탭/버튼 강조를 더 쉽게 구분 · 다른 강조 색상과 v0.22.30 이하 기존 기능 유지"
+  "versionCode": 153,
+  "versionName": "0.22.32",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.22.32.apk",
+  "sha256": "a1f1e290519373093427f6c15d415a79cb15a22250336de973f68f24c92a38a4",
+  "notes": "멘션·해시태그·링크 강조 글자를 살짝 더 두껍게 표시 · 일반 본문 글자 굵기는 그대로 유지 · 모노 블루그레이와 v0.22.31 이하 기존 기능 유지"
 }
