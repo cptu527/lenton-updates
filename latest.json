@@ -1,7 +1,7 @@
 {
-  "versionCode": 164,
-  "versionName": "0.23.00",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.00.apk",
-  "sha256": "ebcb83813d14ffe01316e09abf69f87b9aca220eeed3b5eeb19afc335f12fbc6",
-  "notes": "메시지 목록에서 같은 상대의 여러 DM 타래를 각각 별도 대화로 표시 · 같은 상대에게 여러 타래가 있을 때 타래 1/N 형태로 구분 · 각 목록 항목에서 해당 타래로 바로 진입 · 기존 DM 타래 분리/병합 기록 및 기존 기능 유지"
+  "versionCode": 165,
+  "versionName": "0.23.01",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.01.apk",
+  "sha256": "143be4031702095deb00be4f48e9011de10c3f806acd302593d12e21f5cb68fc",
+  "notes": "뒤로가기 시 하위 화면에서 홈으로 돌아가지 않고 앱이 종료되던 현상만 수정 · 홈 화면에서의 기존 뒤로가기 종료 동작과 v0.23.00 이하 기존 기능 유지"
 }
