@@ -1,0 +1,45 @@
+name: Publish Lenton v0.23.05 once
+
+on:
+  push:
+    paths:
+      - '.github/workflows/publish-v02305-once.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download verified build artifact
+        run: |
+          curl -fL --retry 3 --retry-delay 2 'https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-fa58-8211-a39a-cda1da802739/raw?se=2026-09-06T15%3A01%3A54Z&sp=r&sv=2026-02-06&sr=b&scid=0c0d15b7-7579-51f4-85fc-97378ea42725&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-06T02%3A07%3A35Z&ske=2026-09-07T02%3A07%3A35Z&sks=b&skv=2026-02-06&sig=/I1L4Dfz4YlfF3ynqaDgzkIxZXy6vkDEIDWzJmgubN8%3D' -o v02305.zip
+          echo 'f01be223314f14b83bade397aedd61b394546a6e0af635edb61322f504c6321f  v02305.zip' | sha256sum -c -
+          unzip -o v02305.zip Lenton-v0.23.05.apk
+          echo '4ad39fae317ad7c748cc4dda6ff3b0e9d2f8de511b7fcfa7904733855f095c6a  Lenton-v0.23.05.apk' | sha256sum -c -
+      - name: Write updater metadata
+        run: |
+          python - <<'PY'
+          import json
+          meta = {
+              'versionCode': 169,
+              'versionName': '0.23.05',
+              'apkUrl': 'https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.05.apk',
+              'sha256': '4ad39fae317ad7c748cc4dda6ff3b0e9d2f8de511b7fcfa7904733855f095c6a',
+              'notes': 'DM 말풍선 길게 누르기 동작 개선 · 내 DM 수정/삭제 메뉴 추가 · 링크/미디어 위에서도 길게 누르기 메뉴 동작 · 수정 시 수신자 멘션 보존 및 현재 대화 즉시 갱신 · 삭제 성공 시 병합 DM 기록에서도 제거해 다시 나타나는 문제 수정 · v0.23.04 이하 기존 기능 유지',
+          }
+          with open('latest.json','w',encoding='utf-8') as f:
+              json.dump(meta,f,ensure_ascii=False,indent=2)
+              f.write('\n')
+          PY
+      - name: Commit v0.23.05 updater files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add Lenton-v0.23.05.apk latest.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Publish Lenton v0.23.05 DM long-press edit/delete fix'
+          git push
