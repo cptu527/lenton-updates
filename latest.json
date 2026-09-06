@@ -1,7 +1,7 @@
 {
-  "versionCode": 167,
-  "versionName": "0.23.03",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.03.apk",
-  "sha256": "38aa0088e74d6293ee5f7d425d342267004d4972401e8ed4b28067f3b5dbbfa7",
-  "notes": "DM 현재 타래 우선 로딩 최적화 · 같은 상대의 오래된 타래는 백그라운드 병합 · DM 입력창 남은 글자 수 실시간 표시 · 기존 타래 분리/이전 공개 대화 보기/실시간 DM 및 기존 기능 유지"
+  "versionCode": 168,
+  "versionName": "0.23.04",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.04.apk",
+  "sha256": "51fe15ad678a4b701afd27aab0c337a8478dcb26ab87aefde5a1cc1a68cea50c",
+  "notes": "DM이 공개/미등록 공개 타래에서 이어진 경우 이전 공개 대화 보기 판별 개선 · 중간에 여러 DM 답글이 있어도 조상 타래를 확인해 공개 시작점을 찾음 · DM 최적화/남은 글자 수 및 기존 기능 유지"
 }
