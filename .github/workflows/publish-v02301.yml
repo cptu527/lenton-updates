@@ -1,0 +1,56 @@
+name: Publish Lenton v0.23.01
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/publish-v02301.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Download verified v0.23.01 build artifact
+        env:
+          ARTIFACT_URL: 'https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-4c74-8211-96c3-5e3c89020fdb/raw?se=2026-09-06T05%3A15%3A58Z&sp=r&sv=2026-02-06&sr=b&scid=8f81e0e6-660b-5ded-b672-9dd871fea76f&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-06T00%3A32%3A59Z&ske=2026-09-07T00%3A32%3A59Z&sks=b&skv=2026-02-06&sig=U3lbrtrPgLULjMm01Q8MFa/qghQvCH18z6vEQ0WqDoE%3D'
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 "$ARTIFACT_URL" -o v02301.zip
+          rm -rf v02301
+          mkdir v02301
+          unzip -q v02301.zip -d v02301
+          test -f v02301/Lenton-v0.23.01.apk
+          echo '143be4031702095deb00be4f48e9011de10c3f806acd302593d12e21f5cb68fc  v02301/Lenton-v0.23.01.apk' | sha256sum -c -
+          cp v02301/Lenton-v0.23.01.apk ./Lenton-v0.23.01.apk
+
+      - name: Create verified update manifest
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d={
+            'versionCode':165,
+            'versionName':'0.23.01',
+            'apkUrl':'https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.01.apk',
+            'sha256':'143be4031702095deb00be4f48e9011de10c3f806acd302593d12e21f5cb68fc',
+            'notes':'뒤로가기 시 하위 화면에서 홈으로 돌아가지 않고 앱이 종료되던 현상만 수정 · 홈 화면에서의 기존 뒤로가기 종료 동작과 v0.23.00 이하 기존 기능 유지'
+          }
+          Path('latest.json').write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+
+      - name: Publish APK and latest.json
+        run: |
+          set -euo pipefail
+          git config user.name 'lenton-update-bot'
+          git config user.email 'cptu527@gmail.com'
+          git add Lenton-v0.23.01.apk latest.json
+          git rm .github/workflows/publish-v02301.yml
+          git commit -m 'Publish Lenton v0.23.01 back-to-home fix'
+          git push origin HEAD:main
