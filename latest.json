@@ -1,7 +1,7 @@
 {
-  "versionCode": 165,
-  "versionName": "0.23.01",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.01.apk",
-  "sha256": "143be4031702095deb00be4f48e9011de10c3f806acd302593d12e21f5cb68fc",
-  "notes": "뒤로가기 시 하위 화면에서 홈으로 돌아가지 않고 앱이 종료되던 현상만 수정 · 홈 화면에서의 기존 뒤로가기 종료 동작과 v0.23.00 이하 기존 기능 유지"
+  "versionCode": 166,
+  "versionName": "0.23.02",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.02.apk",
+  "sha256": "15ef4d48699ad407ef8542bdf4ae254ddcfe853363325a6d35f49447769c9836",
+  "notes": "DM이 공개/미등록 공개 타래에서 이어진 경우에만 이전 공개 대화 보기 링크 추가 · 공개글은 DM에 섞지 않고 기존 게시물 상세 타래로 이동 · 기존 DM 타래 분리 및 기타 기능 유지"
 }
