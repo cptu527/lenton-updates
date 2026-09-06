@@ -1,0 +1,57 @@
+name: Publish Lenton v0.23.02
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/publish-v02302.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download exact verified v0.23.02 artifact
+        run: |
+          set -euo pipefail
+          curl -fL 'https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-2a90-8211-8c0c-60dc716a3d2d/raw?se=2026-09-06T05%3A47%3A24Z&sp=r&sv=2026-02-06&sr=b&scid=4aa935c3-a7ce-5ec1-bfe7-744398239ff8&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-05T22%3A55%3A47Z&ske=2026-09-06T22%3A55%3A47Z&sks=b&skv=2026-02-06&sig=tG%2BNMt9u%2BUyeItJNAhbMK8Vuw2xrRKMEYplnq2EsZc0%3D' -o artifact.zip
+          unzip -o artifact.zip
+          test -f Lenton-v0.23.02.apk
+          actual="$(sha256sum Lenton-v0.23.02.apk | awk '{print $1}')"
+          expected='15ef4d48699ad407ef8542bdf4ae254ddcfe853363325a6d35f49447769c9836'
+          echo "APK_SHA256=$actual"
+          test "$actual" = "$expected"
+
+      - name: Write UTF-8 update metadata
+        run: |
+          python3 - <<'PY'
+          import json
+          data = {
+            "versionCode": 166,
+            "versionName": "0.23.02",
+            "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.02.apk",
+            "sha256": "15ef4d48699ad407ef8542bdf4ae254ddcfe853363325a6d35f49447769c9836",
+            "notes": "DM이 공개/미등록 공개 타래에서 이어진 경우에만 이전 공개 대화 보기 링크 추가 · 공개글은 DM에 섞지 않고 기존 게시물 상세 타래로 이동 · 기존 DM 타래 분리 및 기타 기능 유지"
+          }
+          with open('latest.json','w',encoding='utf-8') as f:
+            json.dump(data,f,ensure_ascii=False,indent=2)
+            f.write('\n')
+          PY
+          cat latest.json
+
+      - name: Publish APK and latest.json
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add Lenton-v0.23.02.apk latest.json
+          git rm .github/workflows/publish-v02302.yml
+          git commit -m 'Publish Lenton v0.23.02 public DM context link'
+          git push origin HEAD:main
