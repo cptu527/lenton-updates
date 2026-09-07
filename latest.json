@@ -1,7 +1,7 @@
 {
-  "versionCode": 170,
-  "versionName": "0.23.06",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.06.apk",
-  "sha256": "a5152b478e7c96d277a1007185d00bf57e789173f51f0fc843439a910bfb8f53",
-  "notes": "갤럭시 노트9 등 구형 삼성 기기 APK 설치 호환성 개선 · 기존 렌톤 서명 인증서 유지 · v1+v2 APK 서명 적용 · v0.23.05의 DM 수정/삭제 및 기존 기능 유지"
+  "versionCode": 171,
+  "versionName": "0.23.07",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.07.apk",
+  "sha256": "d82508b4320131ddc774657003ef49cf8cf7840466b12dae45eae24cda425db1",
+  "notes": "계정 설정에 로그인 이메일 메모 추가 · 캐릭터/계정별로 직접 입력·수정 가능 · 이메일은 이 기기에만 저장되고 마스토돈/OAuth/문제 신고로 자동 전송하지 않음 · v0.23.06 구형 삼성 설치 호환성과 기존 기능 유지"
 }
