@@ -1,0 +1,96 @@
+name: Publish Lenton v0.23.06 updater package
+
+on:
+  push:
+    paths:
+      - '.github/workflows/publish-v02306-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download verified v0.23.06 APK artifact
+        shell: bash
+        run: |
+          curl -fL --retry 3 --retry-delay 2 \
+            'https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-4758-8211-b1e3-f6306ed0efe2/raw?se=2026-09-07T09%3A07%3A12Z&sp=r&sv=2026-02-06&sr=b&scid=7a585868-f142-50a8-9c2e-7fae4cf02d8f&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-06T21%3A11%3A14Z&ske=2026-09-07T21%3A11%3A14Z&sks=b&skv=2026-02-06&sig=ydYa1Cy4lwx3KcBxUKUBULOnGp0v5DBu8vRQZPKvhP4%3D' \
+            -o artifact.zip
+          rm -rf artifact && mkdir artifact
+          unzip -o artifact.zip -d artifact
+          APK="$(find artifact -type f -name '*.apk' | head -n 1)"
+          test -n "$APK"
+          cp "$APK" Lenton-v0.23.06.apk
+          echo 'a5152b478e7c96d277a1007185d00bf57e789173f51f0fc843439a910bfb8f53  Lenton-v0.23.06.apk' | sha256sum -c -
+
+      - name: Verify Lenton signing certificate
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, struct
+
+          data=Path('Lenton-v0.23.06.apk').read_bytes()
+          assert hashlib.sha256(data).hexdigest() == 'a5152b478e7c96d277a1007185d00bf57e789173f51f0fc843439a910bfb8f53'
+          eocd=data.rfind(b'PK\x05\x06')
+          assert eocd >= 0
+          cd_offset=struct.unpack_from('<4sHHHHIIH',data,eocd)[6]
+          size2=struct.unpack_from('<Q',data,cd_offset-24)[0]
+          assert data[cd_offset-16:cd_offset] == b'APK Sig Block 42'
+          block_start=cd_offset-(size2+8)
+          pairs={}
+          i=block_start+8
+          end=cd_offset-24
+          while i < end:
+              length=struct.unpack_from('<Q',data,i)[0]
+              i += 8
+              pair_id=struct.unpack_from('<I',data,i)[0]
+              pairs[pair_id]=data[i+4:i+length]
+              i += length
+          assert 0x7109871a in pairs
+          def lp32(buf,off):
+              length=struct.unpack_from('<I',buf,off)[0]
+              start=off+4
+              finish=start+length
+              assert finish <= len(buf)
+              return buf[start:finish],finish
+          v2=pairs[0x7109871a]
+          signers,_=lp32(v2,0)
+          signer,_=lp32(signers,0)
+          signed_data,_=lp32(signer,0)
+          _,sd_off=lp32(signed_data,0)
+          certs,_=lp32(signed_data,sd_off)
+          cert,_=lp32(certs,0)
+          cert_sha=hashlib.sha256(cert).hexdigest()
+          expected='fe6fc92cc637bc3fdbd18e98b7c0846b8e489d4c0d0f4e859fc520333f2d8688'
+          assert cert_sha == expected, cert_sha
+          print('certificate matches installed Lenton:', cert_sha)
+          PY
+
+      - name: Write updater manifest
+        shell: bash
+        run: |
+          cat > latest.json <<'JSON'
+          {
+            "versionCode": 170,
+            "versionName": "0.23.06",
+            "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.06.apk",
+            "sha256": "a5152b478e7c96d277a1007185d00bf57e789173f51f0fc843439a910bfb8f53",
+            "notes": "갤럭시 노트9 등 구형 삼성 기기 APK 설치 호환성 개선 · 기존 렌톤 서명 인증서 유지 · v1+v2 APK 서명 적용 · v0.23.05의 DM 수정/삭제 및 기존 기능 유지"
+          }
+          JSON
+
+      - name: Commit updater package
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/publish-v02306-once.yml
+          rm -rf artifact artifact.zip
+          git add Lenton-v0.23.06.apk latest.json
+          git commit -m 'Publish Lenton v0.23.06 updater package'
+          git push
