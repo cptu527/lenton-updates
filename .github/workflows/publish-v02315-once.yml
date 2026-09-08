@@ -1,0 +1,46 @@
+name: Publish Lenton v0.23.15 updater package
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/publish-v02315-once.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download verified v0.23.15 build artifact
+        run: |
+          curl -fL --retry 3 --retry-delay 2 \
+            'https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-27d4-8211-8033-1525b0a1fa54/raw?se=2026-09-08T03%3A11%3A42Z&sp=r&sv=2026-02-06&sr=b&scid=6063f0e0-9d26-5996-8c0e-a869c630686f&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-08T01%3A10%3A45Z&ske=2026-09-09T01%3A10%3A45Z&sks=b&skv=2026-02-06&sig=10v27tDj2bYcEmuvWaopFPOXl/qBrVieDabC3TNYh40%3D' \
+            -o /tmp/Lenton-v0.23.15-artifact.zip
+          unzip -o /tmp/Lenton-v0.23.15-artifact.zip Lenton-v0.23.15.apk latest.json -d .
+
+      - name: Verify updater package
+        run: |
+          echo '83e648f1ec4284e2a49c525fe0b2cef6a903b8c43c0b31b408ab7138b0955b5f  Lenton-v0.23.15.apk' | sha256sum -c -
+          python3 - <<'PY'
+          import json
+          with open('latest.json', encoding='utf-8') as f:
+              meta=json.load(f)
+          assert meta['versionCode'] == 179
+          assert meta['versionName'] == '0.23.15'
+          assert meta['apkUrl'] == 'https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.15.apk'
+          assert meta['sha256'] == '83e648f1ec4284e2a49c525fe0b2cef6a903b8c43c0b31b408ab7138b0955b5f'
+          PY
+
+      - name: Commit updater package
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add Lenton-v0.23.15.apk latest.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Publish Lenton v0.23.15 updater package'
+          git push
