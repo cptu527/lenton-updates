@@ -1,7 +1,7 @@
 {
-  "versionCode": 171,
-  "versionName": "0.23.07",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.07.apk",
-  "sha256": "d82508b4320131ddc774657003ef49cf8cf7840466b12dae45eae24cda425db1",
-  "notes": "계정 설정에 로그인 이메일 메모 추가 · 캐릭터/계정별로 직접 입력·수정 가능 · 이메일은 이 기기에만 저장되고 마스토돈/OAuth/문제 신고로 자동 전송하지 않음 · v0.23.06 구형 삼성 설치 호환성과 기존 기능 유지"
+  "versionCode": 179,
+  "versionName": "0.23.15",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.15.apk",
+  "sha256": "83e648f1ec4284e2a49c525fe0b2cef6a903b8c43c0b31b408ab7138b0955b5f",
+  "notes": "커스텀 이모지 ReplacementSpan 줄 높이 계산 수정 · 단독 shortcode도 자체 font metrics 확보 · 이미지 상단 클리핑 방지 · v0.23.14 프로필 field.name/value 렌더링과 기존 기능/서명 유지"
 }
