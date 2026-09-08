@@ -1,0 +1,50 @@
+name: Publish Lenton v0.23.17 in-app update
+
+on:
+  push:
+    paths:
+      - '.github/workflows/publish-v02317-update.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout update repository
+        uses: actions/checkout@v4
+
+      - name: Verify APK and publish latest.json
+        shell: bash
+        run: |
+          set -euo pipefail
+          APK='Lenton-v0.23.17-test.apk'
+          test -f "$APK"
+          SHA256="$(sha256sum "$APK" | awk '{print $1}')"
+          test "${#SHA256}" -eq 64
+          cat > latest.json <<EOF
+          {
+            "versionCode": 181,
+            "versionName": "0.23.17",
+            "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.17-test.apk",
+            "sha256": "$SHA256",
+            "notes": "서버 커스텀 이모지 선택기 추가 · 작성창 CW 옆 이모지 버튼에서 서버 이모지를 선택해 입력 가능 · 기존 커스텀 이모지 표시/비율 수정 유지"
+          }
+          EOF
+          echo "APK SHA-256: $SHA256"
+
+      - name: Commit in-app update metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add latest.json
+          if git diff --cached --quiet; then
+            echo 'latest.json already up to date'
+            exit 0
+          fi
+          git commit -m 'Publish Lenton v0.23.17 in-app update'
+          git push
