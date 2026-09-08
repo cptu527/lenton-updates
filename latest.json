@@ -1,7 +1,7 @@
 {
-  "versionCode": 180,
-  "versionName": "0.23.16",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.16.apk",
-  "sha256": "fb445ae11c6a379fd0a00df5dee59aace825818b8ccd9d4b12fdbaf5b7ea25ea",
-  "notes": "앱 업데이트 화면의 변경사항 문구가 이전 버전 내용으로 남던 문제 수정 · 현재 버전에 맞는 업데이트 내용을 표시하도록 수정 · v0.23.15 이하 기존 기능 유지"
+  "versionCode": 181,
+  "versionName": "0.23.17",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.17-test.apk",
+  "sha256": "51cce5e3734e844af3b49ba320b8fb3ca6e1305174cd62fc0c059a4b49682d22",
+  "notes": "서버 커스텀 이모지 선택기 추가 · 작성창 CW 옆 이모지 버튼에서 서버 이모지를 선택해 입력 가능 · 기존 커스텀 이모지 표시/비율 수정 유지"
 }
