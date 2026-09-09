@@ -1,7 +1,7 @@
 {
-  "versionCode": 183,
-  "versionName": "0.23.19",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.19-test.apk",
-  "sha256": "c77b889bd2ba627fcbb859f13787a3382d104378dd16d3712de0ebe95e41d886",
-  "notes": "• 타임라인 과거 글을 자동 무한 스크롤 대신 '더 불러오기' 버튼으로 직접 불러오도록 변경\n• 홈/공개 타임라인의 독립 커서와 기존 필터 규칙 유지\n• 불러오는 동안 중복 요청 방지"
+    "versionCode":  183,
+    "versionName":  "0.23.19",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.23.19-test.apk",
+    "sha256":  "773e2a060496d6b918e78716e98dac4b14c345d72b6c30eb1b41e5e003be7eda",
+    "notes":  "• 타임라인 과거 글을 자동 무한 스크롤 대신 \u0027더 불러오기\u0027 버튼으로 직접 불러오도록 변경\n• 홈/공개 타임라인의 독립 커서와 기존 필터 규칙 유지\n• 불러오는 동안 중복 요청 방지"
 }
