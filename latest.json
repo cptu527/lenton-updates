@@ -1,7 +1,7 @@
 {
-    "versionCode":  185,
-    "versionName":  "0.25.01",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.01-test.apk",
-    "sha256":  "5376ee9274e3d917ec998ad7348dd6646729dd952c0d870ebe894190be3cf764",
-    "notes":  "• 내 툿 메뉴에서 툿 고정/고정 해제 기능 추가\n• 팔로잉·팔로워 목록에서 바로 팔로우 상태를 바꾸고 맞팔 여부 확인\n• 글이나 멘션 답글 작성 중 뒤로가기를 누르면 작성 내용을 버리기 전에 확인"
+    "versionCode":  186,
+    "versionName":  "0.25.02",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.02-test.apk",
+    "sha256":  "5c00d9ddce718132d043ecaf121e6b7a8e21803b6e24cd1b35f572a0444a30eb",
+    "notes":  "• 툿 오른쪽 점 세 개 메뉴가 스크롤 중 잘못 열리지 않도록 터치 이탈·이동 시 클릭 취소\n• 프로필 편집에서 키보드가 열린 상태에서도 메타데이터 마지막 항목까지 스크롤 가능\n• v0.25.01의 툿 고정·팔로우/맞팔·작성 중 뒤로가기 보호 기능 유지"
 }
