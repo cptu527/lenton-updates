@@ -1,7 +1,7 @@
 {
-    "versionCode":  184,
-    "versionName":  "0.25.00",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.00-test.apk",
-    "sha256":  "8743b1d2f70c0f6f15b2d3f93097e8b5cd1c096a74dbd6cf30485fca8f9f37c4",
-    "notes":  "• DM이 ‘멘션한 사람만’으로 바뀌기 전 대화가 있으면 맨 위에 ‘이전 대화 보기’ 표시\n• ‘이전 대화 보기’를 누르면 이전 대화의 본문/대화 상세 화면으로 이동\n• 이전 대화는 DM 말풍선에 섞지 않고 기존 DM·타임라인·업데이트 기능 유지"
+    "versionCode":  185,
+    "versionName":  "0.25.01",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.01-test.apk",
+    "sha256":  "5376ee9274e3d917ec998ad7348dd6646729dd952c0d870ebe894190be3cf764",
+    "notes":  "• 내 툿 메뉴에서 툿 고정/고정 해제 기능 추가\n• 팔로잉·팔로워 목록에서 바로 팔로우 상태를 바꾸고 맞팔 여부 확인\n• 글이나 멘션 답글 작성 중 뒤로가기를 누르면 작성 내용을 버리기 전에 확인"
 }
