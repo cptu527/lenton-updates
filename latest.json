@@ -1,7 +1,7 @@
 {
-    "versionCode":  186,
-    "versionName":  "0.25.02",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.02-test.apk",
-    "sha256":  "5c00d9ddce718132d043ecaf121e6b7a8e21803b6e24cd1b35f572a0444a30eb",
-    "notes":  "• 툿 오른쪽 점 세 개 메뉴가 스크롤 중 잘못 열리지 않도록 터치 이탈·이동 시 클릭 취소\n• 프로필 편집에서 키보드가 열린 상태에서도 메타데이터 마지막 항목까지 스크롤 가능\n• v0.25.01의 툿 고정·팔로우/맞팔·작성 중 뒤로가기 보호 기능 유지"
+    "versionCode":  187,
+    "versionName":  "0.25.03",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.03-test.apk",
+    "sha256":  "d8c7a78eec5903235c1b87af32170d96f5bcad72b09a2030bffbe269c11c68dd",
+    "notes":  "• 답글 작성 화면에서 답글 대상 계정을 눌러 자동 멘션 수신자를 선택하거나 제외할 수 있음\n• 제외해도 기존 타래 연결(in_reply_to_id)은 유지\n• v0.25.02의 기존 기능 유지"
 }
