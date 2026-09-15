@@ -1,7 +1,7 @@
 {
-    "versionCode":  187,
-    "versionName":  "0.25.03",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.03-test.apk",
-    "sha256":  "d8c7a78eec5903235c1b87af32170d96f5bcad72b09a2030bffbe269c11c68dd",
-    "notes":  "• 답글 작성 화면에서 답글 대상 계정을 눌러 자동 멘션 수신자를 선택하거나 제외할 수 있음\n• 제외해도 기존 타래 연결(in_reply_to_id)은 유지\n• v0.25.02의 기존 기능 유지"
+    "versionCode":  188,
+    "versionName":  "0.25.04",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.04-test.apk",
+    "sha256":  "31b00a8138d26779ed234cd65a5305b0478721c1b301b9eced8615730ff29d3c",
+    "notes":  "• 답글 받을 계정 선택창에서 타래의 실제 표시 이름을 우선 표시\n• 표시 이름을 찾지 못한 계정은 @아이디를 한 번만 표시\n• 게시물 상세 답글 패널의 오터치 영역 축소\n• 상세 화면을 떠나면 남아 있던 답글 패널과 키보드를 즉시 정리"
 }
