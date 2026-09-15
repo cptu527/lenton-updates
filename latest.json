@@ -1,7 +1,7 @@
 {
-    "versionCode":  189,
-    "versionName":  "0.25.05",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.05-test.apk",
-    "sha256":  "91427ea64620e7e9b6001ee6bc1f2ea71883640869e2f0c6f11f523dda084326",
-    "notes":  "• 답글 받을 계정 선택창에 계정별 프로필 이미지 표시\n• 표시 이름과 @아이디, 선택 체크박스를 한 행에서 확인\n• 표시 이름을 찾지 못한 계정은 @아이디를 한 번만 표시\n• v0.25.04 답글 대상 제외와 답글 패널 수정 유지"
+    "versionCode":  190,
+    "versionName":  "0.25.06",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.06-test.apk",
+    "sha256":  "ab91422a1ec8b6660d1366e58267bf7d8d5d10127489d203d122ff777c1b06b4",
+    "notes":  "• 홈·검색·알림·메시지·프로필 하단 탭을 좌우 스와이프로 이동\n• 세로 스크롤과 구분되는 충분한 가로 제스처에서만 탭 이동\n• 다크 모드의 순검정 배경과 강한 명암을 부드러운 청회색 계열로 완화\n• 답글 대상 아바타·표시 이름·제외 기능과 기존 답글 패널 수정 유지"
 }
