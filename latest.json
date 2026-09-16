@@ -1,7 +1,7 @@
 {
-    "versionCode":  190,
-    "versionName":  "0.25.06",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.06-test.apk",
-    "sha256":  "ab91422a1ec8b6660d1366e58267bf7d8d5d10127489d203d122ff777c1b06b4",
-    "notes":  "• 홈·검색·알림·메시지·프로필 하단 탭을 좌우 스와이프로 이동\n• 세로 스크롤과 구분되는 충분한 가로 제스처에서만 탭 이동\n• 다크 모드의 순검정 배경과 강한 명암을 부드러운 청회색 계열로 완화\n• 답글 대상 아바타·표시 이름·제외 기능과 기존 답글 패널 수정 유지"
+    "versionCode":  191,
+    "versionName":  "0.25.07",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.07-test.apk",
+    "sha256":  "7c601f588bea85ffed16c774bab0cb4aeed143042d804bb28e3b37c15d463848",
+    "notes":  "• 하단 탭 스와이프 시작 영역을 교체되는 스크롤 뷰 대신 메인 화면 전체 콘텐츠 기준으로 수정\n• 홈·검색·알림·메시지·프로필에서 좌우 스와이프가 일관되게 동작\n• 세로 스크롤 보호와 완화된 다크 모드 유지\n• 답글 대상 아바타·표시 이름·제외 기능과 답글 패널 수정 유지"
 }
