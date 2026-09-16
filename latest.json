@@ -2,6 +2,6 @@
     "versionCode":  193,
     "versionName":  "0.25.09",
     "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.09-test.apk",
-    "sha256":  "07cd7ff2e4e3228b3ed7764071e8325ee20b430b200af90803bd4243d4021107",
+    "sha256":  "d6b4a62f7734183c55df1bea30743adb281bfb511d11bb2d7422ea37ea73efeb",
     "notes":  "• 사이드 메뉴의 팔로우 요청 아래에 화면 구성 편집 추가\n• 하단 탭을 드래그해 순서를 바꾸고 탭별 표시·숨김 설정 가능\n• 저장된 탭 순서와 표시 상태를 하단 메뉴와 좌우 스와이프에 동일 적용\n• 최소 1개 탭 유지 및 현재 탭 숨김 시 안전한 탭으로 이동\n• 기본값으로 초기화 기능 추가"
 }
