@@ -1,7 +1,7 @@
 {
-    "versionCode":  194,
-    "versionName":  "0.25.10",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.10-test.apk",
-    "sha256":  "0a9d5e705a0a80eea91e4c9416fdb6600a5d5d7ed0723a2469515a106f2230a1",
-    "notes":  "• 사이드 메뉴의 팔로우 요청 아래에 화면 구성 편집 추가\n• 하단 탭을 드래그해 순서를 바꾸고 탭별 표시·숨김 설정 가능\n• 저장된 탭 순서와 표시 상태를 하단 메뉴와 좌우 스와이프에 동일 적용\n• 최소 1개 탭 유지 및 현재 탭 숨김 시 안전한 탭으로 이동\n• 기본값으로 초기화 기능 추가"
+    "versionCode":  195,
+    "versionName":  "0.25.11",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.11-test.apk",
+    "sha256":  "2004be93047be041c432636c2b9ac5722fae8c11bad1b3db349c24ea99df4d74",
+    "notes":  "• 열람주의(CW)가 설정된 게시물에 답글을 작성하면 원문의 열람주의 문구를 자동으로 이어받도록 수정\n• 열람주의가 없는 일반 답글은 기존 동작 그대로 유지\n• 기존 화면 구성 편집·스와이프·답글 수신자·DM·업데이트 등 기존 기능 유지"
 }
