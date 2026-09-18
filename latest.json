@@ -1,7 +1,7 @@
 {
-    "versionCode":  196,
-    "versionName":  "0.25.12",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.12-test.apk",
-    "sha256":  "e9f85b2ca11144a98821a6507a9a0b3962234ab254aa88948bd4e4b0c07b85b9",
-    "notes":  "• 마스토돈 정식 리스트 조회·생성·이름 변경·삭제·멤버 관리 및 리스트 타임라인 추가\n• 홈 화면에 표시할 리스트를 계정별로 선택하고 리스트별 새로고침·이전 게시물 불러오기 지원\n• 다른 사용자 프로필 오른쪽 위 메뉴에서 리스트 관리·뮤트·차단·신고·프로필 링크 복사 지원\n• v0.25.11의 열람주의(CW) 답글 상속과 기존 화면 구성·스와이프·DM 기능 유지"
+    "versionCode":  197,
+    "versionName":  "0.25.13",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.13-test.apk",
+    "sha256":  "4c39c2df3fee3b983bb942ab3d3cd575ae420b924c46ddabc94b91efd1ff7073",
+    "notes":  "• 프로필 오른쪽 위 3점 메뉴를 상태바가 아닌 프로필 상단 툴바에 맞춰 정렬\n• CW가 있는 글에 답글할 때 첫 게시물뿐 아니라 추가 타래 게시물에도 같은 CW를 초기값으로 상속\n• 각 타래 게시물의 CW는 개별적으로 끄거나 문구를 수정할 수 있음\n• v0.25.12의 리스트·프로필 관리와 기존 CW/스와이프/DM 기능 유지"
 }
