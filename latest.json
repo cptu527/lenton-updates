@@ -1,7 +1,7 @@
 {
-    "versionCode":  197,
-    "versionName":  "0.25.13",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.13-test.apk",
-    "sha256":  "4c39c2df3fee3b983bb942ab3d3cd575ae420b924c46ddabc94b91efd1ff7073",
-    "notes":  "• 프로필 오른쪽 위 3점 메뉴를 상태바가 아닌 프로필 상단 툴바에 맞춰 정렬\n• CW가 있는 글에 답글할 때 첫 게시물뿐 아니라 추가 타래 게시물에도 같은 CW를 초기값으로 상속\n• 각 타래 게시물의 CW는 개별적으로 끄거나 문구를 수정할 수 있음\n• v0.25.12의 리스트·프로필 관리와 기존 CW/스와이프/DM 기능 유지"
+    "versionCode":  198,
+    "versionName":  "0.25.14",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.14-test.apk",
+    "sha256":  "3a8d93ef8c7b5efab4190b7d7d71db501fb64a0ac7ea7e24ddd55672279d5d69",
+    "notes":  "• 프로필 오른쪽 위 3점 메뉴의 동그란 배경 제거\n• 새 툿 게시 후 홈 타임라인으로 돌아오면 자동으로 최신 내용 새로고침\n• 리스트·프로필 관리, CW 타래 상속, 스와이프·DM 등 기존 기능 유지"
 }
