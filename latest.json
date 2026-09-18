@@ -1,7 +1,7 @@
 {
-    "versionCode":  198,
-    "versionName":  "0.25.14",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.14-test.apk",
-    "sha256":  "3a8d93ef8c7b5efab4190b7d7d71db501fb64a0ac7ea7e24ddd55672279d5d69",
-    "notes":  "• 프로필 오른쪽 위 3점 메뉴의 동그란 배경 제거\n• 새 툿 게시 후 홈 타임라인으로 돌아오면 자동으로 최신 내용 새로고침\n• 리스트·프로필 관리, CW 타래 상속, 스와이프·DM 등 기존 기능 유지"
+    "versionCode":  199,
+    "versionName":  "0.25.15",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.15-test.apk",
+    "sha256":  "051c1cfb3da2183457c68fd191df23300b215dcde60d7660087e5f746ddb979d",
+    "notes":  "• 하단 내비게이션 위에 트위터처럼 얇은 구분선 추가\n• 일반 게시물·멘션 구분선과 다르게 현재 테마 강조색을 은은하게 반영\n• v0.25.14의 프로필 3점 원형 제거와 새 툿 게시 후 홈 자동 새로고침 유지"
 }
