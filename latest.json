@@ -1,7 +1,7 @@
 {
-    "versionCode":  200,
-    "versionName":  "0.25.16",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.16-test.apk",
-    "sha256":  "cca5e47431a9d3c0cbb07134160cd4196b5c6e52ae245068e097e7c651ca0b4b",
-    "notes":  "• 상대방 프로필에 나만 볼 수 있는 비밀 메모 추가\n• 마스토돈 공식 private note API로 메모 저장·수정·삭제\n• v0.25.15의 하단 구분선, 프로필 관리, CW·리스트·DM·스와이프 기능 유지"
+    "versionCode":  201,
+    "versionName":  "0.25.17",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.17-test.apk",
+    "sha256":  "ab00a62b188c71880068c34e1f5810df44e300e50e91cafe8d2bb0304dce4c9a",
+    "notes":  "• 비밀 메모 카드 배경을 현재 강조색으로 변경\n• 비밀 메모 제목의 잠금 아이콘 제거\n• 강조색 밝기에 따라 메모 글자색을 자동 조정하고 v0.25.16 기존 기능 유지"
 }
