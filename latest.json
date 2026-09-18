@@ -1,7 +1,7 @@
 {
-    "versionCode":  199,
-    "versionName":  "0.25.15",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.15-test.apk",
-    "sha256":  "051c1cfb3da2183457c68fd191df23300b215dcde60d7660087e5f746ddb979d",
-    "notes":  "• 하단 내비게이션 위에 트위터처럼 얇은 구분선 추가\n• 일반 게시물·멘션 구분선과 다르게 현재 테마 강조색을 은은하게 반영\n• v0.25.14의 프로필 3점 원형 제거와 새 툿 게시 후 홈 자동 새로고침 유지"
+    "versionCode":  200,
+    "versionName":  "0.25.16",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.16-test.apk",
+    "sha256":  "cca5e47431a9d3c0cbb07134160cd4196b5c6e52ae245068e097e7c651ca0b4b",
+    "notes":  "• 상대방 프로필에 나만 볼 수 있는 비밀 메모 추가\n• 마스토돈 공식 private note API로 메모 저장·수정·삭제\n• v0.25.15의 하단 구분선, 프로필 관리, CW·리스트·DM·스와이프 기능 유지"
 }
