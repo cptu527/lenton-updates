@@ -1,7 +1,7 @@
 {
-    "versionCode": 203,
-    "versionName": "0.25.19",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.19-test.apk",
-    "sha256": "ed10959213a40328e1da477ae071f42ecdd7cb0acb888e02ffeeb87e7c8061c6",
-    "notes": "• 홈 진입 시 이미 보이는 타임라인 위에 큰 로딩 표시가 계속 뜨던 현상 제거\n• 홈은 캐시를 즉시 표시하고 최신 게시물은 뒤에서 조용히 갱신\n• 아래로 당겨 새로고침 시 최신 항목만 빠르게 확인하고 로딩 표시는 1초 이내 종료\n• 429 대기 때문에 다른 화면 요청까지 막히지 않도록 네트워크 대기 구조 수정\n• v0.25.18의 답글 이름·즉시 복귀 및 기존 기능 유지"
+    "versionCode":  204,
+    "versionName":  "0.25.20",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.20-test.apk",
+    "sha256":  "682fcecfc352fc6e4339dd673e1b684b7d71a83efe70b04f2168a9401e125c0a",
+    "notes":  "• 렌톤을 보고 있는 중에도 새 알림이 오면 화면 상단에 푸시처럼 바로 표시\n• 배너를 누르면 해당 멘션·DM·게시물로 바로 이동\n• 알림 프로필 이미지 다운로드가 실시간 알림 표시를 늦추던 병목 제거\n• v0.25.19의 홈 로딩·새로고침 성능 개선 유지"
 }
