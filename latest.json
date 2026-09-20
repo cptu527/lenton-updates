@@ -1,7 +1,7 @@
 {
-    "versionCode":  201,
-    "versionName":  "0.25.17",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.17-test.apk",
-    "sha256":  "ab00a62b188c71880068c34e1f5810df44e300e50e91cafe8d2bb0304dce4c9a",
-    "notes":  "• 비밀 메모 카드 배경을 현재 강조색으로 변경\n• 비밀 메모 제목의 잠금 아이콘 제거\n• 강조색 밝기에 따라 메모 글자색을 자동 조정하고 v0.25.16 기존 기능 유지"
+    "versionCode":  202,
+    "versionName":  "0.25.18",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.18-test.apk",
+    "sha256":  "e5742bc7fa8e2cadb0662ad2bab4461839bc593441d6bbe84dde3107cc510516",
+    "notes":  "• 답글 작성 화면의 받는 사람을 @아이디 대신 표시 이름으로 우선 표시\n• 답글 게시 후 이전 화면으로 즉시 돌아가 불필요한 게시물 재로딩 대기 제거\n• v0.25.17의 비밀 메모·리스트·프로필·CW·DM·스와이프 기능 유지"
 }
