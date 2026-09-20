@@ -1,7 +1,7 @@
 {
-    "versionCode":  202,
-    "versionName":  "0.25.18",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.18-test.apk",
-    "sha256":  "e5742bc7fa8e2cadb0662ad2bab4461839bc593441d6bbe84dde3107cc510516",
-    "notes":  "• 답글 작성 화면의 받는 사람을 @아이디 대신 표시 이름으로 우선 표시\n• 답글 게시 후 이전 화면으로 즉시 돌아가 불필요한 게시물 재로딩 대기 제거\n• v0.25.17의 비밀 메모·리스트·프로필·CW·DM·스와이프 기능 유지"
+    "versionCode":  203,
+    "versionName":  "0.25.19",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.19-test.apk",
+    "sha256":  "ed10959213a40328e1da477ae071f42ecdd7cb0acb888e02ffeeb87e7c8061c6",
+    "notes":  "????吏꾩엯 ???대? 蹂댁씠????꾨씪???꾩뿉 ??濡쒕뵫 ?쒖떆媛 怨꾩냽 ?⑤뜕 ?꾩긽 ?쒓굅\r\n???덉? 罹먯떆瑜?利됱떆 ?쒖떆?섍퀬 理쒖떊 寃뚯떆臾쇱? ?ㅼ뿉??議곗슜??媛깆떊\r\n???꾨옒濡??밴꺼 ?덈줈怨좎묠 ??理쒖떊 ??ぉ留?鍮좊Ⅴ寃??뺤씤?섍퀬 濡쒕뵫 ?쒖떆??1珥??대궡 醫낅즺\r\n??429 ?湲??뚮Ц???ㅻⅨ ?붾㈃ ?붿껌源뚯? 留됲엳吏 ?딅룄濡??ㅽ듃?뚰겕 ?湲?援ъ“ ?섏젙\r\n??v0.25.18???듦? ?대쫫쨌利됱떆 蹂듦? 諛?湲곗〈 湲곕뒫 ?좎?"
 }
