@@ -1,7 +1,7 @@
 {
-    "versionCode":  208,
-    "versionName":  "0.25.24",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.24-test.apk",
-    "sha256":  "74f28898041b763d4b260e4160f019af58c91f37a5bf1f0da8322a9f91f6d69c",
-    "notes":  "• 푸시가 도착하면 하단 내비게이션에 알림 출처 배지를 즉시 표시\n• DM은 메시지 아이콘, 멘션·좋아요·부스트 등은 알림 아이콘에 각각 배지 표시\n• 푸시를 눌러 앱으로 들어온 뒤에도 배지를 유지해 DM인지 일반 알림인지 바로 구분\n• 메시지/알림 탭을 실제로 열면 해당 로컬 배지 해제\n• v0.25.23 자물쇠 아이콘과 기존 타래·성능·실시간 푸시 개선 유지"
+    "versionCode":  209,
+    "versionName":  "0.25.25",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.25-test.apk",
+    "sha256":  "580ff8e99a790ca6fbc635e39a733d0badc38d93d3933ba3920f4edb30f96dc0",
+    "notes":  "• 새 알림 행이 다시 연한 강조색 배경으로 표시되도록 복구\n• v0.25.24의 즉시 배지와 연동해 푸시 직후에도 최신 알림을 흰색으로 잘못 표시하지 않음\n• 알림을 실제로 확인하면 해당 행만 일반 배경으로 복귀\n• 기존 DM/알림 배지·자물쇠 아이콘·타래·성능 개선 유지"
 }
