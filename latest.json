@@ -1,7 +1,7 @@
 {
-    "versionCode":  231,
-    "versionName":  "0.25.47",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.47-test.apk",
-    "sha256":  "288bb4ccc9c6240c0484899718b020ba5a82bd50a45c184516ff056f1b5b9034",
-    "notes":  "• QA 6 추가 수정: 게시물 상세 타래에서 직접 답글 수를 context 기준으로 다시 계산\n• 위쪽 타래 게시물도 자식 답글이 있으면 말풍선 옆에 1, 2처럼 정상 표시\n• 선택한 게시물의 \u0027답글 0\u0027 메타도 같은 계산값 사용\n• 답글 전송 직후 카운트 유지 및 홈·알림 재렌더링 보정 유지\n• QA 1~5 및 기존 홈/퍼블릭 규칙 유지"
+    "versionCode":  232,
+    "versionName":  "0.25.48",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.48-test.apk",
+    "sha256":  "786524a8953bb8964ef4d0fbdfd0f9172f30080345b3f171ca9cd694552f56b2",
+    "notes":  "• QA 5 추가 수정: PC·웹·다른 앱에서 이미 답한 멘션도 서버의 내 답글 기록으로 자동 확인\n• 답장할 멘션을 열 때 내 최근 답글의 in_reply_to_id를 대조해 처리 완료된 멘션 자동 제거\n• 렌톤에서 답한 경우 기존 즉시 제거 동작 유지\n• 오래된 알림 기록에 남아 있어도 처리 완료 멘션은 다시 표시되지 않도록 보정\n• QA 1~6 및 기존 홈/퍼블릭 규칙 유지"
 }
