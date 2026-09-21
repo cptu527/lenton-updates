@@ -1,7 +1,7 @@
 {
-    "versionCode": 229,
-    "versionName": "0.25.45",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.45-test.apk",
-    "sha256": "dfb5d122e519b2e5ef4a4abdcba90fda0c4c8c090b33c915d2932197ca124a66",
-    "notes": "• 답멘을 완료하면 답장할 멘션에서 해당 원문을 반드시 처리 완료로 기록\n• 타래 안에서 답해도 답장할 멘션 화면으로 돌아갈 때 즉시 재필터해 카드 제거\n• 빠른 답장·하단 답글창·전체 작성기 모든 답멘 경로를 동일 처리\n• QA 1~4번과 현재 홈/퍼블릭 규칙·빠른 로딩 그대로 유지"
+    "versionCode":  230,
+    "versionName":  "0.25.46",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.46-test.apk",
+    "sha256":  "caa53fa3cc92d7a98d676e81eefc2760dda904b15449f681a5034dffb5532dd2",
+    "notes":  "• QA 6: 답멘을 게시하면 원문 말풍선 옆 답글 수가 즉시 증가하도록 수정\n• 하단 답글창·빠른 답장·전체 작성기 모든 답글 경로에서 동일하게 반영\n• 서버 반영이 늦어도 방금 올린 답글 수가 다시 0으로 돌아가지 않도록 보정\n• 홈·게시물·알림에서 답글 카운트 재렌더링 강화\n• QA 1~5 및 기존 홈/퍼블릭 규칙 유지"
 }
