@@ -1,7 +1,7 @@
 {
-    "versionCode":  227,
-    "versionName":  "0.25.43",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.43-test.apk",
-    "sha256":  "73e5ee59c2b00f8b1c4ca04d5c007a3b65b5e8ca937b87f254ee74d3fa94cdda",
-    "notes":  "• QA 2번: 전체 알림을 확인하면 현재 계정의 사이드바 프로필 얼굴 알림 점도 함께 제거\n• 하단 알림 뱃지와 사이드바 계정 뱃지를 같은 확인 시점으로 동기화\n• 다른 계정에 새 알림이 오면 해당 계정 얼굴의 알림 점은 다시 정상 표시\n• QA 1번 타래 회색선 수정과 v0.25.40 홈/퍼블릭 규칙·빠른 로딩 그대로 유지"
+    "versionCode": 227,
+    "versionName": "0.25.43",
+    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.43-test.apk",
+    "sha256": "73e5ee59c2b00f8b1c4ca04d5c007a3b65b5e8ca937b87f254ee74d3fa94cdda",
+    "notes": "• QA 3번: 답멘 게시 성공 직후 부모 게시물과 새 답멘 사이 회색선을 즉시 표시\n• 화면 재진입·컨텍스트 재조회 없이 현재 타래 UI에서 바로 연결\n• QA 1번의 실제 직접 답글 판정 조건을 그대로 사용해 잘못된 선은 생성하지 않음\n• QA 2번 계정 알림 뱃지 수정과 v0.25.40 홈/퍼블릭 규칙·빠른 로딩 그대로 유지"
 }
