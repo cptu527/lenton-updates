@@ -1,7 +1,7 @@
 {
-    "versionCode":  209,
-    "versionName":  "0.25.25",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.25-test.apk",
-    "sha256":  "580ff8e99a790ca6fbc635e39a733d0badc38d93d3933ba3920f4edb30f96dc0",
-    "notes":  "• 새 알림 행이 다시 연한 강조색 배경으로 표시되도록 복구\n• v0.25.24의 즉시 배지와 연동해 푸시 직후에도 최신 알림을 흰색으로 잘못 표시하지 않음\n• 알림을 실제로 확인하면 해당 행만 일반 배경으로 복귀\n• 기존 DM/알림 배지·자물쇠 아이콘·타래·성능 개선 유지"
+    "versionCode":  210,
+    "versionName":  "0.25.26",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.26-test.apk",
+    "sha256":  "ad83c0347d372bfff9d74d89907b8255bc877f536eabbf75ac4d1ea9575f9226",
+    "notes":  "• 렌톤을 켜서 보고 있는 동안 안드로이드 시스템 헤드업 팝업 중복 표시 제거\n• 실행 중에도 시스템 알림 자체는 알림창에 조용히 남겨 기록 유지\n• 렌톤 자체 상단 인앱 팝업은 그대로 즉시 표시\n• 앱이 백그라운드이거나 꺼져 있을 때는 기존 휴대폰 푸시 팝업 유지\n• v0.25.25 새 알림 강조색과 기존 배지·성능 개선 유지"
 }
