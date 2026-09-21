@@ -1,7 +1,7 @@
 {
-    "versionCode":  206,
-    "versionName":  "0.25.22",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.22-test.apk",
-    "sha256":  "fe0ff27a261076463be6f6b3b3daa3893e5d468e6aad13fbb0102742c4045ce9",
-    "notes":  "• 타래 회색선을 실제 부모→직접 답글 관계에만 연결\n• 답글 작성 화면의 회색 연결선도 각 구간이 따로 보이도록 간격 조정\n• 홈에서 비공개 계정·팔로워 전용 글은 부스트 대신 잠금 아이콘 표시\n• v0.25.21 답글 전송 버튼 하단 배치와 기존 성능·알림 개선 유지"
+    "versionCode":  207,
+    "versionName":  "0.25.23",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.23-test.apk",
+    "sha256":  "1f0484194ec84b521e0ab8f81ecc37c01ee103cbe3c87521a45cb5f9ae50ce84",
+    "notes":  "• 홈의 부스트 잠금 표시를 이모지 대신 렌톤 액션 스타일의 선형 자물쇠 아이콘으로 변경\n• 비공개 계정·팔로워 전용 글의 부스트 차단 동작은 그대로 유지\n• v0.25.22의 타래 연결선 분리와 v0.25.21 답글 버튼 하단 배치 유지"
 }
