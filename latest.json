@@ -1,7 +1,7 @@
 {
-    "versionCode": 223,
-    "versionName": "0.25.39",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.39-test.apk",
-    "sha256": "71fb20fd315653aee4e87e901c93b2555f794981f283db4146204d7a2fcbff66",
-    "notes": "• 퍼블릭에서 첫 40개가 전부 답글이어도 빈 화면으로 끝내지 않음\n• 홈 타임라인의 다음 페이지를 자동으로 읽어 답글이 아닌 글을 채움\n• 서버 소스는 계속 /api/v1/timelines/home 하나만 사용\n• 시간순은 원본 홈 타임라인, 퍼블릭은 같은 홈에서 답글만 숨김"
+    "versionCode":  224,
+    "versionName":  "0.25.40",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.40-test.apk",
+    "sha256":  "310c96a0509207b2403737c6731bd380bea6c8be1c23b8dc8e827dab54eef12f",
+    "notes":  "• 홈 서버 요청 소스를 시간순 홈 타임라인 하나로 통일\n• 퍼블릭은 시간순 홈 원본을 앱 안에서 복사한 뒤 실제 답글만 제거\n• 퍼블릭 전환·앱 재실행 시 별도 퍼블릭 로딩 요청 제거\n• 퍼블릭 요청 실패 시 시간순 홈 캐시에서 즉시 복구\n• @태그 새 글·내 글·부스트는 답글이 아니면 그대로 표시"
 }
