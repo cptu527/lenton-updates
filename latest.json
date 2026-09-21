@@ -1,7 +1,7 @@
 {
-    "versionCode":  233,
-    "versionName":  "0.25.49",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.49-test.apk",
-    "sha256":  "4992e1fc353e8f9e35efb5e655f85cfe33a188b86a1230e3ad38b7c9f2118266",
-    "notes":  "• QA 7: 좋아요 알림에서 어느 게시물에 마음이 눌렸는지 본문 미리보기 표시\n• 시스템 좋아요 푸시에 대상 게시물 본문/CW/미디어 안내 표시\n• 좋아요 시스템 알림의 ! 기본 아이콘을 눈 달린 하트 전용 아이콘으로 교체\n• 앱 알림 목록의 좋아요 아이콘도 같은 눈 달린 하트 디자인으로 통일\n• 본문 없는 미디어·투표 게시물도 빈칸 대신 구분 가능한 안내 표시\n• QA 1~6 및 기존 홈/퍼블릭 규칙 유지"
+    "versionCode":  234,
+    "versionName":  "0.25.50",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.50-test.apk",
+    "sha256":  "bb1ee7617a3d80f89203d2f59f128f62690bf19cb8499a63521f4a64926bb89b",
+    "notes":  "• 알림 화면을 `전체 알림 | 답변해야 하는 멘션` 2탭 구조로 변경\n• 선택된 탭 아래 강조선 표시\n• 좌우 스와이프로 두 알림 탭 자연스럽게 전환\n• 스와이프 중 화면이 손가락을 따라 이동하고 임계점 미달 시 원위치\n• 기존 당겨서 새로고침 동작 유지\n• 알림 지우기를 상단 우측 ⋮ 메뉴로 이동\n• 기존 필터 메뉴와 PC/웹 답변 동기화, QA 1~7 유지"
 }
