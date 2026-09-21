@@ -1,7 +1,7 @@
 {
-    "versionCode":  219,
-    "versionName":  "0.25.35",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.35-test.apk",
-    "sha256":  "8a1f728864bc96e2457df02c20bbf08e3bfbb020d29b06af0f2f77967622a165",
-    "notes":  "• 글/답글 작성 중 상대 프로필을 열었다가 뒤로가도 작성하던 본문과 작성 화면을 그대로 유지\n• 프로필 위에 다른 화면을 더 열어도 작성창을 닫지 않고 화면 스택만 순서대로 복귀\n• 답장할 멘션의 빠른 답글창에서 전송한 뒤 알림 목록으로 바로 돌아가지 않고 서버가 생성한 실제 답글 본문을 즉시 표시\n• 방금 답한 멘션은 처리 완료 상태를 유지하고 게시물 화면에서 뒤로가면 답장할 멘션 목록을 다시 검증\n• v0.25.34 알림 배지/당겨서 새로고침 개선과 기존 CW·DM·프로필 기능 유지"
+    "versionCode":  220,
+    "versionName":  "0.25.36",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.36-test.apk",
+    "sha256":  "8ddea629a10a48b86c5b58fcd859ab9c23c45f8b6041ccb290990354ae660d44",
+    "notes":  "• 알림에서 멘션/답멘을 열면 타래 맨 위가 아니라 선택한 게시물 위치로 이동\n• 같은 게시물을 수정·갱신한 뒤에도 상세 화면의 스크롤 위치 유지\n• CW 더보기/숨기기 펼침 상태를 게시물별로 기억해 수정·갱신 후에도 유지\n• v0.25.35 작성창·프로필·알림 개선과 기존 기능 유지"
 }
