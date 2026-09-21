@@ -1,7 +1,7 @@
 {
-    "versionCode":  220,
-    "versionName":  "0.25.36",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.36-test.apk",
-    "sha256":  "8ddea629a10a48b86c5b58fcd859ab9c23c45f8b6041ccb290990354ae660d44",
-    "notes":  "• 알림에서 멘션/답멘을 열면 타래 맨 위가 아니라 선택한 게시물 위치로 이동\n• 같은 게시물을 수정·갱신한 뒤에도 상세 화면의 스크롤 위치 유지\n• CW 더보기/숨기기 펼침 상태를 게시물별로 기억해 수정·갱신 후에도 유지\n• v0.25.35 작성창·프로필·알림 개선과 기존 기능 유지"
+    "versionCode":  221,
+    "versionName":  "0.25.37",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.37-test.apk",
+    "sha256":  "911b426392aac6794dfc3727a85ae4c2e788200f2588640aa177033fbf00e56a",
+    "notes":  "• 홈 시간순 탭은 마스토돈 홈 타임라인 원본만 사용\n• 퍼블릭 탭은 같은 홈 타임라인에서 실제 답글만 숨김\n• @태그가 있는 새 글, 내 글, 부스트는 답글이 아니면 그대로 표시\n• 글로벌 퍼블릭 타임라인/팔로잉 목록 병합과 계정별 보충 요청 제거\n• 더 불러오기도 동일한 홈 타임라인 소스로 통일"
 }
