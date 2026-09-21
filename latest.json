@@ -1,7 +1,7 @@
 {
-    "versionCode":  222,
-    "versionName":  "0.25.38",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.38-test.apk",
-    "sha256":  "368f3be5e8a15e312d0274b509e8a22c641b0a5ea3bc93255c114417f47490f1",
+    "versionCode":  223,
+    "versionName":  "0.25.39",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.39-test.apk",
+    "sha256":  "71fb20fd315653aee4e87e901c93b2555f794981f283db4146204d7a2fcbff66",
     "notes":  "• 홈 서버 요청 소스를 시간순 홈 타임라인 하나로 통일\n• 퍼블릭은 시간순 홈 원본을 앱 안에서 복사한 뒤 실제 답글만 제거\n• 퍼블릭 전환·앱 재실행 시 별도 퍼블릭 로딩 요청 제거\n• 퍼블릭 요청 실패 시 시간순 홈 캐시에서 즉시 복구\n• @태그 새 글·내 글·부스트는 답글이 아니면 그대로 표시"
 }
