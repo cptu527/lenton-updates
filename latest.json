@@ -1,7 +1,7 @@
 {
-    "versionCode":  225,
-    "versionName":  "0.25.41",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.41-test.apk",
-    "sha256":  "2171794953112d05983be2e26c116d4d3225b62f42834ea50fa52935a33d558a",
-    "notes":  "• QA 1번: 실제 직접 답글 관계가 확인될 때만 타래 회색 연결선 표시\n• 서로 이어지지 않은 멘션/답멘 사이의 잘못된 회색선 제거\n• 숨겨진 게시물 더보기 구간도 전체가 연속 답글 체인일 때만 선 표시\n• v0.25.40 홈/퍼블릭 규칙과 빠른 로딩 동작 그대로 유지"
+    "versionCode":  226,
+    "versionName":  "0.25.42",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.42-test.apk",
+    "sha256":  "8079d3e565f654bc2fbea174130b16c163a4cf96287145837be4ba62cf8e11ed",
+    "notes":  "• QA 2번: 전체 알림을 확인하면 현재 계정의 사이드바 프로필 얼굴 알림 점도 함께 제거\n• 하단 알림 뱃지와 사이드바 계정 뱃지를 같은 확인 시점으로 동기화\n• 다른 계정에 새 알림이 오면 해당 계정 얼굴의 알림 점은 다시 정상 표시\n• QA 1번 타래 회색선 수정과 v0.25.40 홈/퍼블릭 규칙·빠른 로딩 그대로 유지"
 }
