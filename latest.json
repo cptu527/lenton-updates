@@ -1,7 +1,7 @@
 {
-    "versionCode":  232,
-    "versionName":  "0.25.48",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.48-test.apk",
-    "sha256":  "786524a8953bb8964ef4d0fbdfd0f9172f30080345b3f171ca9cd694552f56b2",
-    "notes":  "• QA 5 추가 수정: PC·웹·다른 앱에서 이미 답한 멘션도 서버의 내 답글 기록으로 자동 확인\n• 답장할 멘션을 열 때 내 최근 답글의 in_reply_to_id를 대조해 처리 완료된 멘션 자동 제거\n• 렌톤에서 답한 경우 기존 즉시 제거 동작 유지\n• 오래된 알림 기록에 남아 있어도 처리 완료 멘션은 다시 표시되지 않도록 보정\n• QA 1~6 및 기존 홈/퍼블릭 규칙 유지"
+    "versionCode":  233,
+    "versionName":  "0.25.49",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.49-test.apk",
+    "sha256":  "4992e1fc353e8f9e35efb5e655f85cfe33a188b86a1230e3ad38b7c9f2118266",
+    "notes":  "• QA 7: 좋아요 알림에서 어느 게시물에 마음이 눌렸는지 본문 미리보기 표시\n• 시스템 좋아요 푸시에 대상 게시물 본문/CW/미디어 안내 표시\n• 좋아요 시스템 알림의 ! 기본 아이콘을 눈 달린 하트 전용 아이콘으로 교체\n• 앱 알림 목록의 좋아요 아이콘도 같은 눈 달린 하트 디자인으로 통일\n• 본문 없는 미디어·투표 게시물도 빈칸 대신 구분 가능한 안내 표시\n• QA 1~6 및 기존 홈/퍼블릭 규칙 유지"
 }
