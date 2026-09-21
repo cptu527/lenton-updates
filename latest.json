@@ -1,7 +1,7 @@
 {
-    "versionCode":  218,
-    "versionName":  "0.25.34",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.34-test.apk",
-    "sha256":  "1f259e91c83e9ccc5420077d995abac264d9017af5b010d800d15789ad0f2c93",
-    "notes":  "• 실제 알림이 없는데 종 아이콘 배지가 남는 문제 수정\n• 서버 알림 목록 확인 성공 시 오래된 실시간 임시 배지를 실제 미확인 알림 수와 재조정\n• 배지 확인 도중 새 알림이 도착하면 그 새 이벤트만 보존\n• 알림 화면 당겨서 새로고침 표시를 앱 최상단 레이어에 표시해 트위터/X처럼 드래그 상태가 확실히 보이도록 수정\n• 임계점 진동 1회 및 놓아서 새로고침 동작 유지"
+    "versionCode":  219,
+    "versionName":  "0.25.35",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.35-test.apk",
+    "sha256":  "8a1f728864bc96e2457df02c20bbf08e3bfbb020d29b06af0f2f77967622a165",
+    "notes":  "• 글/답글 작성 중 상대 프로필을 열었다가 뒤로가도 작성하던 본문과 작성 화면을 그대로 유지\n• 프로필 위에 다른 화면을 더 열어도 작성창을 닫지 않고 화면 스택만 순서대로 복귀\n• 답장할 멘션의 빠른 답글창에서 전송한 뒤 알림 목록으로 바로 돌아가지 않고 서버가 생성한 실제 답글 본문을 즉시 표시\n• 방금 답한 멘션은 처리 완료 상태를 유지하고 게시물 화면에서 뒤로가면 답장할 멘션 목록을 다시 검증\n• v0.25.34 알림 배지/당겨서 새로고침 개선과 기존 CW·DM·프로필 기능 유지"
 }
