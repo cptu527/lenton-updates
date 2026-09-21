@@ -1,7 +1,7 @@
 {
-  "versionCode": 235,
-  "versionName": "0.25.51",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.51-test.apk",
-  "sha256": "e1d030a3556fb8a30a436f9e4f4565c31d488a6ce07699141b2929aa40013206",
-  "notes": "• 업데이트 확인 시 GitHub API 우선 조회로 GitHub raw CDN 캐시 지연 방지\n• GitHub API 조회 실패 시 기존 raw 주소로 자동 대체\n• 업데이트 내용 보기에 남아 있던 오래된 QA6 문구 수정\n• 알림 화면 `전체 알림 | 답변해야 하는 멘션` 2탭 구조 유지\n• 좌우 스와이프 알림 탭 전환 및 우측 상단 ⋮ 알림 지우기 유지\n• 좋아요 알림 본문 미리보기와 눈 달린 하트 아이콘 유지\n• PC·웹·다른 앱에서 답한 멘션의 답변 완료 동기화 유지\n• QA 1~7 및 기존 홈/퍼블릭 동작 유지"
+    "versionCode":  235,
+    "versionName":  "0.25.51",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.51-test.apk",
+    "sha256":  "e1d030a3556fb8a30a436f9e4f4565c31d488a6ce07699141b2929aa40013206",
+    "notes":  "• 업데이트 확인 시 GitHub API 우선 조회로 GitHub raw CDN 캐시 지연 방지\n• GitHub API 조회 실패 시 기존 raw 주소로 자동 대체\n• 업데이트 내용 보기에 남아 있던 오래된 QA6 문구 수정\n• 알림 화면 `전체 알림 | 답변해야 하는 멘션` 2탭 구조 유지\n• 좌우 스와이프 알림 탭 전환 및 우측 상단 ⋮ 알림 지우기 유지\n• 좋아요 알림 본문 미리보기와 눈 달린 하트 아이콘 유지\n• PC·웹·다른 앱에서 답한 멘션의 답변 완료 동기화 유지\n• QA 1~7 및 기존 홈/퍼블릭 동작 유지"
 }
