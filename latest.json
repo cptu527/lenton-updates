@@ -1,7 +1,7 @@
 {
-    "versionCode": 224,
-    "versionName": "0.25.40",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.40-test.apk",
-    "sha256": "310c96a0509207b2403737c6731bd380bea6c8be1c23b8dc8e827dab54eef12f",
-    "notes": "• 홈/퍼블릭 표시 규칙은 v0.25.39 그대로 유지\n• 퍼블릭은 최신 홈 1페이지가 도착하면 먼저 즉시 표시하고 부족한 글은 뒤에서 자동 보충\n• 기존 v0.25.39 시간순 홈 캐시를 그대로 재사용해 업데이트 직후와 탭 전환을 빠르게 처리\n• 캐시가 있을 때 백그라운드 갱신 시작 지연을 1.2초에서 0.25초로 단축\n• 서버 소스는 계속 /api/v1/timelines/home 하나만 사용"
+    "versionCode":  225,
+    "versionName":  "0.25.41",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.41-test.apk",
+    "sha256":  "2171794953112d05983be2e26c116d4d3225b62f42834ea50fa52935a33d558a",
+    "notes":  "• QA 1번: 실제 직접 답글 관계가 확인될 때만 타래 회색 연결선 표시\n• 서로 이어지지 않은 멘션/답멘 사이의 잘못된 회색선 제거\n• 숨겨진 게시물 더보기 구간도 전체가 연속 답글 체인일 때만 선 표시\n• v0.25.40 홈/퍼블릭 규칙과 빠른 로딩 동작 그대로 유지"
 }
