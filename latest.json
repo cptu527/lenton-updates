@@ -1,7 +1,7 @@
 {
-    "versionCode":  207,
-    "versionName":  "0.25.23",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.23-test.apk",
-    "sha256":  "1f0484194ec84b521e0ab8f81ecc37c01ee103cbe3c87521a45cb5f9ae50ce84",
-    "notes":  "• 홈의 부스트 잠금 표시를 이모지 대신 렌톤 액션 스타일의 선형 자물쇠 아이콘으로 변경\n• 비공개 계정·팔로워 전용 글의 부스트 차단 동작은 그대로 유지\n• v0.25.22의 타래 연결선 분리와 v0.25.21 답글 버튼 하단 배치 유지"
+    "versionCode":  208,
+    "versionName":  "0.25.24",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.24-test.apk",
+    "sha256":  "74f28898041b763d4b260e4160f019af58c91f37a5bf1f0da8322a9f91f6d69c",
+    "notes":  "• 푸시가 도착하면 하단 내비게이션에 알림 출처 배지를 즉시 표시\n• DM은 메시지 아이콘, 멘션·좋아요·부스트 등은 알림 아이콘에 각각 배지 표시\n• 푸시를 눌러 앱으로 들어온 뒤에도 배지를 유지해 DM인지 일반 알림인지 바로 구분\n• 메시지/알림 탭을 실제로 열면 해당 로컬 배지 해제\n• v0.25.23 자물쇠 아이콘과 기존 타래·성능·실시간 푸시 개선 유지"
 }
