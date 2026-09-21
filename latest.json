@@ -1,7 +1,7 @@
 {
-    "versionCode":  230,
-    "versionName":  "0.25.46",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.46-test.apk",
-    "sha256":  "caa53fa3cc92d7a98d676e81eefc2760dda904b15449f681a5034dffb5532dd2",
-    "notes":  "• QA 6: 답멘을 게시하면 원문 말풍선 옆 답글 수가 즉시 증가하도록 수정\n• 하단 답글창·빠른 답장·전체 작성기 모든 답글 경로에서 동일하게 반영\n• 서버 반영이 늦어도 방금 올린 답글 수가 다시 0으로 돌아가지 않도록 보정\n• 홈·게시물·알림에서 답글 카운트 재렌더링 강화\n• QA 1~5 및 기존 홈/퍼블릭 규칙 유지"
+    "versionCode":  231,
+    "versionName":  "0.25.47",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.47-test.apk",
+    "sha256":  "288bb4ccc9c6240c0484899718b020ba5a82bd50a45c184516ff056f1b5b9034",
+    "notes":  "• QA 6 추가 수정: 게시물 상세 타래에서 직접 답글 수를 context 기준으로 다시 계산\n• 위쪽 타래 게시물도 자식 답글이 있으면 말풍선 옆에 1, 2처럼 정상 표시\n• 선택한 게시물의 \u0027답글 0\u0027 메타도 같은 계산값 사용\n• 답글 전송 직후 카운트 유지 및 홈·알림 재렌더링 보정 유지\n• QA 1~5 및 기존 홈/퍼블릭 규칙 유지"
 }
