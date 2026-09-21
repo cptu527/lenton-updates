@@ -1,7 +1,7 @@
 {
-    "versionCode":  217,
-    "versionName":  "0.25.33",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.33-test.apk",
-    "sha256":  "6c02a3d0b8cd2cd14c559786c325f1e005072be67fccdce216e8dd1b4c1e5641",
-    "notes":  "• 이미 확인한 알림인데 하단 종 아이콘 배지가 다시 생기는 레이스 조건 수정\n• 알림 화면을 연 뒤 늦게 도착한 이전 배지 조회 결과가 배지를 되살리지 않도록 차단\n• 알림 화면을 보고 있는 동안 도착한 일반 알림은 종 배지를 새로 만들지 않음\n• DM은 종 배지 집계에서 제외해 메시지 배지와 중복되지 않도록 유지\n• v0.25.32 답장 멘션/타래 개선과 기존 성능 개선 유지"
+    "versionCode":  218,
+    "versionName":  "0.25.34",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.34-test.apk",
+    "sha256":  "1f259e91c83e9ccc5420077d995abac264d9017af5b010d800d15789ad0f2c93",
+    "notes":  "• 실제 알림이 없는데 종 아이콘 배지가 남는 문제 수정\n• 서버 알림 목록 확인 성공 시 오래된 실시간 임시 배지를 실제 미확인 알림 수와 재조정\n• 배지 확인 도중 새 알림이 도착하면 그 새 이벤트만 보존\n• 알림 화면 당겨서 새로고침 표시를 앱 최상단 레이어에 표시해 트위터/X처럼 드래그 상태가 확실히 보이도록 수정\n• 임계점 진동 1회 및 놓아서 새로고침 동작 유지"
 }
