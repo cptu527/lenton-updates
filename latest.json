@@ -1,7 +1,7 @@
 {
-    "versionCode":  244,
-    "versionName":  "0.25.60",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.60-test.apk",
-    "sha256":  "6135c6dd42a57b97f4b4f6ed15c163f9ec4d6257799d7694c61d8decb1f62e87",
-    "notes":  "• 알림 전체/답변해야 하는 멘션을 옆 페이지가 같이 보이는 페이저형 스와이프로 개선\n• 전체 알림과 답변해야 하는 멘션의 스크롤 위치를 각각 기억해 탭을 왕복해도 보던 위치 유지\n• 손가락 이동량을 그대로 따라가도록 알림 좌우 스와이프 움직임 개선"
+    "versionCode":  245,
+    "versionName":  "0.25.61",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.61-test.apk",
+    "sha256":  "8d9b57e47f326b3c0b559fb19b9f930f52a0736f812b1be589e4c0820d1a81b7",
+    "notes":  "• 홈 시간순/퍼블릭을 프로필 탭과 같은 실제 2페이지 페이저 구조로 교체\n• 스와이프 중 임시 프리뷰를 다시 그리지 않아 잔상과 버벅임 제거\n• 시간순/퍼블릭 RecyclerView를 각각 계속 유지해 스크롤 위치 자연스럽게 보존\n• 알림 전체/답변해야 하는 멘션도 실제 2페이지 ScrollView 페이저로 교체\n• 알림도 스와이프 중 화면 재렌더링 없이 실제 옆 페이지가 그대로 따라오도록 수정"
 }
