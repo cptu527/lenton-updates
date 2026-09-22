@@ -1,7 +1,7 @@
 {
-    "versionCode":  247,
-    "versionName":  "0.25.63",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.63-test.apk",
-    "sha256":  "29d52c3778943e71043f3e1b82a839ebfa418c95799490266846efddd52d542f",
-    "notes":  "• 알림의 전체 알림/답변해야 하는 멘션 탭을 스크롤 영역 밖 상단에 고정\n• 알림 내용을 아래로 내려도 탭은 위에 계속 표시\n• 좌우 스와이프하는 동안 파란 선택 밑줄이 손가락 이동량을 따라 함께 이동\n• 홈/프로필 탭과 같은 고정 탭 + 이동 밑줄 사용감으로 통일"
+    "versionCode":  248,
+    "versionName":  "0.25.64",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.64-test.apk",
+    "sha256":  "153921ab88cd03cb08339978b517667b0ac7b3a5459d6894604cecbc8b77ee91",
+    "notes":  "• 답글 게시 성공 뒤 전체 작성창을 즉시 닫고 원래 본문/타래 화면으로 복귀\n• 답변해야 하는 멘션에서 작성한 답글도 작성기 화면이 남지 않도록 수정\n• 게시 성공 뒤 하단 답글 게시하기 입력창이 작성기와 동시에 겹쳐 보이는 현상 수정\n• 새 답글을 로컬 타래에 즉시 반영하고 중복 화면 복귀를 제거"
 }
