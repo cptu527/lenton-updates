@@ -1,7 +1,7 @@
 {
-    "versionCode":  241,
-    "versionName":  "0.25.57",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.57-test.apk",
-    "sha256":  "0060eeb643f153f09ea1107d6088e0291d4b27e2cd793661cb47310d134a13c5",
-    "notes":  "• 알림 탭의 부스트 알림 아이콘을 초록색 ↻ 형태로 수정\n• 알림 목록을 아래로 당길 때 중앙 원형 새로고침 표시가 따라오도록 구현\n• 새로고침을 놓은 뒤 서버 응답이 끝날 때까지 표시가 회전하고 완료되면 자연스럽게 사라지도록 수정"
+    "versionCode":  242,
+    "versionName":  "0.25.58",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.58-test.apk",
+    "sha256":  "f222c9e4a2c3fe2e853bb3c1f0153b13c990f1e78265051e39028d96b0f5b4d3",
+    "notes":  "• 본문/타래에서 답멘 작성 중 프로필로 이동했다가 뒤로 와도 작성 내용·CW·공개범위를 그대로 복원\n• 말풍선으로 답멘 작성할 때 대화 문맥의 상대 프로필 사진을 눌러 프로필로 이동 가능\n• 내 프로필 사진은 답멘 문맥에서 프로필 이동 대상으로 처리하지 않음"
 }
