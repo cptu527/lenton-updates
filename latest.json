@@ -1,7 +1,7 @@
 {
-    "versionCode":  248,
-    "versionName":  "0.25.64",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.64-test.apk",
-    "sha256":  "153921ab88cd03cb08339978b517667b0ac7b3a5459d6894604cecbc8b77ee91",
-    "notes":  "• 답글 게시 성공 뒤 전체 작성창을 즉시 닫고 원래 본문/타래 화면으로 복귀\n• 답변해야 하는 멘션에서 작성한 답글도 작성기 화면이 남지 않도록 수정\n• 게시 성공 뒤 하단 답글 게시하기 입력창이 작성기와 동시에 겹쳐 보이는 현상 수정\n• 새 답글을 로컬 타래에 즉시 반영하고 중복 화면 복귀를 제거"
+    "versionCode":  249,
+    "versionName":  "0.25.65",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.65-test.apk",
+    "sha256":  "9692b1ee55e8687a73fc80d814784102fd73f9b2d1d95898cbe2e2f62f21ef86",
+    "notes":  "• 당겨서 새로고침 아이콘의 화살표 모양을 제거하고 얇은 원형 스피너로 변경\n• 홈/알림 새로고침 아이콘을 동일한 원형 아크 디자인으로 통일\n• 드래그 중에는 당긴 정도에 따라 원형 아크가 자연스럽게 채워지고, 새로고침 중에는 부드럽게 회전\n• 라이트/다크 모드와 강조색에 맞춰 깔끔하게 표시"
 }
