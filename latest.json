@@ -1,7 +1,7 @@
 {
-    "versionCode":  238,
-    "versionName":  "0.25.54",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.54-test.apk",
-    "sha256":  "4183d08973732b9fc2cbdaa34d7a7a86df83d9db3e1e4ddacbaeec7927370185",
-    "notes":  "• 좋아요 알림 아이콘 하트의 아래쪽 선을 이어 완전히 닫힌 하트로 수정\n• 하트 외곽을 조금 키워 상태바와 알림창에서 더 또렷하게 표시\n• 멘션 오렌지 아이콘도 같은 시각 크기로 조정해 두 아이콘 크기 통일\n• 좋아요/멘션이 같은 시점에 와도 시스템 알림창에서 각각 별도 알림으로 유지\n• 좋아요는 ‘♥ 좋아요 · 이름’, 멘션은 ‘멘션 · 이름’으로 제목 구분\n• 좋아요 분홍 / 멘션 주황 강조와 알림 클릭·소리·진동 동작 유지\n• 알림 탭 좌우 스와이프 방식 유지\n• 업데이트 확인 GitHub API 우선 조회 유지\n• 기존 QA 1~7 동작 유지"
+    "versionCode":  239,
+    "versionName":  "0.25.55",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.55-test.apk",
+    "sha256":  "966a83e52467d5cccd266fcd52800d6da1a2a0139c92133e1a258c027e554faf",
+    "notes":  "• 알림 탭의 부스트 알림 아이콘을 홈과 같은 부스트 아이콘으로 통일\n• 홈의 자물쇠 아이콘 위치를 기존 액션 아이콘 기준선에 맞게 정렬\n• 게시물 상세에서 확인된 답글 수를 홈으로 동기화해 답글 수 표시가 사라지지 않도록 수정"
 }
