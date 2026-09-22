@@ -1,7 +1,7 @@
 {
-  "versionCode": 250,
-  "versionName": "0.25.66",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.66-test.apk",
-  "sha256": "f155778723144e75ffa1cc3f254fc12d59254367da5a2821fd985344a9962a97",
-  "notes": "• 알림창에서 실제로 아래로 당겨 새로고침할 수 있게 수정\n• 세로 당김이 시작되면 좌우 페이저 스와이프가 제스처를 가로채지 않도록 축 잠금 적용\n• 가로 스와이프는 기존처럼 알림 탭 전환에 정상 전달\n• 새로고침 완료 후 스피너/당김 상태를 완전히 초기화해 반복해서 여러 번 새로고침 가능"
+    "versionCode":  251,
+    "versionName":  "0.25.67",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.67-test.apk",
+    "sha256":  "f9dc47e08559ba5506154d161e2e170a19dff4d833f2f5009827acaacfb420e3",
+    "notes":  "• 답멘 작성창을 열 때 현재 답글 대상 게시물을 즉시 표시하도록 개선\n• 이전 대화 context를 5분 메모리 캐시에 저장해 같은 타래 재진입 시 바로 표시\n• 캐시가 있어도 서버 최신 context는 뒤에서 갱신하는 방식으로 변경\n• context 요청 실패/지연 시 \u0027불러오는 중\u0027 화면에 멈추지 않고 현재 답글 대상은 계속 표시\n• 게시물 상세에서 이미 불러온 context도 답멘 작성기에 재사용"
 }
