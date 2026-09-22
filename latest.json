@@ -1,7 +1,7 @@
 {
-    "versionCode":  246,
-    "versionName":  "0.25.62",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.62-test.apk",
-    "sha256":  "a353a21c48f246f54544c50c435735d29b84d8b0e28f83776e086bb061b678ed",
-    "notes":  "• 새로고침 아이콘을 배경 없는 얇은 원형 스피너로 개선\n• 화살촉을 작은 라인 형태로 바꿔 더 깔끔하게 표시\n• 홈/알림에서 같은 새로고침 아이콘 디자인 유지"
+    "versionCode":  247,
+    "versionName":  "0.25.63",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.63-test.apk",
+    "sha256":  "29d52c3778943e71043f3e1b82a839ebfa418c95799490266846efddd52d542f",
+    "notes":  "• 알림의 전체 알림/답변해야 하는 멘션 탭을 스크롤 영역 밖 상단에 고정\n• 알림 내용을 아래로 내려도 탭은 위에 계속 표시\n• 좌우 스와이프하는 동안 파란 선택 밑줄이 손가락 이동량을 따라 함께 이동\n• 홈/프로필 탭과 같은 고정 탭 + 이동 밑줄 사용감으로 통일"
 }
