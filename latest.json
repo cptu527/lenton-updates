@@ -1,7 +1,7 @@
 {
-    "versionCode":  250,
-    "versionName":  "0.25.66",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.66-test.apk",
-    "sha256":  "f155778723144e75ffa1cc3f254fc12d59254367da5a2821fd985344a9962a97",
-    "notes":  "• 알림첝 당겨순 새로고치을 스크론 실제 당기로 새로고침 가능하게 수정\n• 세로 당기 지움에서 지정 도달하면 줌욄 페이저 좌우 스와이프가 가로채지기 방지\n• 가로 스와이프를 시작하는 입력은 페이저에 정상적으로 전달았수정\n• 새로고침 완도 중 스피너 상태를 완전히 초기화해 여랼 벘복 당겨서 새로고침 가능"
+  "versionCode": 250,
+  "versionName": "0.25.66",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.66-test.apk",
+  "sha256": "f155778723144e75ffa1cc3f254fc12d59254367da5a2821fd985344a9962a97",
+  "notes": "• 알림창에서 실제로 아래로 당겨 새로고침할 수 있게 수정\n• 세로 당김이 시작되면 좌우 페이저 스와이프가 제스처를 가로채지 않도록 축 잠금 적용\n• 가로 스와이프는 기존처럼 알림 탭 전환에 정상 전달\n• 새로고침 완료 후 스피너/당김 상태를 완전히 초기화해 반복해서 여러 번 새로고침 가능"
 }
