@@ -1,7 +1,7 @@
 {
-    "versionCode":  239,
-    "versionName":  "0.25.55",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.55-test.apk",
-    "sha256":  "966a83e52467d5cccd266fcd52800d6da1a2a0139c92133e1a258c027e554faf",
-    "notes":  "• 알림 탭의 부스트 알림 아이콘을 홈과 같은 부스트 아이콘으로 통일\n• 홈의 자물쇠 아이콘 위치를 기존 액션 아이콘 기준선에 맞게 정렬\n• 게시물 상세에서 확인된 답글 수를 홈으로 동기화해 답글 수 표시가 사라지지 않도록 수정"
+    "versionCode":  240,
+    "versionName":  "0.25.56",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.56-test.apk",
+    "sha256":  "35202af419aa4a05f9d9be4cac79484296553b559e0725591c0ab0c97b11aef6",
+    "notes":  "• 알림 탭의 부스트 알림 아이콘을 초록색 ↻ 형태로 수정\n• 알림 목록을 아래로 당길 때 중앙 원형 새로고침 표시가 따라오도록 구현\n• 새로고침을 놓은 뒤 서버 응답이 끝날 때까지 표시가 회전하고 완료되면 자연스럽게 사라지도록 수정"
 }
