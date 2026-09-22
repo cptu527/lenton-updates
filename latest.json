@@ -1,7 +1,7 @@
 {
-    "versionCode":  236,
-    "versionName":  "0.25.52",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.52-test.apk",
-    "sha256":  "0f713b57b9252161df52fb8c3dc0bce76765c1ec353c4ec082c400650581794e",
-    "notes":  "• 알림 탭 좌우 스와이프가 실제 기기에서 안 먹던 문제 수정\n• 알림 카드/본문/프로필 위에서 밀어도 최상단 화면이 스와이프를 먼저 감지\n• 전체 알림 ↔ 답변해야 하는 멘션 양방향 전환\n• 화면 폭 5% 이동 기준으로 짧게 밀어도 자연스럽게 전환\n• 세로 스크롤·당겨서 새로고침·왼쪽 가장자리 서랍 제스처 유지\n• 알림 지우기 우측 상단 ⋮ 메뉴와 필터 유지\n• 업데이트 확인 GitHub API 우선 조회 및 최신 릴리즈 노트 유지\n• QA 1~7 및 기존 홈/퍼블릭 동작 유지"
+    "versionCode":  237,
+    "versionName":  "0.25.53",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.53-test.apk",
+    "sha256":  "048b0551b47329468fff0f1311dcb3ac92ea34a06702a9893b1bb063a98356cc",
+    "notes":  "• 좋아요 알림 아이콘을 최신 스케치 기준의 기울어진 하트 얼굴로 교체\n• 하트 안에 점눈 2개 + 속 빈 동그란 입 적용\n• 시스템 알림에서 좋아요는 ‘좋아요 · 이름’, 멘션은 ‘멘션 · 이름’으로 제목 구분\n• 좋아요 알림은 분홍 강조, 멘션은 주황 강조로 시각 구분\n• 좋아요 본문은 ‘내 게시물에 좋아요를 눌렀어요’ 다음 줄에 대상 게시물 미리보기 표시\n• 알림 탭 좌우 스와이프 최상단 제스처 방식 유지\n• 업데이트 확인 GitHub API 우선 조회 유지\n• QA 1~7 및 기존 홈/퍼블릭 동작 유지"
 }
