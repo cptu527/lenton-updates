@@ -1,7 +1,7 @@
 {
-    "versionCode":  237,
-    "versionName":  "0.25.53",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.53-test.apk",
-    "sha256":  "048b0551b47329468fff0f1311dcb3ac92ea34a06702a9893b1bb063a98356cc",
-    "notes":  "• 좋아요 알림 아이콘을 최신 스케치 기준의 기울어진 하트 얼굴로 교체\n• 하트 안에 점눈 2개 + 속 빈 동그란 입 적용\n• 시스템 알림에서 좋아요는 ‘좋아요 · 이름’, 멘션은 ‘멘션 · 이름’으로 제목 구분\n• 좋아요 알림은 분홍 강조, 멘션은 주황 강조로 시각 구분\n• 좋아요 본문은 ‘내 게시물에 좋아요를 눌렀어요’ 다음 줄에 대상 게시물 미리보기 표시\n• 알림 탭 좌우 스와이프 최상단 제스처 방식 유지\n• 업데이트 확인 GitHub API 우선 조회 유지\n• QA 1~7 및 기존 홈/퍼블릭 동작 유지"
+    "versionCode":  238,
+    "versionName":  "0.25.54",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.54-test.apk",
+    "sha256":  "4183d08973732b9fc2cbdaa34d7a7a86df83d9db3e1e4ddacbaeec7927370185",
+    "notes":  "• 좋아요 알림 아이콘 하트의 아래쪽 선을 이어 완전히 닫힌 하트로 수정\n• 하트 외곽을 조금 키워 상태바와 알림창에서 더 또렷하게 표시\n• 멘션 오렌지 아이콘도 같은 시각 크기로 조정해 두 아이콘 크기 통일\n• 좋아요/멘션이 같은 시점에 와도 시스템 알림창에서 각각 별도 알림으로 유지\n• 좋아요는 ‘♥ 좋아요 · 이름’, 멘션은 ‘멘션 · 이름’으로 제목 구분\n• 좋아요 분홍 / 멘션 주황 강조와 알림 클릭·소리·진동 동작 유지\n• 알림 탭 좌우 스와이프 방식 유지\n• 업데이트 확인 GitHub API 우선 조회 유지\n• 기존 QA 1~7 동작 유지"
 }
