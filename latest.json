@@ -1,7 +1,7 @@
 {
-    "versionCode":  243,
-    "versionName":  "0.25.59",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.59-test.apk",
-    "sha256":  "f89e78f186d86226f5f6cb786b8ed35b4072bd5a29a675a8ffcd7f96fe92e96c",
-    "notes":  "• 홈 시간순/퍼블릭을 옆 페이지가 같이 보이는 페이저형 스와이프로 개선\n• 시간순과 퍼블릭의 스크롤 위치를 각각 기억해 다시 돌아왔을 때 보던 위치 유지\n• 탭 전환 때 맨 위로 강제로 올라가던 동작 제거\n• 업데이트 완료/업데이트 내용 화면이 실제 설치 버전의 변경사항을 표시하도록 수정"
+    "versionCode":  244,
+    "versionName":  "0.25.60",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.60-test.apk",
+    "sha256":  "6135c6dd42a57b97f4b4f6ed15c163f9ec4d6257799d7694c61d8decb1f62e87",
+    "notes":  "• 알림 전체/답변해야 하는 멘션을 옆 페이지가 같이 보이는 페이저형 스와이프로 개선\n• 전체 알림과 답변해야 하는 멘션의 스크롤 위치를 각각 기억해 탭을 왕복해도 보던 위치 유지\n• 손가락 이동량을 그대로 따라가도록 알림 좌우 스와이프 움직임 개선"
 }
