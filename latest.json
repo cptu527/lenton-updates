@@ -1,7 +1,7 @@
 {
-    "versionCode":  242,
-    "versionName":  "0.25.58",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.58-test.apk",
-    "sha256":  "f222c9e4a2c3fe2e853bb3c1f0153b13c990f1e78265051e39028d96b0f5b4d3",
-    "notes":  "• 본문/타래에서 답멘 작성 중 프로필로 이동했다가 뒤로 와도 작성 내용·CW·공개범위를 그대로 복원\n• 말풍선으로 답멘 작성할 때 대화 문맥의 상대 프로필 사진을 눌러 프로필로 이동 가능\n• 내 프로필 사진은 답멘 문맥에서 프로필 이동 대상으로 처리하지 않음"
+    "versionCode":  243,
+    "versionName":  "0.25.59",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.59-test.apk",
+    "sha256":  "f89e78f186d86226f5f6cb786b8ed35b4072bd5a29a675a8ffcd7f96fe92e96c",
+    "notes":  "• 홈 시간순/퍼블릭을 옆 페이지가 같이 보이는 페이저형 스와이프로 개선\n• 시간순과 퍼블릭의 스크롤 위치를 각각 기억해 다시 돌아왔을 때 보던 위치 유지\n• 탭 전환 때 맨 위로 강제로 올라가던 동작 제거\n• 업데이트 완료/업데이트 내용 화면이 실제 설치 버전의 변경사항을 표시하도록 수정"
 }
