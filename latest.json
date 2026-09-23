@@ -1,7 +1,7 @@
 {
-    "versionCode":  267,
-    "versionName":  "0.25.83",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.83-test.apk",
-    "sha256":  "8d62d78b370755ea226356af1802c753945e3b16557f23817e874b209968710c",
-    "notes":  "• 화면 구성 편집을 화면 구성 / 배경 테마 두 탭으로 분리\n• 같은 파일 경로를 다시 사용해도 새 배경 사진이 즉시 갱신되도록 Glide 캐시 키 수정\n• 배경 테마 탭에 적용 버튼 추가\n• 기존 알림·멘션 테마 연결과 스크롤·스와이프 동작 유지"
+    "versionCode":  268,
+    "versionName":  "0.25.84",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.84-test.apk",
+    "sha256":  "3294144f4ca3c8d160bc26f9074e4958b9f78eebc2aaaeb6c23d3dd28c1ad86c",
+    "notes":  "• 답변해야 하는 멘션 목록 전체에 배경 테마 surface 적용\n• 멘션 카드·읽지 않은 멘션 강조·빈 영역·좌우 스와이프 미리보기까지 배경이 자연스럽게 이어지도록 수정\n• 멘션에서 바로 답글 작성 시 답글 대상·작성 카드·CW 영역도 같은 테마 톤 적용\n• 기존 홈/알림 세로 스크롤·좌우 스와이프·당겨서 새로고침 동작 유지"
 }
