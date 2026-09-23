@@ -1,7 +1,7 @@
 {
-    "versionCode":  253,
-    "versionName":  "0.25.69",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.69-test.apk",
-    "sha256":  "af8971708edd740faf59ecc24308849634b061cc0a451278313c3b3395f7c181",
-    "notes":  "• 퍼블릭 타임라인을 즉시 기존 캐시로 먼저 표시하도록 변경\n• 최신 페이지만 먼저 즉시 갱신하고 나머지 페이지는 백그라운드에서 채움\n• 기존 캐시의 오래된 시간대와 연결되면 더 이상 불필요한 페이지 스캔을 중단\n• 사용자는 오래 기다리지 않고 퍼블릭을 바로 볼 수 있게 개선\n• v0.25.67 답멘 이전 대화 속도 개선은 그대로 유지"
+    "versionCode":  254,
+    "versionName":  "0.25.70",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.70-test.apk",
+    "sha256":  "c37b2109523fe2755f90707255ac35a7e885095e50f186d111f30706c0045052",
+    "notes":  "• 알림 탭 당겨서 새로고침을 X/Twitter 스타일 드래그 방식으로 변경\n• 상단 알림 탭은 고정하고 알림 목록만 손가락을 따라 저항감 있게 내려오도록 개선\n• 임계점에 도달하면 원형 스피너와 가벼운 햅틱 피드백 표시\n• 손을 놓으면 목록은 부드럽게 제자리로 복귀하고 스피너만 남아 새로고침 진행\n• 짧게 당기면 자연스럽게 취소되며 좌우 알림 탭 스와이프와 충돌하지 않도록 유지\n• v0.25.69 퍼블릭 누락/점진 로딩 및 v0.25.67 답멘 속도 개선 유지"
 }
