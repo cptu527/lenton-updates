@@ -1,7 +1,7 @@
 {
-    "versionCode": 258,
-    "versionName": "0.25.74",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.74-test.apk",
-    "sha256": "764ec9a823f3047dfabd4e72799ebe7eb1a546cfed32d96c9f07dd6c095c4b20",
-    "notes": "• CW(콘텐츠 경고) 제목 글자수를 본문과 합산해 실제 게시 제한과 카운터가 맞도록 수정\n• CW를 입력하거나 열고 닫을 때 남은 글자 수와 게시 버튼 상태가 즉시 갱신\n• 게시 버튼을 누른 뒤 전송이 끝날 때까지 중복 클릭을 잠가 연속 게시 방지\n• 게시 요청에 중복 방지 키를 적용해 응답이 끊겨 재시도해도 같은 게시물이 여러 번 생성되지 않도록 보강\n• 서버 게시 성공 후 화면 갱신에서 오류가 나도 게시 실패로 잘못 표시하지 않도록 성공 처리와 UI 후처리를 분리\n• 리스트 위치와 기존 타임라인·알림·퍼블릭·답멘 기능은 변경하지 않음"
+    "versionCode":  259,
+    "versionName":  "0.25.74",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.75-test.apk",
+    "sha256":  "483e92546af32e1775c46e6d60bf900de69a57b9757a436266e8cf8579a58893",
+    "notes":  "• 상단 시스템 알림의 하트와 오렌지 아이콘을 둘 다 조금 더 크게 조정\n• 두 아이콘에 동일한 1.05배 시각 배율을 적용해 크기를 맞춤\n• 기존 알림 동작과 아이콘 디자인은 그대로 유지"
 }
