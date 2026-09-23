@@ -1,7 +1,7 @@
 {
-    "versionCode":  265,
-    "versionName":  "0.25.81",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.81-test.apk",
-    "sha256":  "f699d4a10c259dc05a9dce4716d2b29508d3ba2a15d0a9d9ab0e8d643a6dc87a",
-    "notes":  "• 화면 구성 편집에 로컬 배경 테마 기능 추가\n• JPG/PNG/WEBP 이미지 1장을 배경으로 선택하고 불투명도·오버레이·블러·표시 방식을 즉시 조절\n• 상단 바·상단 탭·전체 화면 배경·하단 네비게이션 적용 여부를 각각 설정\n• 게시물 카드 가독성을 유지하고 홈/알림 스크롤·스와이프 동작에 영향을 주지 않도록 정적 배경 레이어로 처리"
+    "versionCode":  266,
+    "versionName":  "0.25.82",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.82-test.apk",
+    "sha256":  "1f007a7b60bfbacbbd5e1766e68a7d3eabdd0e7dca134b62a4aaebefbec0966c",
+    "notes":  "• 알림/멘션 목록도 배경 테마가 자연스럽게 이어지도록 반투명 surface 적용\n• 읽지 않은 알림 강조색도 테마 위에서 유지\n• 테마 OFF 또는 전체 화면 배경 OFF 시 기존 불투명 알림 디자인으로 복원\n• 홈/알림 스크롤·스와이프·당겨서 새로고침 동작은 변경하지 않음"
 }
