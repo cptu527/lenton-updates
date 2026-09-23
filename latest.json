@@ -1,7 +1,7 @@
 {
-    "versionCode":  278,
-    "versionName":  "0.25.94",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.94-test.apk",
-    "sha256":  "858f2f025dbd92fe9275654887b9a50a4c5930b3b3cff3f09de6c09aec496394",
-    "notes":  "• 게시물 상세서 스크릸/피드 전체의 bg()로 다시 댐플지 안도로 수정\n• 알립 화폤면 Pager/Scroll/List 이하 발경 해공을 직접 제거야해 중간시점 늱릐지 않게 수정\n• 화면 구성 편집창 바는 븈수미 유지하고, 븈수 사이는부분 배경 다시 노출"
+    "versionCode":  279,
+    "versionName":  "0.25.95",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.95-test.apk",
+    "sha256":  "9c3fad1a5b7a6398719ca1633f6ef89994b8f1188a16f69333b17b5cd045543f",
+    "notes":  "• 게시물 상세 내부의 기본 bg() 배경을 재귀적으로 제거해 실제 배경 이미지가 보이도록 수정\n• 알림 화면 내부의 기본 bg() 배경도 재귀적으로 제거해 배경이 끊기지 않도록 수정\n• 화면 구성 편집창의 불투명 바는 유지하고 바 사이 배경 노출은 유지"
 }
