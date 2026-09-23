@@ -1,7 +1,7 @@
 {
-    "versionCode":  255,
-    "versionName":  "0.25.71",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.71-test.apk",
-    "sha256":  "348b6ebf19346c28f5231d86d94f6ef7ffcd0ed72999fe76657d554bbcfa8a36",
-    "notes":  "• 알림 탭 당겨서 새로고침을 전용 ScrollView 구젰뮂�p���\u0013�f`+�\u0002���\u000e\u0007�.���V3����\u000e��v\u0000��΃��W�Vc�΀��V3��������w��0��\u001aC��\u0003�v��v\u0010��Rîv���\u0003�V���@��z#��0��\nӮ���b��\u003e\u0013��t��r���\u0000+�\u0002���V3���A���ˮ*P���\u0003��p��*��f\u0003�vӮ�0���\u000e#��s�΃�栃����vw�v\u0000��\u0012�\u0006p��Ns�zc��㮞0���\u0013�.ӮNs��Ѓ�ڧ�\u003e3�Vc��\u0000��V/�\u003e\u0013��t��\"c��T\n• 스피너은 임계점에 도달하면 활성화고 조우 스나밝 후 새로고침하게 유지\n• 임륕 삼스는 취소되면 제자리로 복귀 및 전체렁 요한 전삡은 그대로 유지\n• 퍼블릭 누락/【진 로딩, 답멘 이전 대화 속도 개선 유지"
+    "versionCode": 255,
+    "versionName": "0.25.71",
+    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.71-test.apk",
+    "sha256": "348b6ebf19346c28f5231d86d94f6ef7ffcd0ed72999fe76657d554bbcfa8a36",
+    "notes": "• 알림 탭 당겨서 새로고침을 전용 ScrollView 구조로 변경\n• 상단 알림 탭은 고정하고 알림 목록만 손가락을 따라 내려오도록 유지\n• 가로 스와이프는 Pager, 세로 당김은 알림 ScrollView가 각각 직접 처리하도록 분리\n• 임계점에 도달하면 원형 스피너와 햅틱 피드백 후 새로고침\n• 짧게 당기면 제자리로 복귀하고 기존 퍼블릭/답멘 속도 개선은 그대로 유지"
 }
