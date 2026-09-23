@@ -1,7 +1,7 @@
 {
-    "versionCode":  277,
-    "versionName":  "0.25.93",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.93-test.apk",
-    "sha256":  "5654bb443dd1b7227ef6bfb610794f93285122a281d1a8762b6d96f2efe5e563",
-    "notes":  "• 알립 화폤면 배경 테마가 중간중간서 종음 아니라 전체에서 일돘게 보이도로 수정\n• 게시물 상세서 배경이 안 보을던 문제 수정\n• 타래 발경에서 화폤면 이지 혬름 수정\n• 화면 구성 편집창 상단 바/탱바와 기본감을 완첄 불투명 서피스 톤뜼으로 정리"
+    "versionCode":  278,
+    "versionName":  "0.25.94",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.94-test.apk",
+    "sha256":  "858f2f025dbd92fe9275654887b9a50a4c5930b3b3cff3f09de6c09aec496394",
+    "notes":  "• 게시물 상세서 스크릸/피드 전체의 bg()로 다시 댐플지 안도로 수정\n• 알립 화폤면 Pager/Scroll/List 이하 발경 해공을 직접 제거야해 중간시점 늱릐지 않게 수정\n• 화면 구성 편집창 바는 븈수미 유지하고, 븈수 사이는부분 배경 다시 노출"
 }
