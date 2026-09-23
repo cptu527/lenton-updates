@@ -1,7 +1,7 @@
 {
-  "versionCode": 264,
-  "versionName": "0.25.80",
-  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.80-test.apk",
-  "sha256": "584100f713064ead5997bcbc14f6f1b5351f8e4353304dab60a447c916f76adb",
-  "notes": "• 답글형 게시물을 열 때 목록에서 받은 데이터에 이전 대화 정보가 빠져 있어도, 원본 게시물을 다시 불러와 부모 게시물 정보를 확인하도록 수정했습니다.\n• /context 이전 대화가 비어 있으면 이전 부모 게시물을 직접 다시 불러오는 복구 로직을 유지합니다.\n• 게시물 상세 화면의 당겨서 새로고침도 같은 방식으로 이전 대화를 다시 확인합니다."
+    "versionCode":  265,
+    "versionName":  "0.25.81",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.81-test.apk",
+    "sha256":  "f699d4a10c259dc05a9dce4716d2b29508d3ba2a15d0a9d9ab0e8d643a6dc87a",
+    "notes":  "• 화면 구성 편집에 로컬 배경 테마 기능 추가\n• JPG/PNG/WEBP 이미지 1장을 배경으로 선택하고 불투명도·오버레이·블러·표시 방식을 즉시 조절\n• 상단 바·상단 탭·전체 화면 배경·하단 네비게이션 적용 여부를 각각 설정\n• 게시물 카드 가독성을 유지하고 홈/알림 스크롤·스와이프 동작에 영향을 주지 않도록 정적 배경 레이어로 처리"
 }
