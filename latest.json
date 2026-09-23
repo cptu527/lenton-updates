@@ -1,7 +1,7 @@
 {
-    "versionCode":  275,
-    "versionName":  "0.25.91",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.91-test.apk",
-    "sha256":  "0256322f44d9d9bfea55a22a36754e421ce0a48c9c6f718765ebe3b934b51a9a",
-    "notes":  "• 배경 편집 미리보기를 실제 안드로이드 배경 영역 비율과 맞춰 편집한 구도가 적용 후 달라지던 문제 수정\n• 두 손가락 확대/축소 후 한 손가락으로 전환할 때 좌표 기준을 다시 잡아 이미지가 튀는 현상 수정\n• 핀치 중심 이동을 부드럽게 반영해 확대 중 순간이동을 줄임"
+    "versionCode":  276,
+    "versionName":  "0.25.92",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.92-test.apk",
+    "sha256":  "e3072017680f8e84e266dbfe1fe68185d1a1a5b28f88ab39b948a0c3f4d684d6",
+    "notes":  "• 배경 편집 위치 저장 범위를 크게 넓혀 적용 후 다른 위치로 이동하던 문제 수정\n• 배경 이미지 최대 확대를 600%에서 1600%로 확대\n• 기존 배경 편집/핀치 보정과 계정별 설정은 그대로 유지"
 }
