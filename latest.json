@@ -1,7 +1,7 @@
 {
-    "versionCode":  274,
-    "versionName":  "0.25.90",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.90-test.apk",
-    "sha256":  "40a7fb68d272b8f6d4c88fecf80a09034ff5438e5149f391b130ece90de8a9c1",
-    "notes":  "• 배경 사진 편집을 FIT 기준 Matrix 방식으로 변경해 처음부터 원본 전체가 보이도록 수정\n• 손가락 이동·핀치를 ImageView 변형 대신 GPU Matrix로 처리해 버벅임 감소\n• 편집용 이미지를 화면 크기에 맞춰 다운샘플해 고해상도 사진에서도 반응 속도 개선\n• 적용 결과도 FIT 기준 위치/확대값으로 저장해 편집 화면과 실제 배경 차이를 줄임"
+    "versionCode":  275,
+    "versionName":  "0.25.91",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.91-test.apk",
+    "sha256":  "0256322f44d9d9bfea55a22a36754e421ce0a48c9c6f718765ebe3b934b51a9a",
+    "notes":  "• 배경 편집 미리보기를 실제 안드로이드 배경 영역 비율과 맞춰 편집한 구도가 적용 후 달라지던 문제 수정\n• 두 손가락 확대/축소 후 한 손가락으로 전환할 때 좌표 기준을 다시 잡아 이미지가 튀는 현상 수정\n• 핀치 중심 이동을 부드럽게 반영해 확대 중 순간이동을 줄임"
 }
