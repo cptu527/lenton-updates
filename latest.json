@@ -1,6 +1,6 @@
 {
     "versionCode":  259,
-    "versionName":  "0.25.74",
+    "versionName":  "0.25.75",
     "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.75-test.apk",
     "sha256":  "483e92546af32e1775c46e6d60bf900de69a57b9757a436266e8cf8579a58893",
     "notes":  "• 상단 시스템 알림의 하트와 오렌지 아이콘을 둘 다 조금 더 크게 조정\n• 두 아이콘에 동일한 1.05배 시각 배율을 적용해 크기를 맞춤\n• 기존 알림 동작과 아이콘 디자인은 그대로 유지"
