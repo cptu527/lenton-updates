@@ -1,7 +1,7 @@
 {
-    "versionCode":  261,
-    "versionName":  "0.25.77",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.77-test.apk",
-    "sha256":  "6d7f74bf3fb1d04f720804e82d4116dd22234812e5fa92a61a6a8720a1df3288",
-    "notes":  "• 알림을 확인한 후 새로고침하면 이미 본 알림의 배경색이 다시 남지 않도록 수정\n• 답변해야 하는 멘션 탭에서도 읽음 상태를 정상 반영하도록 수정\n• 게시물 상세에서 이전 멘션/대화 로딩이 실패할 때 /context 요청을 최대 3회 재시도하고, 그래도 실패하면 직접 부모 게시물을 불러오도록 보강"
+    "versionCode":  262,
+    "versionName":  "0.25.78",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.78-test.apk",
+    "sha256":  "09d65476b80fa2c80548eb23f21b36d0aa571571fb725c25ab13c5b1cbcffa67",
+    "notes":  "• 알림 탭을 다시 누르면 현재 알림 탭을 맨 위로 올리고 즉시 새로고침\n• 알림 목록 스크롤이 위에서 시작할 때도 일반 스크롤/플링을 가로채지 않도록 수정\n• 홈 타임라인도 Android 기본 RecyclerView 터치 처리를 다시 사용해 손가락을 더 정확히 따라오도록 수정"
 }
