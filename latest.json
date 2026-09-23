@@ -1,7 +1,7 @@
 {
-    "versionCode":  260,
-    "versionName":  "0.25.76",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.76-test.apk",
-    "sha256":  "3e19b5dd9b3cd08c72dad476968d67ab994dcf88975e6ed2cdfe11a154925878",
-    "notes":  "• CW(콘텐츠 경고) 입력 시 글자 수가 본문 카운터에 즉시 반영되도록 수정\n• 한글 조합 입력 중에도 CW 글자 수가 바로 갱신되도록 보완\n• CW를 켜거나 끌 때 카운터와 게시 가능 상태가 즉시 다시 계산되도록 수정"
+    "versionCode":  261,
+    "versionName":  "0.25.77",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.77-test.apk",
+    "sha256":  "6d7f74bf3fb1d04f720804e82d4116dd22234812e5fa92a61a6a8720a1df3288",
+    "notes":  "• 알림을 확인핔 후 새로고침해도 었벂��ӲvӮ*P���s��ò\u000e\u0027�vЃ�.��.p��*㮢Ӳ�\u0000��V/�\u003e\u0013��t��\"c��W\n•\"\u000e��N�8\u000e�[N�[�\u000e�Y����\b:�f;!f\b;`�{\u0027f\b;\"\u0026:��\b;`�{%�;!\u0027\b;\u0027n;\"�H;(%{ �{a�\b;( {\u0026�B��(����3�.p��2\u0003�fP��vӲ�\u0010�����V`���s�B��f\u0000��.��2��^@��2\u0003�VЀ����ѕ�Ѓ�z��.s�\u003e\u0010�̃�fp��zC�\u003ed��.s�\u003e\u0010���\u003c��.p��\n���"
 }
