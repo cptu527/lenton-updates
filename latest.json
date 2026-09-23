@@ -1,7 +1,7 @@
 {
-    "versionCode":  259,
-    "versionName":  "0.25.75",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.75-test.apk",
-    "sha256":  "483e92546af32e1775c46e6d60bf900de69a57b9757a436266e8cf8579a58893",
-    "notes":  "• 상단 시스템 알림의 하트와 오렌지 아이콘을 둘 다 조금 더 크게 조정\n• 두 아이콘에 동일한 1.05배 시각 배율을 적용해 크기를 맞춤\n• 기존 알림 동작과 아이콘 디자인은 그대로 유지"
+    "versionCode":  260,
+    "versionName":  "0.25.76",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.76-test.apk",
+    "sha256":  "3e19b5dd9b3cd08c72dad476968d67ab994dcf88975e6ed2cdfe11a154925878",
+    "notes":  "• CW(콘텐츠 경고) 입력 시 글자 수가 본문 카운터에 즉시 반영되도록 수정\n• 한글 조합 입력 중에도 CW 글자 수가 바로 갱신되도록 보완\n• CW를 켜거나 끌 때 카운터와 게시 가능 상태가 즉시 다시 계산되도록 수정"
 }
