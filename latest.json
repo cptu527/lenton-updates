@@ -1,7 +1,7 @@
 {
-    "versionCode": 272,
-    "versionName": "0.25.88",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.88-test.apk",
-    "sha256": "5cd11112a7e8488e050a032cf5cccdb08a8b895ab14d8ca907c4217e222f8fd9",
-    "notes": "• 시스템 상태바에 실제 반투명 overlay를 추가해 상단 탭과 같은 흰 톤으로 표시\n• 배경 이미지 편집에서 확대·좌우·상하 위치를 조절하고 적용 가능\n• 배경 사진과 불투명도·블러·적용 영역·사진 위치를 계정별로 각각 저장\n• 기존 기기 공용 배경은 현재 계정으로 한 번 자동 이전"
+    "versionCode":  273,
+    "versionName":  "0.25.89",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.89-test.apk",
+    "sha256":  "5e156a7cc18202b02c9f9ad323a4d2c15ae17d4fae65f6a902e3daf802a1ff9d",
+    "notes":  "• 배경 사진을 선택하면 저장 전에 바로 손가락 편집 화면 표시\n• 한 손가락 드래그로 위치 이동, 두 손가락 핀치로 확대/축소 가능\n• 취소 시 기존 배경 유지, 적용 시에만 새 사진과 위치 저장\n• 배경 이미지 편집 메뉴도 같은 손가락 편집 방식 사용 · 계정별 설정 유지"
 }
