@@ -1,7 +1,7 @@
 {
-    "versionCode":  264,
-    "versionName":  "0.25.80",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.80-test.apk",
-    "sha256":  "584100f713064ead5997bcbc14f6f1b5351f8e4353304dab60a447c916f76adb",
-    "notes":  "• 다글혔 게\u001eȄ밼 열을 때 뢩록에서 받은 하개 문자루에 이전 대화 정보가 블윐 있더이터를 다시 불러와 관성으록 재정하니다.\n• /context 이전 대화가 비어한데 이전 부모 게시물을 직접 재시도하는 궀낤가 그대로 유지남 복구합니다.\n• 다글혔 당길에서도 및각 새로고침을 그대로 사용합니다."
+  "versionCode": 264,
+  "versionName": "0.25.80",
+  "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.80-test.apk",
+  "sha256": "584100f713064ead5997bcbc14f6f1b5351f8e4353304dab60a447c916f76adb",
+  "notes": "• 답글형 게시물을 열 때 목록에서 받은 데이터에 이전 대화 정보가 빠져 있어도, 원본 게시물을 다시 불러와 부모 게시물 정보를 확인하도록 수정했습니다.\n• /context 이전 대화가 비어 있으면 이전 부모 게시물을 직접 다시 불러오는 복구 로직을 유지합니다.\n• 게시물 상세 화면의 당겨서 새로고침도 같은 방식으로 이전 대화를 다시 확인합니다."
 }
