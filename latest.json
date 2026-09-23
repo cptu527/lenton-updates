@@ -1,7 +1,7 @@
 {
-    "versionCode":  262,
-    "versionName":  "0.25.78",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.78-test.apk",
-    "sha256":  "09d65476b80fa2c80548eb23f21b36d0aa571571fb725c25ab13c5b1cbcffa67",
-    "notes":  "• 알림 탭을 다시 누르면 현재 알림 탭을 맨 위로 올리고 즉시 새로고침\n• 알림 목록 스크롤이 위에서 시작할 때도 일반 스크롤/플링을 가로채지 않도록 수정\n• 홈 타임라인도 Android 기본 RecyclerView 터치 처리를 다시 사용해 손가락을 더 정확히 따라오도록 수정"
+    "versionCode":  263,
+    "versionName":  "0.25.79",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.79-test.apk",
+    "sha256":  "d940a1914a19a69f4753671b8f7c179dd7cefd8c200cd7a7c810bacc06e74c0d",
+    "notes":  "• 알림 목록을 홈 타임라인처럼 터치 즉시 멈추는 스크롤 감각으로 수정\n• 알림이 관성으로 움직이는 중 화면을 터치하면 남은 플링을 즉시 끊고 손가락 입력을 우선하도록 보정\n• 당겨서 새로고침과 좌우 탭 스와이프 동작은 그대로 유지"
 }
