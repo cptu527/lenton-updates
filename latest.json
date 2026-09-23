@@ -1,7 +1,7 @@
 {
-    "versionCode":  273,
-    "versionName":  "0.25.89",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.89-test.apk",
-    "sha256":  "5e156a7cc18202b02c9f9ad323a4d2c15ae17d4fae65f6a902e3daf802a1ff9d",
-    "notes":  "• 배경 사진을 선택하면 저장 전에 바로 손가락 편집 화면 표시\n• 한 손가락 드래그로 위치 이동, 두 손가락 핀치로 확대/축소 가능\n• 취소 시 기존 배경 유지, 적용 시에만 새 사진과 위치 저장\n• 배경 이미지 편집 메뉴도 같은 손가락 편집 방식 사용 · 계정별 설정 유지"
+    "versionCode":  274,
+    "versionName":  "0.25.90",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.90-test.apk",
+    "sha256":  "40a7fb68d272b8f6d4c88fecf80a09034ff5438e5149f391b130ece90de8a9c1",
+    "notes":  "• 배경 사진 편집을 FIT 기준 Matrix 방식으로 변경해 처음부터 원본 전체가 보이도록 수정\n• 손가락 이동·핀치를 ImageView 변형 대신 GPU Matrix로 처리해 버벅임 감소\n• 편집용 이미지를 화면 크기에 맞춰 다운샘플해 고해상도 사진에서도 반응 속도 개선\n• 적용 결과도 FIT 기준 위치/확대값으로 저장해 편집 화면과 실제 배경 차이를 줄임"
 }
