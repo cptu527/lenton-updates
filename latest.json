@@ -1,7 +1,7 @@
 {
-    "versionCode":  271,
-    "versionName":  "0.25.87",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.87-test.apk",
-    "sha256":  "d38ac14dc8a66051179077a47afd7825cb522c482ed61622db8b6ea070a06f34",
-    "notes":  "• 시스텝 상태바리 상단 탭과 같은 반투명 테마 surface로 통일\n• 배경 테마 ON일 땜 마 유 멘 위만 선명하게 비치뉔 차이 완화\n• 하단 타임라다 상단 핤더/탭사업는 기존 규조 유지\n• 테마 OFF 시 상태바도 기존 색삡으로 복원"
+    "versionCode": 271,
+    "versionName": "0.25.87",
+    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.87-test.apk",
+    "sha256": "d38ac14dc8a66051179077a47afd7825cb522c482ed61622db8b6ea070a06f34",
+    "notes": "• 시스템 상태바(시간·와이파이·배터리 영역)를 상단 탭과 같은 반투명 테마 surface로 통일\n• 배경 테마 ON일 때 맨 위만 너무 선명하게 비치던 차이를 완화\n• 하단 타임라인 배경 표시와 상단 헤더/탭 구조는 그대로 유지\n• 테마 OFF 시 상태바도 기존 배경색으로 복원"
 }
