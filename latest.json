@@ -1,7 +1,7 @@
 {
-    "versionCode":  269,
-    "versionName":  "0.25.85",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.85-test.apk",
-    "sha256":  "c4b72d674883ed6df368a67515d6db27ca023be158d89122a329028a6a398a6c",
-    "notes":  "• 알림 제목��과 전체 알림/돵답하는 멘션 탭에 홈전백경 키지트 바다에 적용\n• 답변해야 하는 멘션 목록 영역을 완전 투명도 처리하고 선택한 배경 사진을 직접 보인지 중구 바게하 수정가"
+    "versionCode": 269,
+    "versionName": "0.25.85",
+    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.85-test.apk",
+    "sha256": "c4b72d674883ed6df368a67515d6db27ca023be158d89122a329028a6a398a6c",
+    "notes": "• 알림 제목 영역과 전체 알림/답변해야 하는 멘션 탭은 홈 헤더처럼 반투명 surface 유지\n• 답변해야 하는 멘션 목록은 카드 배경을 제거해 선택한 배경 사진이 직접 보이도록 변경\n• 읽지 않은 멘션만 아주 약한 강조색을 남기고 읽은 멘션은 완전 투명 처리\n• 기존 멘션 구분선·글자·아이콘과 스크롤·스와이프·당겨서 새로고침 동작 유지"
 }
