@@ -1,7 +1,7 @@
 {
-    "versionCode":  252,
-    "versionName":  "0.25.68",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.68-test.apk",
-    "sha256":  "3269655f50701d5a37b07926d26083d1052a4f4c3a70b60a29eba9865b63992c",
-    "notes":  "• 퍼블릭 타임라인에서 최신 글과 오래된 캐시 사이 시간이 통째로 비는 현상 수정\n• 새 글이 40개 이상 쌓인 경우 다음 페이지까지 연속으로 불러와 중간 구간 누락 방지\n• 퍼블릭의 기존 답글 제외 규칙과 정렬 방식은 그대로 유지\n• v0.25.67 답멘 이전 대화 속도 개선은 그대로 유지"
+    "versionCode":  253,
+    "versionName":  "0.25.69",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.69-test.apk",
+    "sha256":  "af8971708edd740faf59ecc24308849634b061cc0a451278313c3b3395f7c181",
+    "notes":  "• 퍼블릭 타임라인을 즉시 기존 캐시로 먼저 표시하도록 변경\n• 최신 페이지만 먼저 즉시 갱신하고 나머지 페이지는 백그라운드에서 채움\n• 기존 캐시의 오래된 시간대와 연결되면 더 이상 불필요한 페이지 스캔을 중단\n• 사용자는 오래 기다리지 않고 퍼블릭을 바로 볼 수 있게 개선\n• v0.25.67 답멘 이전 대화 속도 개선은 그대로 유지"
 }
