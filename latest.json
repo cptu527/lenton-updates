@@ -1,7 +1,7 @@
 {
-    "versionCode":  263,
-    "versionName":  "0.25.79",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.79-test.apk",
-    "sha256":  "d940a1914a19a69f4753671b8f7c179dd7cefd8c200cd7a7c810bacc06e74c0d",
-    "notes":  "• 알림 목록을 홈 타임라인처럼 터치 즉시 멈추는 스크롤 감각으로 수정\n• 알림이 관성으로 움직이는 중 화면을 터치하면 남은 플링을 즉시 끊고 손가락 입력을 우선하도록 보정\n• 당겨서 새로고침과 좌우 탭 스와이프 동작은 그대로 유지"
+    "versionCode":  264,
+    "versionName":  "0.25.80",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.80-test.apk",
+    "sha256":  "584100f713064ead5997bcbc14f6f1b5351f8e4353304dab60a447c916f76adb",
+    "notes":  "• 다글혔 게\u001eȄ밼 열을 때 뢩록에서 받은 하개 문자루에 이전 대화 정보가 블윐 있더이터를 다시 불러와 관성으록 재정하니다.\n• /context 이전 대화가 비어한데 이전 부모 게시물을 직접 재시도하는 궀낤가 그대로 유지남 복구합니다.\n• 다글혔 당길에서도 및각 새로고침을 그대로 사용합니다."
 }
