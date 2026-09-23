@@ -1,7 +1,7 @@
 {
-    "versionCode":  268,
-    "versionName":  "0.25.84",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.84-test.apk",
-    "sha256":  "3294144f4ca3c8d160bc26f9074e4958b9f78eebc2aaaeb6c23d3dd28c1ad86c",
-    "notes":  "• 답변해야 하는 멘션 목록 전체에 배경 테마 surface 적용\n• 멘션 카드·읽지 않은 멘션 강조·빈 영역·좌우 스와이프 미리보기까지 배경이 자연스럽게 이어지도록 수정\n• 멘션에서 바로 답글 작성 시 답글 대상·작성 카드·CW 영역도 같은 테마 톤 적용\n• 기존 홈/알림 세로 스크롤·좌우 스와이프·당겨서 새로고침 동작 유지"
+    "versionCode":  269,
+    "versionName":  "0.25.85",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.85-test.apk",
+    "sha256":  "c4b72d674883ed6df368a67515d6db27ca023be158d89122a329028a6a398a6c",
+    "notes":  "• 알림 제목��과 전체 알림/돵답하는 멘션 탭에 홈전백경 키지트 바다에 적용\n• 답변해야 하는 멘션 목록 영역을 완전 투명도 처리하고 선택한 배경 사진을 직접 보인지 중구 바게하 수정가"
 }
