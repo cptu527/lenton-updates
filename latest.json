@@ -1,7 +1,7 @@
 {
-    "versionCode":  290,
+    "versionCode":  291,
     "versionName":  "0.26.06",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.06-test.apk",
-    "sha256":  "1d5a66abc4518c55660b3fa29f51e3201af0228567387ed3f92538e2267783cc",
-    "notes":  "• DM 대화방에서도 계정별 배경 테마가 보이도록 수정\n• DM 상단바·대화 본문·하단 입력 영역을 배경 테마와 자연스럽게 연결\n• DM 목록도 배경 테마 사용 시 일반 행은 투명, 읽지 않은 대화는 가벼운 반투명 강조로 표시"
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.07-test.apk",
+    "sha256":  "cb7c84280bc487f7537a09edc02f36686a489a16a2871fac73928a65c2c33f29",
+    "notes":  "• 내 게시물은 공개/조용한 공개 상태라면 내 계정이 잠금 계정이어도 부스트 가능하게 수정\n• 팔로워 전용·DM 게시물은 기존처럼 부스트 잠금 유지\n• 다른 잠금 계정 게시물에 대한 기존 제한은 유지"
 }
