@@ -1,7 +1,7 @@
 {
-    "versionCode":  284,
-    "versionName":  "0.26.00",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.00-test.apk",
-    "sha256":  "49ec971c177bab32e927b20293f1c3cf0c31f35a16301de504d02aba9c115eac",
-    "notes":  "• 게시물 상세 본문에서 배경을 막는 컨테이너 drawable을 종류와 상관없이 제거\n• 답글 작성창 본문 컨테이너 배경도 동일하게 제거\n• 상단/하단 입력 UI는 유지하고 실제 배경 이미지는 뒤에서 보이도록 수정"
+    "versionCode":  285,
+    "versionName":  "0.26.01",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.01-test.apk",
+    "sha256":  "83352e3f088f646c0c4f67b5c03dea9f8a4cd3fb7c84aff428336ae78ef77355",
+    "notes":  "• 게시물 상세 본문의 ScrollView/feed 븰경 완전 투명화뮆p���W��p��r���\u0000+�\u0002���.ת�\u0000���\u0013��Ѓ�zG�*����^@���ê��f\u0013��\u0010���#�\"���\u0017�r�p���\u0007��D���\u0003�z��Vc�\u003e\u0013��p��\"c��T+�\u0002���Vc�.���.ת�\u0000��z\u0017������\u003e\u0010���c�\"���\u0017�\u003e\u0010��\nc�\u0016��p��r���"
 }
