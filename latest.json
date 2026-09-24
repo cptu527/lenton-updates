@@ -1,7 +1,7 @@
 {
-    "versionCode":  291,
-    "versionName":  "0.26.06",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.07-test.apk",
-    "sha256":  "cb7c84280bc487f7537a09edc02f36686a489a16a2871fac73928a65c2c33f29",
-    "notes":  "• 내 게시물은 공개/조용한 공개 상태라면 내 계정이 잠금 계정이어도 부스트 가능하게 수정\n• 팔로워 전용·DM 게시물은 기존처럼 부스트 잠금 유지\n• 다른 잠금 계정 게시물에 대한 기존 제한은 유지"
+    "versionCode": 291,
+    "versionName": "0.26.07",
+    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.07-test.apk",
+    "sha256": "cb7c84280bc487f7537a09edc02f36686a489a16a2871fac73928a65c2c33f29",
+    "notes": "• 내 게시물은 공개/조용한 공개 상태라면 내 계정이 잠금 계정이어도 부스트 가능하게 수정\n• 팔로워 전용·DM 게시물은 기존처럼 부스트 잠금 유지\n• 다른 잠금 계정 게시물에 대한 기존 제한은 유지"
 }
