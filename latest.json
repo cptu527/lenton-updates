@@ -1,7 +1,7 @@
 {
-    "versionCode":  292,
+    "versionCode":  293,
     "versionName":  "0.26.08",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.08-test.apk",
-    "sha256":  "ecdd5deee0cf2de98772caf9f0bc2fe8d3b932187a53ebc61f4252c9957eb107",
-    "notes":  "• 내 게시물의 부스트 시 공개 번위를 선택할 수 있도록 개선\n• 일반 부스트는 기조 동작을 유지하고, 팔로워에게만 부스트를 선택 가능\n• 눴 팔로워 전용 게시물은 자기 계정으로 팔로움만 부스트 가늤하게 다른 사람은 지금 제한 유지"
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.09-test.apk",
+    "sha256":  "e6ac08ee7a0a81fc5bf9bfd30602f0deaea2b0941c69a41828d46eb306e65ec7",
+    "notes":  "• 답글 수는 있는데 타래가 비어 보이는 현상 수정\n• 서버 context가 일시적으로 빈 descendants를 반환해도 답글 수가 있으면 최대 4회 재시도\n• 답글이 있는 게시물의 빈 context 캐시는 재사용하지 않도록 수정"
 }
