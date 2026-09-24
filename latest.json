@@ -1,7 +1,7 @@
 {
-    "versionCode":  289,
+    "versionCode":  290,
     "versionName":  "0.26.05",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.05-test.apk",
-    "sha256":  "b52608c7864358246912bcdc8a8a84864a1a1378848e05e2d3e328b401c1484c",
-    "notes":  "• 답글 게시 직후 같은 게시물이 두 줄로 중복 표시되는 현상 수정\n• 로컬 즉시 표시와 서버/캐시 타래 재렌더가 겹쳐도 게시물 ID 기준으로 한 번만 표시\n• 인라인 답글, 빠른 답글, 전체 작성창에서 같은 중복 방지 로직 적용"
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.06-test.apk",
+    "sha256":  "1d5a66abc4518c55660b3fa29f51e3201af0228567387ed3f92538e2267783cc",
+    "notes":  "• DM 대화방에서도 계정별 배경 테마가 보이도록 수정\n• DM 상단바·대화 본문·하단 입력 영역을 배경 테마와 자연스럽게 연결\n• DM 목록도 배경 테마 사용 시 일반 행은 투명, 읽지 않은 대화는 가벼운 반투명 강조로 표시"
 }
