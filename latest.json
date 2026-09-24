@@ -1,7 +1,7 @@
 {
-    "versionCode":  279,
-    "versionName":  "0.25.95",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.95-test.apk",
-    "sha256":  "9c3fad1a5b7a6398719ca1633f6ef89994b8f1188a16f69333b17b5cd045543f",
-    "notes":  "• 게시물 상세 내부의 기본 bg() 배경을 재귀적으로 제거해 실제 배경 이미지가 보이도록 수정\n• 알림 화면 내부의 기본 bg() 배경도 재귀적으로 제거해 배경이 끊기지 않도록 수정\n• 화면 구성 편집창의 불투명 바는 유지하고 바 사이 배경 노출은 유지"
+    "versionCode":  280,
+    "versionName":  "0.25.96",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.96-test.apk",
+    "sha256":  "93aaf3d7b6e8296535f687c178af5b91ff77c9e6ee1718ead131d181c96f5446",
+    "notes":  "• 게시물 상세/알림의 기본 bg()와 surface() 레이어를 반투명 glass로 바꿔 배경 이미지가 확실히 비치도록 수정\n• 화면 구성 편집의 상단바/탭바/홈·검색·알림·DM 행/초기화 바를 완전 불투명 대신 진한 반투명으로 변경\n• 기존 배경 편집 위치/확대/핀치 보정은 유지"
 }
