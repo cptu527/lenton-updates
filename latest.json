@@ -1,7 +1,7 @@
 {
-    "versionCode": 288,
-    "versionName": "0.26.04",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.04-test.apk",
-    "sha256": "9c4e53ac834505681a223c6f412910159b536025a896c7759d12235465ca6e2e",
-    "notes": "• 배경 테마 화면 오른쪽 위의 적용 버튼을 파란색 둥근 버튼으로 변경\n• 흰색 굵은 글자와 넉넉한 터치 영역으로 적용 버튼 식별성 개선\n• 배경 테마 탭에서만 표시되는 기존 동작은 유지"
+    "versionCode":  288,
+    "versionName":  "0.26.04",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.04-test.apk",
+    "sha256":  "9c4e53ac834505681a223c6f412910159b536025a896c7759d12235465ca6e2e",
+    "notes":  "• 배경 테마 화면 오른쪽 위의 적용 버튼을 파란색 둥근 버튼으로 변경\n• 흰색 굵은 글자와 넉넉한 터치 영역으로 적용 버튼 식별성 개선\n• 배경 테마 탭에서만 표시되는 기존 동작은 유지"
 }
