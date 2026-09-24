@@ -1,7 +1,7 @@
 {
-    "versionCode":  287,
+    "versionCode":  288,
     "versionName":  "0.26.03",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.03-test.apk",
-    "sha256":  "d7bd481fca90da72d3fe31de85afe49c98484d7fe3349d3a5a3bb9be2f0ff531",
-    "notes":  "• 다른 기기에서 기존 배경 테마 설정이 남아 타임라인/알림 배경이 흰색으로 보이던 경우를 1회 자동 보정\n• 배경 테마 적용 시 홈 타임라인을 즉시 다시 바인딩해 투명 배경을 바로 반영\n• 배경 테마의 적용 버튼을 설정 화면 오른쪽 위로 이동하고 배경 테마 탭에서만 표시"
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.04-test.apk",
+    "sha256":  "9c4e53ac834505681a223c6f412910159b536025a896c7759d12235465ca6e2e",
+    "notes":  "• 배경 테마 화면 오른쪽 위의 적용 버튼을 파란색 둥근 버튼으로 변경\n• 흰색 굵은 글자와 넉넉한 터치 영역으로 적용 버튼 식별성 개선\n• 배경 테마 탭에서만 표시되는 기존 동작은 유지"
 }
