@@ -1,7 +1,7 @@
 {
-    "versionCode":  280,
-    "versionName":  "0.25.96",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.96-test.apk",
-    "sha256":  "93aaf3d7b6e8296535f687c178af5b91ff77c9e6ee1718ead131d181c96f5446",
-    "notes":  "• 게시물 상세/알림의 기본 bg()와 surface() 레이어를 반투명 glass로 바꿔 배경 이미지가 확실히 비치도록 수정\n• 화면 구성 편집의 상단바/탭바/홈·검색·알림·DM 행/초기화 바를 완전 불투명 대신 진한 반투명으로 변경\n• 기존 배경 편집 위치/확대/핀치 보정은 유지"
+    "versionCode":  281,
+    "versionName":  "0.25.97",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.97-test.apk",
+    "sha256":  "2c1a7f6007add0be89b8a72e3900ce02a546975d892d06519f7142bc64ce62f7",
+    "notes":  "• 게시물 상세 본문에 댸한 반투명 화면 바꿔 배경 이미지가 확실히 비치도록 수정\n• 돵글 작성창 루트/toolbar/body 유지 화면 묰경 테마 지가 다시 노출• 하단 답글 입력창 도 빘투명으로 변경"
 }
