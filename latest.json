@@ -1,7 +1,7 @@
 {
-    "versionCode": 289,
-    "versionName": "0.26.05",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.05-test.apk",
-    "sha256": "b52608c7864358246912bcdc8a8a84864a1a1378848e05e2d3e328b401c1484c",
-    "notes": "• 답글 게시 직후 같은 게시물이 두 줄로 중복 표시되는 현상 수정\n• 로컬 즉시 표시와 서버/캐시 타래 재렌더가 겹쳐도 게시물 ID 기준으로 한 번만 표시\n• 인라인 답글, 빠른 답글, 전체 작성창에서 같은 중복 방지 로직 적용"
+    "versionCode":  289,
+    "versionName":  "0.26.05",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.05-test.apk",
+    "sha256":  "b52608c7864358246912bcdc8a8a84864a1a1378848e05e2d3e328b401c1484c",
+    "notes":  "• 답글 게시 직후 같은 게시물이 두 줄로 중복 표시되는 현상 수정\n• 로컬 즉시 표시와 서버/캐시 타래 재렌더가 겹쳐도 게시물 ID 기준으로 한 번만 표시\n• 인라인 답글, 빠른 답글, 전체 작성창에서 같은 중복 방지 로직 적용"
 }
