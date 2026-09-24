@@ -1,7 +1,7 @@
 {
-    "versionCode": 285,
-    "versionName": "0.26.01",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.01-test.apk",
-    "sha256": "83352e3f088f646c0c4f67b5c03dea9f8a4cd3fb7c84aff428336ae78ef77355",
-    "notes": "• 게시물 상세 본문의 ScrollView/feed 배경 완전 투명화\n• 답글 전체 작성창 본문 배경 완전 투명화\n• 렌더링 후 다시 배경색이 덮이지 않도록 재적용 처리\n• 하단 답글 입력창은 가독성을 위해 약한 반투명 유지"
+    "versionCode":  286,
+    "versionName":  "0.26.02",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.02-test.apk",
+    "sha256":  "2e10f07fb4bb40555365ba6c7832659c0f0cbdff0ff7affe05cf41a42cb0ca5d",
+    "notes":  "• 게시물 상세 당겨서 새로고침 FrameLayout 래퍼를 완전 투명 처리\n• 테마 배경 사용 시 해당 래퍼를 PASS 영역으로 고정\n• 기존 ScrollView/feed 투명화와 답글 작성창 투명화 유지"
 }
