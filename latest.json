@@ -1,7 +1,7 @@
 {
-    "versionCode": 290,
-    "versionName": "0.26.06",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.06-test.apk",
-    "sha256": "1d5a66abc4518c55660b3fa29f51e3201af0228567387ed3f92538e2267783cc",
-    "notes": "• DM 대화방에서도 계정별 배경 테마가 보이도록 수정\n• DM 상단바·대화 본문·하단 입력 영역을 배경 테마와 자연스럽게 연결\n• DM 목록도 배경 테마 사용 시 일반 행은 투명, 읽지 않은 대화는 가벼운 반투명 강조로 표시"
+    "versionCode":  290,
+    "versionName":  "0.26.06",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.06-test.apk",
+    "sha256":  "1d5a66abc4518c55660b3fa29f51e3201af0228567387ed3f92538e2267783cc",
+    "notes":  "• DM 대화방에서도 계정별 배경 테마가 보이도록 수정\n• DM 상단바·대화 본문·하단 입력 영역을 배경 테마와 자연스럽게 연결\n• DM 목록도 배경 테마 사용 시 일반 행은 투명, 읽지 않은 대화는 가벼운 반투명 강조로 표시"
 }
