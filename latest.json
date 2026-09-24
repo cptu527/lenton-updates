@@ -1,7 +1,7 @@
 {
-    "versionCode":  283,
-    "versionName":  "0.25.99",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.25.99-test.apk",
-    "sha256":  "a7bb61af8f089e2a145c728704a92479b4f300ed80be1f5289285c4585ea3c38",
-    "notes":  "• 게시물 상세 본문을 테마 이미지가 콜 있으면 전체화뭴 배경 톨과로 강제 토계• 다글 작성창의 코포지로 발경 토과로 직접 연결 유지"
+    "versionCode":  284,
+    "versionName":  "0.26.00",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.26.00-test.apk",
+    "sha256":  "49ec971c177bab32e927b20293f1c3cf0c31f35a16301de504d02aba9c115eac",
+    "notes":  "• 게시물 상세 본문에서 배경을 막는 컨테이너 drawable을 종류와 상관없이 제거\n• 답글 작성창 본문 컨테이너 배경도 동일하게 제거\n• 상단/하단 입력 UI는 유지하고 실제 배경 이미지는 뒤에서 보이도록 수정"
 }
