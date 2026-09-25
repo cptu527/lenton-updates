@@ -1,7 +1,7 @@
 {
     "versionCode": 300,
     "versionName": "0.27.06",
-    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.27.06/Lenton-v0.27.06-test.apk",
+    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.27.06-test.apk",
     "sha256": "81e134de63d9cd33449473c3955f467802f9fdd769aabeac5f8676ebf064213b",
-    "notes": "• 0.27.04/05에서 앱 내부 업데이트 시 시스템 설치 화면이 열리지 않을 수 있던 문제 수정\n• APK 설치 앱에 FileProvider URI 읽기 권한을 명시적으로 부여\n• ACTION_VIEW → ACTION_INSTALL_PACKAGE → PackageInstaller 순서로 폴백"
+    "notes": "• 앱 내부 업데이트 다운로드 경로를 이전에 정상 동작하던 Raw GitHub 경로로 복원\n• Android 16 설치 화면 호출 보강\n• 프로필 이미지 Permission Denial 수정 포함"
 }
