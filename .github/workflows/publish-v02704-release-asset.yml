@@ -1,0 +1,37 @@
+name: Publish v0.27.04 release asset
+
+on:
+  push:
+    paths:
+      - '.github/workflows/publish-v02704-release-asset.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f Lenton-v0.27.04-test.apk
+          actual="$(sha256sum Lenton-v0.27.04-test.apk | awk '{print $1}')"
+          expected="8eae26ff1ab3255e568f6b83201a30818a719b5dc4f530cdc21528da8b979d3a"
+          test "$actual" = "$expected"
+
+      - name: Publish release asset
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if ! gh release view v0.27.04 >/dev/null 2>&1; then
+            gh release create v0.27.04               --title "Lenton v0.27.04"               --notes "Lenton Android v0.27.04 updater package"
+          fi
+          gh release upload v0.27.04 Lenton-v0.27.04-test.apk --clobber
+          gh release view v0.27.04 --json assets,url
