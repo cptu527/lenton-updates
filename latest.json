@@ -1,7 +1,7 @@
 {
-    "versionCode":  297,
-    "versionName":  "0.27.02",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.27.03-test.apk",
-    "sha256":  "36b4953a63dadf3658cef243ec439a11055993dd3aed20665304ca93232f77c5",
-    "notes":  "• 업데이트 설치 확인을 눌러도 실제 설치로 이어지지 않는 일부 삼성/Android 16 문제 수정\n• APK 설치 인텐트에 MIME 타입을 명시하고 ACTION_VIEW 방식으로 먼저 실행\n• 시스템 설치 앱이 ACTION_VIEW를 처리하지 못하면 ACTION_INSTALL_PACKAGE로 자동 대체"
+    "versionCode": 297,
+    "versionName": "0.27.03",
+    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.27.03-test.apk",
+    "sha256": "36b4953a63dadf3658cef243ec439a11055993dd3aed20665304ca93232f77c5",
+    "notes": "• 업데이트 설치 확인을 눌러도 실제 설치로 이어지지 않는 일부 삼성/Android 16 문제 수정\n• APK 설치 인텐트에 MIME 타입을 명시하고 ACTION_VIEW 방식으로 먼저 실행\n• 시스템 설치 앱이 ACTION_VIEW를 처리하지 못하면 ACTION_INSTALL_PACKAGE로 자동 대체"
 }
