@@ -1,7 +1,7 @@
 {
-    "versionCode": 300,
-    "versionName": "0.27.06",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.27.06-test.apk",
-    "sha256": "81e134de63d9cd33449473c3955f467802f9fdd769aabeac5f8676ebf064213b",
-    "notes": "• 앱 내부 업데이트 다운로드 경로를 이전에 정상 동작하던 Raw GitHub 경로로 복원\n• Android 16 설치 화면 호출 보강\n• 프로필 이미지 Permission Denial 수정 포함"
+    "versionCode":  301,
+    "versionName":  "0.27.07",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.27.07-test.apk",
+    "sha256":  "a63f727f2b1b8bbe28fa40c9d90c13c6be9f816e3bd3eee4f5710ab04b547805",
+    "notes":  "??0.26.09?먯꽌 ?뺤긽 ?숈옉?섎뜕 PackageInstaller ?곗꽑 ?낅뜲?댄듃 ?먮쫫?쇰줈 蹂듭썝\n??Android 16?먯꽌 0.26.10遺???곸슜?먮뜕 吏곹뻾 ?ㅼ튂 遺꾧린瑜??쒓굅\n???꾨줈???대?吏 Permission Denial ?섏젙 ?ы븿"
 }
