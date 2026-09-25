@@ -1,7 +1,7 @@
 {
-    "versionCode": 298,
-    "versionName": "0.27.04",
-    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.27.04/Lenton-v0.27.04-test.apk",
-    "sha256": "8eae26ff1ab3255e568f6b83201a30818a719b5dc4f530cdc21528da8b979d3a",
-    "notes": "• v0.26.10에서도 재설치 없이 바로 업데이트할 수 있도록 APK 다운로드 경로를 GitHub Release 자산으로 변경\n• 기존 GitHub Pages/Raw 경로 대신 3.6MB APK를 Release에서 직접 다운로드\n• v0.27.04의 Android 16 설치 인텐트 수정은 그대로 유지"
+    "versionCode":  299,
+    "versionName":  "0.27.05",
+    "apkUrl":  "https://github.com/cptu527/lenton-updates/releases/download/v0.27.05/Lenton-v0.27.05-test.apk",
+    "sha256":  "c654972ea5b0121ec1739ef1eef3f70a77d45f8e6a441dfdc3323f8c3788df7f",
+    "notes":  "• 일부 Android 16 / 삼성 기기에서 프로필 이미지 변경 시 Permission Denial 오류가 나던 문제 수정\n• 선택한 원본 이미지를 렌톤 캐시에 복사한 뒤 렌톤 FileProvider URI만 자르기 앱에 전달하도록 변경\n• 자르기 앱에 입력 읽기/출력 읽기·쓰기 권한을 명시적으로 부여"
 }
