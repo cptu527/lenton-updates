@@ -1,7 +1,7 @@
 {
-    "versionCode": 296,
-    "versionName": "0.27.02",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.27.02-test.apk",
-    "sha256": "4bf2dc6f3fca5251d0b67dba64d722017df57053b9efe0f35b8f6db8d8ed85c2",
-    "notes": "• 앱 내부 업데이트 설치 방식을 PackageInstaller 세션 대신 Android 시스템 설치 화면 방식으로 복원\n• 업데이트 권한이 꺼져 있으면 한 번 허용한 뒤 렌톤으로 돌아오면 자동으로 업데이트를 이어서 진행\n• 기존 v0.27.01의 계정별 로컬 설정 기능은 그대로 유지"
+    "versionCode":  296,
+    "versionName":  "0.27.02",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.27.02-test.apk",
+    "sha256":  "4bf2dc6f3fca5251d0b67dba64d722017df57053b9efe0f35b8f6db8d8ed85c2",
+    "notes":  "• 앱 내부 업데이트 설치 방식을 PackageInstaller 세션 대신 Android 시스템 설치 화면 방식으로 복원\n• 업데이트 권한이 꺼져 있으면 한 번 허용한 뒤 렌톤으로 돌아오면 자동으로 업데이트를 이어서 진행\n• 기존 v0.27.01의 계정별 로컬 설정 기능은 그대로 유지"
 }
