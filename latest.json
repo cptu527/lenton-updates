@@ -1,7 +1,7 @@
 {
     "versionCode": 298,
     "versionName": "0.27.04",
-    "apkUrl": "https://cptu527.github.io/lenton-ios/android-updates/Lenton-v0.27.04-test.apk",
+    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.27.04/Lenton-v0.27.04-test.apk",
     "sha256": "8eae26ff1ab3255e568f6b83201a30818a719b5dc4f530cdc21528da8b979d3a",
-    "notes": "• 실제 업데이트 동작 확인을 위해 v0.27.04(code 298)로 새 버전 배포\n• APK는 GitHub Pages 미러에서 직접 다운로드\n• v0.27.03에서 업데이트 확인 시 실제 다운로드·설치 단계로 진입 가능"
+    "notes": "• v0.26.10에서도 재설치 없이 바로 업데이트할 수 있도록 APK 다운로드 경로를 GitHub Release 자산으로 변경\n• 기존 GitHub Pages/Raw 경로 대신 3.6MB APK를 Release에서 직접 다운로드\n• v0.27.04의 Android 16 설치 인텐트 수정은 그대로 유지"
 }
