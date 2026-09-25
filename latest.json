@@ -1,7 +1,7 @@
 {
-    "versionCode": 301,
-    "versionName": "0.27.07",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.27.07-test.apk",
-    "sha256": "a63f727f2b1b8bbe28fa40c9d90c13c6be9f816e3bd3eee4f5710ab04b547805",
-    "notes": "• 0.26.09에서 정상 동작하던 PackageInstaller 우선 업데이트 흐름으로 복원\n• Android 16에서 0.26.10부터 적용됐던 직행 설치 분기를 제거\n• 프로필 이미지 Permission Denial 수정 포함"
+    "versionCode":  302,
+    "versionName":  "0.27.08",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.27.08-test.apk",
+    "sha256":  "3ae4c3dc46b5dc2b6d2c207e73b900c130c589d62176b6eb501fd1703219ee20",
+    "notes":  "• 화면 구성 편집에 색상 테마 탭 추가\n• 라이트/다크 모드와 테마 강조색을 한곳에서 변경\n• 기본 색상 7종 + #RRGGBB 직접 색상 입력\n• 계정별 로컬 저장\n• 0.26.09 방식 업데이터 복원 유지"
 }
