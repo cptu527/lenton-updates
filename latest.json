@@ -1,7 +1,7 @@
 {
-    "versionCode":  304,
-    "versionName":  "0.28.00",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.28.00-test.apk",
-    "sha256":  "9a79eedbe7524e1f9f5d8d112d7d9f1037de632bb99781840b3914c34e2bb406",
-    "notes":  "• 알립 새로고챨을 아재 선 겄시 여렼저 감신함게 종료되닄면 화면을 바로 개신정으로 표시\n• 답변해야 하는 멘셙 털은시 PC/웹본 답볁 여밀아 확인은 배경에서 계속하고 화면은 기다리지 안도으로 보부에서 조요함게 변경\n• 알림 턬을 아마 섰택하는 순간 주용 알림 화뭴을 다시 마드는 로직을 제거하여 예시계 센개 입장 소도 개선\n• 배경 테마 및 0.26.09 방식 앱낵 업데이터 유지"
+    "versionCode": 304,
+    "versionName": "0.28.00",
+    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.28.00-test.apk",
+    "sha256": "9a79eedbe7524e1f9f5d8d112d7d9f1037de632bb99781840b3914c34e2bb406",
+    "notes": "• 알림 새로고침은 알림 서버 응답 1회가 끝나는 즉시 화면부터 갱신하도록 변경\n• ‘답변해야 하는 멘션’의 PC/웹 답변 여부 확인은 백그라운드에서 계속하고 화면은 기다리지 않도록 변경\n• 알림 화면을 다시 열 때 전체 알림 트리를 중복으로 훑던 테마 처리 제거\n• 배경 테마 및 0.26.09 방식 앱 내부 업데이트 유지"
 }
