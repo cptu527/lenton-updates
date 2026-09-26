@@ -1,7 +1,7 @@
 {
-    "versionCode":  302,
-    "versionName":  "0.27.08",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.27.08-test.apk",
-    "sha256":  "3ae4c3dc46b5dc2b6d2c207e73b900c130c589d62176b6eb501fd1703219ee20",
-    "notes":  "• 화면 구성 편집에 색상 테마 탭 추가\n• 라이트/다크 모드와 테마 강조색을 한곳에서 변경\n• 기본 색상 7종 + #RRGGBB 직접 색상 입력\n• 계정별 로컬 저장\n• 0.26.09 방식 업데이터 복원 유지"
+    "versionCode":  303,
+    "versionName":  "0.27.09",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.27.09-test.apk",
+    "sha256":  "881ca4eb30cf4771af94c3b3aed5866f744cb51912067406d263bd01418349a0",
+    "notes":  "• 배경 테마 적용 시 타래 /답글 화뭴 재거 �x캔드 안도으로 션신 부닩 개선\n• 배경 이별 시 줐복된 화뭴 신 전추부 전이 로직 반복을 제거\n• 배경 이별 블러 시 반벘 해상도로 디큐딩 재생성을 좄임\n• 테마 및 색상 기능 유지\n• 0.26.09 방식 업데이터 복원 유지"
 }
