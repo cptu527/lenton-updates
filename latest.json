@@ -1,7 +1,7 @@
 {
-    "versionCode": 305,
-    "versionName": "0.28.01",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.28.01-test.apk",
-    "sha256": "1daddfa1ebb0a42f2951b010088d61ad645a1b8398ba1e1cf053ad841625464c",
-    "notes": "• 멘션 입력 도중 타래 데이터가 늦게 갱신돼도 입력창을 재생성하지 않도록 변경\n• 쓰던 문장과 키보드 포커스가 갑자기 사라지는 문제 수정\n• 알림 새로고침 속도 개선 및 배경 테마 유지\n• 0.26.09 방식 앱 내부 업데이트 로직 유지"
+    "versionCode":  305,
+    "versionName":  "0.28.01",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.28.01-test.apk",
+    "sha256":  "1daddfa1ebb0a42f2951b010088d61ad645a1b8398ba1e1cf053ad841625464c",
+    "notes":  "• 멘션 입력 도중 타래 데이터가 늦게 갱신돼도 입력창을 재생성하지 않도록 변경\n• 쓰던 문장과 키보드 포커스가 갑자기 사라지는 문제 수정\n• 알림 새로고침 속도 개선 및 배경 테마 유지\n• 0.26.09 방식 앱 내부 업데이트 로직 유지"
 }
