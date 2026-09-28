@@ -1,7 +1,7 @@
 {
-    "versionCode":  307,
-    "versionName":  "0.28.03",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.28.03-test.apk",
-    "sha256":  "1c9655ef45c0d0c42088ffc9198fb9e4315c80a36237a46b81dd077704c75846",
-    "notes":  "• 왼쪽 사이드바의 공지사항 아이콘을 톱니바퀴에서 종 아이콘으로 변경\n• 리스트 메뉴의 아이콘이 사라진 문제를 기존 리스트 전용 아이콘으로 복구\n• 공지사항 → 예약 게시물 → 리스트 순서 유지\n• 기존 0.28.02 기능과 이전 수정사항 유지"
+    "versionCode":  308,
+    "versionName":  "0.28.04",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.28.04-test.apk",
+    "sha256":  "33c7e23629d474937dfc08475e19f2987a6f51d68f303d64a263fab27d8425da",
+    "notes":  "• 새 게시물 작성창에서 서버 이모지 바로 옆에 예약용 시계 아이콘 추가\n• 시계 아이콘에서 날짜와 시간을 선택해 실제 예약 게시물로 등록 가능\n• 예약 시간은 현재 시각보다 최소 5분 이후만 허용\n• 예약 설정 후 게시 버튼이 ‘예약’으로 바뀌고, 선택한 예약 시간이 작성창에 표시\n• 예약 게시물 목록의 시간을 한국 현지 형식으로 보기 쉽게 표시\n• 기존 공지사항/예약 게시물/리스트 메뉴 아이콘 수정 및 이전 패치 유지"
 }
