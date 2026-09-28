@@ -1,7 +1,7 @@
 {
-    "versionCode":  309,
-    "versionName":  "0.28.05",
-    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.28.05-test.apk",
-    "sha256":  "a50a74df16990639d468626ed78b72243c65f21acb82fac0615064c20cbc793c",
-    "notes":  "• 공지사항에서 섔버 커스킀 이모지가 실제 이미지로 표시되도록 변경\n• 공지사항아래에 기존 반응을 이모지 + 숨자로 표시¸�(� + 범튼을 누르면 서버 이모지 목록읐도에서 선택하여 반응 추가/취소 가능\n• 예약 게시물 작성창의 시계 아이콘 적욑 유지 / 날짜·시간 선택 포함\n• 예약 게시하면 게시 버튼이 ‘예약’으로 바뭌 선택한 시간을 표시¸�(� 기조 속도 개선 및 업데이터 복원 로직 유지"
+    "versionCode": 309,
+    "versionName": "0.28.05",
+    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.28.05-test.apk",
+    "sha256": "a50a74df16990639d468626ed78b72243c65f21acb82fac0615064c20cbc793c",
+    "notes": "• 공지사항 본문의 서버 커스텀 이모지를 실제 이미지로 표시\n• 공지사항 아래에서 기존 반응을 이모지 + 숫자로 표시\n• + 버튼에서 서버 이모지를 선택해 반응 추가/취소 가능\n• 예약 게시물 작성 기능과 기존 업데이트/속도 개선 유지"
 }
