@@ -1,7 +1,7 @@
 {
-    "versionCode": 309,
-    "versionName": "0.28.05",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.28.05-test.apk",
-    "sha256": "a50a74df16990639d468626ed78b72243c65f21acb82fac0615064c20cbc793c",
-    "notes": "• 공지사항 본문의 서버 커스텀 이모지를 실제 이미지로 표시\n• 공지사항 아래에서 기존 반응을 이모지 + 숫자로 표시\n• + 버튼에서 서버 이모지를 선택해 반응 추가/취소 가능\n• 예약 게시물 작성 기능과 기존 업데이트/속도 개선 유지"
+    "versionCode":  310,
+    "versionName":  "0.28.06",
+    "apkUrl":  "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.28.06-test.apk",
+    "sha256":  "512a980f9bb11769f270e2b01a162742d6156b1453008e4c598294cf5b583e1a",
+    "notes":  "• 같은 상대와 나눈 DM을 답글 타래와 관계없이 시간순 한 채팅방으로 표시\n• 앱을 완전히 종료한 뒤 다시 열어도 중간 DM 기록이 숨지 않도록 복원 방식 수정\n• 기존 답장·실시간 DM·이전 대화 보기 기능 유지"
 }
