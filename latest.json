@@ -1,7 +1,7 @@
 {
-    "versionCode": 311,
-    "versionName": "0.28.07",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.28.07-test.apk",
-    "sha256": "2c937a9fc5bede7efd2c195812d1d180d6f0fe048674ca3ef8ed5cfdce2c4fc7",
-    "notes": "• DM 작성/답글 전송 시 공개 범위가 실수로 바뀌어도 서버 전송 직전에 무조건 DM으로 고정\n• 새 메시지 및 direct 답글에서는 공개 범위 변경 차단\n• ‘답변해야 하는 멘션’에서 각 항목을 답변 목록에서 직접 지우는 기능 추가"
+    "versionCode": 312,
+    "versionName": "0.28.08",
+    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.28.08-test.apk",
+    "sha256": "e06401ea0ad775f9f5349937d55cdafe7b7e36d36ca15627451460cfa60f4919",
+    "notes": "• 답글 작성 시 화면에 숨겨진 @멘션 prefix까지 실제 서버 전송 글자 수에 포함\n• 새 DM 작성 시 숨겨진 수신자 멘션도 글자 수에 포함\n• 실제 최종 글자 수가 제한을 넘으면 답글/게시 버튼을 미리 비활성화"
 }
