@@ -1,7 +1,7 @@
 {
-    "versionCode": 314,
-    "versionName": "0.28.10",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.28.10-test.apk",
-    "sha256": "6ee47c4388efe5ff4af34ff55c347805cc68067dcd0ea58ede6c93bf5a507a4d",
-    "notes": "• 홈/퍼블릭 첫 요청 크기를 줄이고 캐시 갱신 대기시간 제거\n• 답글 있는 상단 게시물의 context를 소량 미리 불러와 상세 진입 시 즉시 표시\n• 게시물 상세에서 본문 최신 상태 갱신과 답글 context를 병렬 처리하고 답글을 우선 표시"
+    "versionCode": 315,
+    "versionName": "0.28.11",
+    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.28.11-test.apk",
+    "sha256": "1eedb63b6f546232e3866c702ed62d81651d4010b77816d0ee92ff2ceb7842b0",
+    "notes": "• 0.28.10에서 변경했던 홈/퍼블릭 로딩 동작을 0.28.09 상태로 전부 원복\n• 홈 타임라인 요청량·갱신 지연·탭 전환 동작 기존 방식 유지\n• 게시물 본문/타래 답글 우선 로딩 속도 개선은 유지"
 }
