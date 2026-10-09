@@ -1,7 +1,7 @@
 {
-    "versionCode": 316,
-    "versionName": "0.29.00",
-    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.00/Lenton-v0.29.00-test.apk",
-    "sha256": "88fce1c7d2a821874bc68dc6ebd88626372a850b90d71eeba8052e51082ab19f",
-    "notes": "• 계정 전환 시 알림 혼합 방지\n• 기존에 섞인 멘션 기록 자동 정리\n• 홈·DM·기존 업데이트 기능 유지"
+    "versionCode": 317,
+    "versionName": "0.29.01",
+    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.01/Lenton-v0.29.01-test.apk",
+    "sha256": "949effed6e27e38be0d7570d7d99425853e6f9e10f2fb3998718a57183deaa07",
+    "notes": "• 계정 전환 시 알림 혼합 방지\n• 기존에 섞인 멘션 기록 자동 정리\n• 홈·DM·기존 업데이트 기능 유지\n• 다운로드 오류 시 재시도와 배포 경로 자동 전환"
 }
