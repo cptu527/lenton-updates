@@ -1,7 +1,7 @@
 {
-    "versionCode": 315,
-    "versionName": "0.28.11",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.28.11-test.apk",
-    "sha256": "1eedb63b6f546232e3866c702ed62d81651d4010b77816d0ee92ff2ceb7842b0",
-    "notes": "• 0.28.10에서 변경했던 홈/퍼블릭 로딩 동작을 0.28.09 상태로 전부 원복\n• 홈 타임라인 요청량·갱신 지연·탭 전환 동작 기존 방식 유지\n• 게시물 본문/타래 답글 우선 로딩 속도 개선은 유지"
+    "versionCode": 316,
+    "versionName": "0.29.00",
+    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.29.00-test.apk",
+    "sha256": "88fce1c7d2a821874bc68dc6ebd88626372a850b90d71eeba8052e51082ab19f",
+    "notes": "• 계정 전환 시 알림 혼합 방지\n• 기존에 섞인 멘션 기록 자동 정리\n• 홈·DM·기존 업데이트 기능 유지"
 }
