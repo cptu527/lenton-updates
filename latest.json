@@ -1,7 +1,7 @@
 {
-    "versionCode": 318,
-    "versionName": "0.29.02",
-    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.02/Lenton-v0.29.02-test.apk",
-    "sha256": "9b4fb26082760ca7762f1b620491e498677fe44599958990b016ab479611a4f8",
-    "notes": "• DM 목록을 아래로 당겨 즉시 새로고침\n• 새 DM을 최신순으로 바로 반영\n• 아래로 스크롤하면 오래된 대화를 계속 불러오기\n• 홈·알림·기존 DM 대화 기능은 그대로 유지"
+    "versionCode": 319,
+    "versionName": "0.29.03",
+    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.03/Lenton-v0.29.03-test.apk",
+    "sha256": "433151254a39b0541d764327338fd2e402ba0a63919367de96e23785abe6add0",
+    "notes": "• 이미 답변한 멘션은 답변 목록에서 제외\n• 지우기 시 선택한 멘션만 바로 제거\n• 새로고침 후 삭제한 멘션 재표시 방지\n• 홈·DM·테마·다른 계정 푸시 알림 유지"
 }
