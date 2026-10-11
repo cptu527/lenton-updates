@@ -1,7 +1,7 @@
 {
-    "versionCode": 320,
-    "versionName": "0.29.04",
-    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.04/Lenton-v0.29.04-test.apk",
-    "sha256": "80fc80c8fe58b5d868b335e965cd7be38f0707411c0235a6f1af6ef4402e0ca1",
-    "notes": "• 전체 알림 120개 저장 제한 제거\n• 아래로 내리면 더 오래된 알림 자동 불러오기\n• 새로고침에도 기존 알림 기록 보존\n• 홈·DM·테마·답변 멘션·계정별 푸시 알림 유지"
+    "versionCode": 321,
+    "versionName": "0.29.05",
+    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.05/Lenton-v0.29.05-test.apk",
+    "sha256": "5285a3cd18a7a66dd96c1fc06167c40bdf29441541d5052b5a842a6cc90bb84a",
+    "notes": "• 예약 게시물 내용 편집 및 예약 시간 변경 지원\n• 예약 게시물 삭제 버튼 및 확인 창 추가\n• 본문 수정 시 원본 안전 보존·실패 시 교체 예약 되돌리기\n• 기존 홈·DM·알림·테마·앱 내 업데이트 기능 유지"
 }
