@@ -1,7 +1,7 @@
 {
-    "versionCode": 321,
-    "versionName": "0.29.05",
-    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.05/Lenton-v0.29.05-test.apk",
-    "sha256": "5285a3cd18a7a66dd96c1fc06167c40bdf29441541d5052b5a842a6cc90bb84a",
-    "notes": "• 예약 게시물 내용 편집 및 예약 시간 변경 지원\n• 예약 게시물 삭제 버튼 및 확인 창 추가\n• 본문 수정 시 원본 안전 보존·실패 시 교체 예약 되돌리기\n• 기존 홈·DM·알림·테마·앱 내 업데이트 기능 유지"
+    "versionCode": 322,
+    "versionName": "0.29.06",
+    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.06/Lenton-v0.29.06-test.apk",
+    "sha256": "36523e9e96233bacb296009b982e1957d8382d14787683836cb31326adeb7ee1",
+    "notes": "• 렌톤 실행 시 새 버전 자동 확인 및 안내 팝업\n• 업데이트를 누르면 APK 다운로드와 설치 화면 연결\n• 나중에 선택하면 사용 계속·같은 실행에서 반복 팝업 방지\n• 기존 홈·DM·알림·예약 게시물·테마·서명 검증 유지"
 }
