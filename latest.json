@@ -1,7 +1,7 @@
 {
-    "versionCode": 322,
-    "versionName": "0.29.06",
-    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.06/Lenton-v0.29.06-test.apk",
-    "sha256": "36523e9e96233bacb296009b982e1957d8382d14787683836cb31326adeb7ee1",
-    "notes": "• 렌톤 실행 시 새 버전 자동 확인 및 안내 팝업\n• 업데이트를 누르면 APK 다운로드와 설치 화면 연결\n• 나중에 선택하면 사용 계속·같은 실행에서 반복 팝업 방지\n• 기존 홈·DM·알림·예약 게시물·테마·서명 검증 유지"
+    "versionCode": 323,
+    "versionName": "0.29.07",
+    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.07/Lenton-v0.29.07-test.apk",
+    "sha256": "3c007726687f2720bedcee6b76acc37d194900425621d1626549d63883135f04",
+    "notes": "• DM 타래마다 정확한 이전 대화 연결\n• 다른 DM 타래의 이전 대화가 잘못 표시되는 오류 수정\n• 기존 홈·알림·DM 채팅·예약 게시물·자동 업데이트 유지"
 }
