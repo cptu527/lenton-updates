@@ -1,7 +1,7 @@
 {
-    "versionCode": 324,
-    "versionName": "0.29.08",
-    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.08/Lenton-v0.29.08-test.apk",
-    "sha256": "e57daf3cada6188b60410f23436c2cf4d5e44118282abf2a3c87a9f3144b9dfb",
-    "notes": "• 시간순 게시물의 경과 시간 표기를 주기적으로 갱신\n• 상세 화면과 홈 화면의 시간 표시 불일치 수정\n• 기존 타임라인·DM·알림·예약 게시물·자동 업데이트 유지"
+    "versionCode": 325,
+    "versionName": "0.29.09",
+    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.09/Lenton-v0.29.09-test.apk",
+    "sha256": "0106954a482d92277b921128dae14ddf82e9fd66f2995d4e7b984677303b49b2",
+    "notes": "• 다른 타래의 DM이 한 채팅창에 섞이는 문제 수정\n• 타래별 선택 및 정확한 답장 대상 유지\n• 기존 DM 기록·홈·알림·예약 게시물·업데이트 기능 유지"
 }
