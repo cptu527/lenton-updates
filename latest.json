@@ -1,7 +1,7 @@
 {
-    "versionCode": 326,
-    "versionName": "0.29.10",
-    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.10/Lenton-v0.29.10-test.apk",
-    "sha256": "cb636fe40b12cdff1023273418b82c7703465e5d3f1b3d45666e1c2d0a16d6ba",
-    "notes": "• DM에서 내가 보낸 메시지·이미지 누락 수정\n• 자동봇 DM 대화 흐름 복원\n• 일반 DM의 타래 분리·홈·알림·예약글·자동 업데이트 유지"
+    "versionCode": 327,
+    "versionName": "0.29.11",
+    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.11/Lenton-v0.29.11-test.apk",
+    "sha256": "d927a70cc8f0c0f95a89c07a65bba70c5ccf2ff948a8b8a34af6f77af68c66c0",
+    "notes": "• 렌톤 스타일 투표 아이콘 추가\n• 투표 선택지, 기간, 복수 선택 설정 및 게시\n• 홈·상세·알림에서 투표 참여 및 결과 보기\n• 기존 홈·DM·알림·예약글·자동 업데이트 유지"
 }
