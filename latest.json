@@ -1,7 +1,7 @@
 {
-    "versionCode": 331,
-    "versionName": "0.29.15",
-    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.15/Lenton-v0.29.15-test.apk",
-    "sha256": "9bcabd9e820a24245e0815607c871db80b6aa913c4e031250b6887cae53e4d22",
-    "notes": "• 시간순: 원글·답멘 표시, DM·답글 아닌 개인 멘션 숨김\n• 퍼블릭: 원글만 표시, DM·개인 멘션·답글 숨김\n• 기존 UI·스크롤·알림·DM·투표·설정 유지"
+    "versionCode": 332,
+    "versionName": "0.29.16",
+    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.16/Lenton-v0.29.16-test.apk",
+    "sha256": "e01785710c189db44aece917bdd07a3ad051bdb9e7f59363cad529c56647e8c9",
+    "notes": "• 시간순: 다른 사람에게 보내는 답멘 표시, 나에게 오는 개인 멘션·DM 제외\n• 퍼블릭: 원글만 표시, 답글·개인 멘션·DM 제외\n• 기존 홈·스크롤·알림·DM·투표·설정 유지"
 }
