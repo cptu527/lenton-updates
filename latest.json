@@ -1,7 +1,7 @@
 {
-    "versionCode": 327,
-    "versionName": "0.29.11",
-    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.11/Lenton-v0.29.11-test.apk",
-    "sha256": "d927a70cc8f0c0f95a89c07a65bba70c5ccf2ff948a8b8a34af6f77af68c66c0",
-    "notes": "• 렌톤 스타일 투표 아이콘 추가\n• 투표 선택지, 기간, 복수 선택 설정 및 게시\n• 홈·상세·알림에서 투표 참여 및 결과 보기\n• 기존 홈·DM·알림·예약글·자동 업데이트 유지"
+    "versionCode": 328,
+    "versionName": "0.29.12",
+    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.12/Lenton-v0.29.12-test.apk",
+    "sha256": "a7b4decef032f77ed5e4b621f1c491e050219a5ad3c94ce569817419f86d1a44",
+    "notes": "• 계정 목록의 프로필 중복 표시 수정\n• DM 답글 공개 범위(direct) 보호\n• 홈·DM·알림·투표·예약글·자동 업데이트 유지"
 }
