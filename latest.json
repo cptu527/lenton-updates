@@ -1,7 +1,7 @@
 {
-    "versionCode": 330,
-    "versionName": "0.29.14",
-    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.14/Lenton-v0.29.14-test.apk",
-    "sha256": "99e08837d9490644c28cd5f6fdcea497e344c89bdaae045a505db9a8feede39d",
-    "notes": "• 시간순·퍼블릭에서 DM(direct)만 숨김\n• 시간순의 일반 답글과 멘션 표시 복구\n• 퍼블릭의 기존 답글 제외 정책 유지\n• 기존 기능 유지 및 구버전 캐시 갱신"
+    "versionCode": 331,
+    "versionName": "0.29.15",
+    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.15/Lenton-v0.29.15-test.apk",
+    "sha256": "9bcabd9e820a24245e0815607c871db80b6aa913c4e031250b6887cae53e4d22",
+    "notes": "• 시간순: 원글·답멘 표시, DM·답글 아닌 개인 멘션 숨김\n• 퍼블릭: 원글만 표시, DM·개인 멘션·답글 숨김\n• 기존 UI·스크롤·알림·DM·투표·설정 유지"
 }
