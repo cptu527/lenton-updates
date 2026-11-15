@@ -1,7 +1,7 @@
 {
-    "versionCode": 337,
-    "versionName": "0.29.21",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.29.21.apk",
-    "sha256": "f93db6a02defa90aee684e894c3b8bffa0f38371cb2cc03ccd6e2adf5b51624f",
-    "notes": "• 실시간 알림 재연결 및 연결 중단 감지 개선\n• 최대 60초 간격의 알림 누락 보조 확인 및 앱 복귀 시 빠른 동기화\n• Android 백그라운드 알림 보조 작업 복구\n• 홈·퍼블릭·DM·알림 기록 기존 기능 유지"
+    "versionCode": 338,
+    "versionName": "0.29.22",
+    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.29.22.apk",
+    "sha256": "8cf5d15c4318a52be0d701a5d70a2461a86d998b16fb92a19903c4232e95823a",
+    "notes": "• 계정별 DM·멘션·게시물·좋아요·부스트·팔로우 알림 ON/OFF 설정이 정확히 적용되도록 수정\n• 알림을 꺼둔 다른 로그인 계정에서 휴대폰 알림·미확인 배지·계정 표시가 발생하지 않도록 수정\n• 홈·퍼블릭·DM 화면 및 기존 속도 개선 기능 유지"
 }
