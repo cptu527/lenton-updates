@@ -1,7 +1,7 @@
 {
-    "versionCode": 333,
-    "versionName": "0.29.17",
-    "apkUrl": "https://github.com/cptu527/lenton-updates/releases/download/v0.29.17/Lenton-v0.29.17-test.apk",
-    "sha256": "af416bf208fb6adb0322b9dc7ea3c5435fcdad4c209406d0567f245cad99e273",
-    "notes": "• 시간순: 일반 원글·답글 표시, DM·독립적인 개인 멘션 숨김\n• 퍼블릭: 일반 원글 표시, 답글·DM·독립적인 개인 멘션 숨김\n• 잘못 걸러졌던 캐시 1회 복구, 기존 UI·기능 유지"
+    "versionCode": 336,
+    "versionName": "0.29.20",
+    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.29.20.apk",
+    "sha256": "7dc06610f518711691c15e3e576acd0ce8cb0a027003ee14651d56c1a58e341c",
+    "notes": "• 알림창 진입 시 대량 알림 로딩 최적화 및 40개씩 점진적으로 표시\n• 이미 읽은 알림의 미확인 숫자 재등장 방지\n• 홈·퍼블릭·DM의 기존 동작 유지"
 }
