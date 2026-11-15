@@ -1,0 +1,18 @@
+{
+  "versionCode": 336,
+  "versionName": "0.29.20",
+  "package": "com.mastoflow.app",
+  "filename": "Lenton-v0.29.20.apk",
+  "size": 3655997,
+  "sha256": "7dc06610f518711691c15e3e576acd0ce8cb0a027003ee14651d56c1a58e341c",
+  "parts": [
+    "part-000.b64",
+    "part-001.b64",
+    "part-002.b64",
+    "part-003.b64",
+    "part-004.b64",
+    "part-005.b64",
+    "part-006.b64",
+    "part-007.b64"
+  ]
+}
