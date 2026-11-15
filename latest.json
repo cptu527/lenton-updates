@@ -1,7 +1,7 @@
 {
-    "versionCode": 336,
-    "versionName": "0.29.20",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.29.20.apk",
-    "sha256": "7dc06610f518711691c15e3e576acd0ce8cb0a027003ee14651d56c1a58e341c",
-    "notes": "• 알림창 진입 시 대량 알림 로딩 최적화 및 40개씩 점진적으로 표시\n• 이미 읽은 알림의 미확인 숫자 재등장 방지\n• 홈·퍼블릭·DM의 기존 동작 유지"
+    "versionCode": 337,
+    "versionName": "0.29.21",
+    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.29.21.apk",
+    "sha256": "f93db6a02defa90aee684e894c3b8bffa0f38371cb2cc03ccd6e2adf5b51624f",
+    "notes": "• 실시간 알림 재연결 및 연결 중단 감지 개선\n• 최대 60초 간격의 알림 누락 보조 확인 및 앱 복귀 시 빠른 동기화\n• Android 백그라운드 알림 보조 작업 복구\n• 홈·퍼블릭·DM·알림 기록 기존 기능 유지"
 }
