@@ -1,0 +1,93 @@
+name: Publish verified Lenton v0.29.23 to existing updater
+on:
+  push:
+    branches:
+      - staging/v02923-apk-transfer
+    paths:
+      - .github/workflows/publish-v02923-staged-apk.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout staged APK parts
+        uses: actions/checkout@v4
+
+      - name: Restore exact verified signed APK
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import base64,hashlib,json
+          from pathlib import Path
+          folder=Path("release-transfer/v02923")
+          meta=json.loads((folder/"manifest.json").read_text("utf-8"))
+          assert meta["versionCode"]==339 and meta["versionName"]=="0.29.23"
+          assert meta["package"]=="com.mastoflow.app" and meta["filename"]=="Lenton-v0.29.23.apk"
+          assert len(meta["parts"])==8
+          expected="624b79b02e32655b7249de29e6d813450ae11b87caadc0a276554a2f44643ce8"
+          assert meta["sha256"]==expected and meta["size"]==3658178
+          encoded="".join((folder/part).read_text("ascii") for part in meta["parts"])
+          apk=base64.b64decode(encoded,validate=True)
+          assert len(apk)==meta["size"] and hashlib.sha256(apk).hexdigest()==expected
+          Path(meta["filename"]).write_bytes(apk)
+          print("Verified staged signed APK",meta["filename"],"SHA256",expected)
+          PY
+
+      - name: Verify original Lenton signing certificate and package identity
+        run: |
+          set -euo pipefail
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'build-tools;35.0.1'
+          BT="$ANDROID_HOME/build-tools/35.0.1"
+          APK="Lenton-v0.29.23.apk"
+          BADGING="$("$BT/aapt2" dump badging "$APK")"
+          printf '%s\n' "$BADGING" | grep -F "package: name='com.mastoflow.app' versionCode='339' versionName='0.29.23'"
+          "$BT/apksigner" verify --verbose --print-certs "$APK"
+          CERT="$("$BT/apksigner" verify --print-certs "$APK" | sed -n 's/^Signer #1 certificate SHA-256 digest: //p' | tr -d ':' | tr 'A-Z' 'a-z')"
+          test "$CERT" = fe6fc92cc637bc3fdbd18e98b7c0846b8e489d4c0d0f4e859fc520333f2d8688
+
+      - name: Publish only APK and latest.json on main
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git switch -C publish-v02923 origin/main
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,hashlib
+          apk=Path("Lenton-v0.29.23.apk")
+          expected="624b79b02e32655b7249de29e6d813450ae11b87caadc0a276554a2f44643ce8"
+          assert apk.exists() and hashlib.sha256(apk.read_bytes()).hexdigest()==expected
+          current=json.loads(Path("latest.json").read_text("utf-8"))
+          if int(current["versionCode"]) not in (338,339):
+              raise RuntimeError("Public updater changed unexpectedly; refusing to replace newer version")
+          if int(current["versionCode"])==339 and current.get("sha256")!=expected:
+              raise RuntimeError("Conflicting v0.29.23 already published")
+          latest={
+            "versionCode":339,
+            "versionName":"0.29.23",
+            "apkUrl":"https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.29.23.apk",
+            "sha256":expected,
+            "notes":"• 새 계정 추가 시 이전 Mastodon 웹 로그인 세션 초기화\n• 로그인 화면에 '다시 로그인' 버튼 추가\n• 기존 로그인 계정·설정·홈·DM·알림 기능 유지"
+          }
+          Path("latest.json").write_text(json.dumps(latest,ensure_ascii=False,indent=4)+"\n",encoding="utf-8")
+          confirmed=json.loads(Path("latest.json").read_text("utf-8"))
+          assert confirmed["versionCode"]==339 and confirmed["sha256"]==expected
+          print("Ready to publish only",apk.name,"and latest.json")
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898286+github-actions[bot]@users.noreply.github.com"
+          git add -- Lenton-v0.29.23.apk latest.json
+          python3 - <<'PY'
+          import subprocess
+          changed=set(subprocess.check_output(["git","diff","--cached","--name-only"],text=True).splitlines())
+          assert changed <= {"Lenton-v0.29.23.apk","latest.json"},changed
+          print("Only requested changes staged:",sorted(changed))
+          PY
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish Lenton v0.29.23 OAuth login fix and latest.json"
+            git push origin HEAD:main
+          fi
