@@ -1,7 +1,7 @@
 {
-    "versionCode": 339,
-    "versionName": "0.29.23",
-    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.29.23.apk",
-    "sha256": "624b79b02e32655b7249de29e6d813450ae11b87caadc0a276554a2f44643ce8",
-    "notes": "• 새 계정 추가 시 이전 Mastodon 웹 로그인 세션 초기화\n• 로그인 화면에 '다시 로그인' 버튼 추가\n• 기존 로그인 계정·설정·홈·DM·알림 기능 유지"
+    "versionCode": 340,
+    "versionName": "0.29.24",
+    "apkUrl": "https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.29.24.apk",
+    "sha256": "9fa9535dd5265002e87e45b7e7a46d6f0393a82d0dbb8b819df8ed2a67e642b2",
+    "notes": "• 로그인 중 서버 연결 실패 안내 및 재시도 추가\n• 계정 전환 중 API 요청의 서버·인증 정보 혼선 방지\n• 기존 홈·DM·알림·계정 설정 유지"
 }
