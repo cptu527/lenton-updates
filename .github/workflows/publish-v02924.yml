@@ -1,0 +1,61 @@
+name: Publish verified Lenton v0.29.24
+on:
+  push:
+    branches: [release/v02924-staging]
+    paths: ['.github/workflows/publish-v02924.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: lenton-production-release
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reassemble and verify APK
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import base64,hashlib,json
+          from pathlib import Path
+          d=Path("release-transfer/v02924")
+          m=json.loads((d/"manifest.json").read_text())
+          assert (m["versionCode"],m["versionName"],m["package"],m["filename"])==(340,"0.29.24","com.mastoflow.app","Lenton-v0.29.24.apk")
+          b=base64.b64decode("".join((d/p).read_text() for p in m["parts"]),validate=True)
+          assert len(b)==m["size"]==3658440
+          assert hashlib.sha256(b).hexdigest()==m["sha256"]=="9fa9535dd5265002e87e45b7e7a46d6f0393a82d0dbb8b819df8ed2a67e642b2"
+          Path(m["filename"]).write_bytes(b)
+          PY
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'build-tools;35.0.1'
+          BT="$ANDROID_HOME/build-tools/35.0.1"
+          "$BT/aapt2" dump badging Lenton-v0.29.24.apk | grep -F "package: name='com.mastoflow.app' versionCode='340' versionName='0.29.24'"
+          "$BT/apksigner" verify --verbose --print-certs Lenton-v0.29.24.apk
+          CERT="$("$BT/apksigner" verify --print-certs Lenton-v0.29.24.apk | sed -n 's/^Signer #1 certificate SHA-256 digest: //p' | tr -d ':' | tr 'A-Z' 'a-z')"
+          test "$CERT" = fe6fc92cc637bc3fdbd18e98b7c0846b8e489d4c0d0f4e859fc520333f2d8688
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: production
+      - name: Publish APK and update metadata atomically
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,shutil
+          from pathlib import Path
+          d=Path("production")
+          p=d/"latest.json"
+          current=json.loads(p.read_text(encoding="utf-8"))
+          assert current["versionCode"]==339 and current["versionName"]=="0.29.23", "Production version changed; refusing overwrite"
+          shutil.copyfile("Lenton-v0.29.24.apk",d/"Lenton-v0.29.24.apk")
+          current.update({"versionCode":340,"versionName":"0.29.24","apkUrl":"https://raw.githubusercontent.com/cptu527/lenton-updates/main/Lenton-v0.29.24.apk","sha256":"9fa9535dd5265002e87e45b7e7a46d6f0393a82d0dbb8b819df8ed2a67e642b2","notes":"• 로그인 중 서버 연결 실패 안내 및 재시도 추가\n• 계정 전환 중 API 요청의 서버·인증 정보 혼선 방지\n• 기존 홈·DM·알림·계정 설정 유지"})
+          p.write_text(json.dumps(current,ensure_ascii=False,indent=4)+"\n",encoding="utf-8")
+          PY
+          cd production
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898286+github-actions[bot]@users.noreply.github.com'
+          git add -- Lenton-v0.29.24.apk latest.json
+          git commit -m 'Publish signed Lenton v0.29.24 network and account API fix'
+          git push origin HEAD:main
